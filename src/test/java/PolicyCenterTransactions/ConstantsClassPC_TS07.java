@@ -1,0 +1,198 @@
+package PolicyCenterTransactions;
+
+public class ConstantsClassPC_TS07 {
+	public static final String internalTools = "//*[@id=\"InternalToolsTabBar-UnsupportedToolsTab\"]/div[3]";
+
+	public static final String testingSystemClock = "//*[@id=\"InternalToolsTabBar-UnsupportedToolsTab-UnsupportedTools_SystemClock\"]/div";
+
+	public static final String testingSystemClockDate = "//*[@id=\"SystemClock-SystemClockScreen-Date\"]/div/input[1]";
+
+	public static final String testingSystemClockTime = "//*[@id=\"SystemClock-SystemClockScreen-Date_time\"]";
+
+	public static final String policyRenewalChangeDateButton = "//*[@id=\"SystemClock-SystemClockScreen-ChangeDate\"]/div";
+
+	public static final String serverTools = "//*[@id=\"InternalToolsTabBar-ServerToolsTab\"]/div[3]";
+
+	public static final String batchProcessInfo = "//*[@id=\"InternalToolsTabBar-ServerToolsTab-ServerTools_BatchProcessInfo\"]/div";
+
+	public static final String policyRenewalStartRunButton = "//*[@id=\"BatchProcessInfo-BatchProcessScreen-BatchProcessesLV-31-RunBatchWithoutNotify\"]";
+
+	public static final String serverToolsMenuActionsButton = "ServerTools-InternalToolsMenuActions";
+
+	public static final String returnToPolicyCenterOption = "//*[@id=\"ServerTools-InternalToolsMenuActions-ReturnToApp\"]/div";
+
+	public static final String url = "http://localhost:8180/pc/PolicyCenter.do";
+	public static final String supervisor = "Login-LoginScreen-LoginDV-username";
+	public static final String supervisorpassword = "Login-LoginScreen-LoginDV-password";
+	public static final String login = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[5]/div/div/div[3]/div[2]/div/div/div[2]";
+	public static final String desktopMenuOPtions = "Desktop-DesktopMenuActions";
+	public static final String accountsTab = "/html/body/form/div/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]";
+	public static final String actionsMenu = "/html/body/form/div/div[2]/div[1]/div[1]/div";
+	public static final String clickOnAccount = "/html/body/form/div/div[2]/div[1]/div[1]/div/div[3]/div[3]/div/div[2]";
+	public static final String firstName = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div[1]/div/div[6]/div[2]/div/div/input";
+	public static final String lastName = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div[1]/div/div[9]/div[2]/div/div/input";
+	public static final String searchForAccount = "NewAccount-NewAccountScreen-NewAccountSearchDV-SearchAndResetInputSet-SearchLinksInputSet-Search";
+	public static final String clickOnCreateAccount = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/div[1]/div[2]";
+	public static final String selectCompany = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/div[3]/div[2]/div";
+	public static final String address = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div/div[31]/div[2]/div/div/input";
+	public static final String selectcity = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div/div[34]/div[2]/div/div/div[1]/input";
+	public static final String state = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div/div[36]/div[2]/div/div/div/select";
+	public static final String ZIP_code = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div/div[37]/div[2]/div/div/div[1]/input";
+	public static final String addressType = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div/div[38]/div[2]/div/div/div/select";
+	public static final String searchOrganization = "CreateAccount-CreateAccountScreen-CreateAccountDV-ProducerSelectionInputSet-Producer-SelectOrganization";
+	public static final String searchOrganizationName = "OrganizationSearchPopup-OrganizationSearchPopupScreen-OrganizationSearchDV-GlobalContactNameInputSet-Name";
+	public static final String search = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[3]/div[2]/div/div[2]/table/tbody/tr[2]/td[1]/div/div/div";
+	public static final String updateButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]";
+
+	public static final String newSubmission = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div[1]/div[4]/div[1]/div[2]/div/div/div[2]");
+	public static final String newSubmissionScreen = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div/div/div/div[2]/div/div/div[2]/table/tbody/tr[10]/td[1]/div/div/div");
+	public static final String OfferingsScreen = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div/div/div[2]/div/div/div/select");
+	public static final String next = ("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[2]/div/div[2]");
+	public static final String qualificationsScreen = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div/div[3]/div[2]/div/div/div[2]/table/tbody/tr[1]/td[2]/div/div/div/div/select");
+	public static final String next1 = ("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]");
+	public static final String secondaryaNamedInsured = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div[1]/div[28]/div[2]/div/div[2]/div/div[2]";
+	public static final String secondaryaNamedInsuredNewPerson = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div[1]/div[28]/div[2]/div/div[2]/div/div[3]/div[1]/div";
+	public static final String SNIFirstname = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[4]/div[2]/div/div/input";
+	public static final String SNILastname = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[7]/div[2]/div/div/input";
+	public static final String SNIDOB = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[9]/div[2]/div/div/input";
+	public static final String SNIAddressLine1 = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[35]/div[2]/div/div/input";
+	public static final String SNIState = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[40]/div[2]/div/div/div/select";
+	public static final String SNIZipcode = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[41]/div[2]/div/div/div[1]/input";
+	public static final String SNIAddressType = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[42]/div[2]/div/div/div/select";
+	public static final String SNILicenseNumber = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[45]/div[2]/div/div/input";
+	public static final String SNILicenseState = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[46]/div[2]/div/div/div/select";
+	public static final String SNIOK = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[1]/div/div[2]";
+	public static final String termType = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div[3]/div[2]/div[2]/div/div/div/select";
+	public static final String toDriversScreen = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]";
+	public static final String addDriver = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[1]";
+	public static final String existingDriverType = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[3]/div[1]";
+	public static final String existingDrivername = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[3]/div[3]/div[2]/div/div[2]";
+
+	public static final String toRoles = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[1]/div[2]/div/div[2]";
+
+	public static final String existingDriverYearFirstLicensed = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[1]/td/div[2]/div/div/div[4]/div[2]/div/div/input";
+
+	public static final String existingDriverNumberOfAccidentsPolicyLevel = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[2]/td[2]/div/div/div/div/select";
+
+	public static final String existingDriverNumberOfAccidentsAccountLevel = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[2]/td[3]/div/div/div/div/select";
+
+	public static final String existingDriverNumberOfViolationsPolicyLevel = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[3]/td[2]/div/div/div/div/select";
+
+	public static final String existingDriverNumberOfViolationsAccountLevel = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[3]/td[3]/div/div/div/div/select";
+
+	public static final String toVehiclesScreen = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]";
+
+	public static final String vehicle1AddOrRemove = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[2]/div[2]/div/div[2]";
+
+	public static final String vehicle1VIN = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[4]/div[2]/div/div/input";
+
+	public static final String vehicle1LicenseState = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[11]/div[2]/div/div/div/select";
+
+	public static final String vehicle1GaragedAt = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[12]/div[2]/div/div[1]/div/select";
+
+	public static final String AssignDriver = "SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-AddDriver";
+
+	public static final String vehicle1Driver1Assignment = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[17]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div/div";
+
+	public static final String vehicle1Driver1Percentage = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[17]/div[2]/div/div/div[2]/table/tbody/tr[2]/td[3]/div/div/div/input";
+
+	public static final String vehicle1CostNew = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/input";
+
+	public static final String vehicle1AI = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[1]/div[2]/div/div[2]";
+
+	public static final String addVehicle1AI = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[1]";
+
+	public static final String existingAI = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[1]/div[2]";
+
+	public static final String existingAIselect = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[1]/div[2]";
+
+	public static final String vehicle1AIExisingPerson = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[3]/div/div/div[2]";
+
+	public static final String vehicle1AIExisingPersonIntrestType = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[2]/table/tbody/tr[2]/td[3]/div/div/div/div/select";
+
+	public static final String toPACoverages = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]";
+
+	public static final String vehicle1Collison = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div[2]/div[3]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/div/input";
+
+	public static final String toRiskAnalysIsScreen = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]";
+
+	public static final String policyCreationQuote = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[4]/div/div[2]/div";
+
+	public static final String policyBindOptions = "SubmissionWizard-Job_RiskAnalysisScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote";
+
+	public static final String issue = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[8]/div[3]/div[2]/div/div[2]";
+
+	public static final String NewTransactionButton = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[10]/div[1]/div[1]/div[1]/div[2]/div/div[1]/div";
+	public static final String PolicyChangeOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[10]/div[1]/div[1]/div[1]/div[2]/div/div[3]/div[1]/div/div[2]";
+	public static final String policyChangeDescription = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[2]/div[2]/div/div/input";
+	public static final String StartPolicyChangeNextButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[1]/div ";
+	public static final String PolicyInfoNextButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div";
+	public static final String NewDriverDropdown = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[1]";
+	public static final String OfferingSelection = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div/div/div[2]/div/div/div/select";
+	public static final String OfferingsScreenNextButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[2]/div";
+
+	public static final String TermTypeOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div[3]/div[2]/div[2]/div/div/div/select";
+
+	public static final String NewDriverAdd = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[1]";
+	public static final String NewPersonOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div/div[2]";
+	public static final String policyChangeDriver1Firstname = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[4]/div[2]/div/div/input";
+
+	public static final String policyChangeExistingDriverYearFirstLicensed = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[3]/div/div/div[6]/div[2]/div/div/input";
+
+	public static final String policyChangeDriver1Lastname = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[7]/div[2]/div/div/input";
+	public static final String policyChangeDriver1dateOfBirth = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[9]/div[2]/div/div/input";
+	public static final String policyChangeDriver1Address1 = " /html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[35]/div[2]/div/div/input";
+	public static final String policyChangeDriver1City = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[38]/div[2]/div/div/div[1]/input";
+	public static final String policyChangeDriver1State = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[40]/div[2]/div/div/div/select";
+	public static final String policyChangeDriver1ZIPCode = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[41]/div[2]/div/div/div[1]/input";
+	public static final String policyChangeDriver1AdressType = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[42]/div[2]/div/div/div/select";
+
+	public static final String policyChangeDriver1LicenseNumber = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[45]/div[2]/div/div/input";
+	public static final String policyChangeDriver1LicenseState = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[2]/div/div/div[46]/div[2]/div/div/div/select";
+
+	public static final String NewDriverOkButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[1]/div";
+	public static final String RolesTab = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[1]/div[2]/div";
+	public static final String policyChangeDriver1NumberOfAccidentsPolicyLevel = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[2]/td[2]/div/div/div/div/select";
+	public static final String policyChangeDriver1NumberOfAccidentsAccountLevel = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[2]/td[3]/div/div/div/div/select";
+	public static final String policyChangeDriver1NumberOfViolationsPolicyLevel = " /html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[3]/td[2]/div/div/div/div/select";
+	public static final String policyChangeDriver1NumberOfViolationsAccountLevel = " /html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[3]/td[3]/div/div/div/div/select";
+
+	public static final String DriversNextButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div";
+
+	public static final String CreateVehicleButton = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[2]/div[2]/div";
+
+	public static final String policyChangeVehicle1VIN = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[4]/div[2]/div/div/input";
+	public static final String policyChangeVehicle1LicenseState = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[11]/div[2]/div/div/div/select";
+	public static final String policyChangeVehicle1CostNew = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/input";
+	public static final String Driver1Assignment = " /html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[17]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[1]";
+	public static final String policyChangeVehicle1Driver1Assignment = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[17]/div[2]/div/div/div[2]/table/tbody/tr[2]/td[3]/div/div/div/input";
+	public static final String VehiclesNextButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]";
+	public static final String policyChangeVehicle1Comprehensive = " /html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div[2]/div[3]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/div/input";
+	public static final String policyChangeVehicle1ComprehensiveLimit = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div[2]/div[3]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div/select";
+	public static final String policyChangeQuoteButton = " /html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[4]/div/div[2]";
+	public static final String IssuePolicy = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[7]/div";
+
+	public static final String CancellationOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[10]/div[1]/div[1]/div[1]/div[2]/div/div[3]/div[2]/div/div[2]";
+
+	public static final String policyCancellationSource = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[1]/div[2]/div/div/div/select";
+	public static final String policyCancellationReason = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[2]/div[2]/div/div/div/select";
+	public static final String policyCancellationReasonDescription = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[3]/div[2]/div/div/textarea";
+	public static final String StartCancellationButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[1]/div";
+	public static final String BindOptions = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[5]/div[1]";
+
+	public static final String ScheduleCancellation = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[5]/div[3]/div[1]/div/div[2]";
+
+	public static final String PolicyTabButton = "/html/body/form/div/div[1]/div/div[2]/div[2]/div[1]/div[3]/div[1]";
+
+	public static final String CancelNowOption = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[5]/div[3]/div/div/div[2]";
+	public static final String CancelPolicyOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[10]/div[1]/div[1]/div[1]/div[2]/div/div[3]/div[2]/div";
+	public static final String ReinstatePolicyOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[10]/div[1]/div[1]/div[1]/div[2]/div/div[3]/div[3]/div/div[2]";
+	public static final String reasonDescription = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[17]/div[2]/div/div/textarea";
+	public static final String StartReinstatementNext = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[2]/div";
+	public static final String reason = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[16]/div[2]/div/div/div/select";
+	public static final String quoteButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]";
+	public static final String reinstateButton = "/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[6]/div/div[2]";
+
+	public static final String policyTabDropdown = "/html/body/form/div/div[1]/div/div[2]/div[2]/div[1]/div[3]/div[3]";
+	public static final String policySearchField = "/html/body/form/div/div[1]/div/div[2]/div[2]/div[1]/div[3]/div[4]/div[3]/div[2]/div[2]/div/input";
+}
