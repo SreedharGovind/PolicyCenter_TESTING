@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtils_TS14 {
 	public static String getCellValueByLabel(String label) throws Exception {
-		String filePath = "C:\\\\Users\\\\GovindaSreedhar.Kopp.SMARTIMS\\\\eclipse-workspace\\\\PolicyCenter\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
 		String sheetname = "TS_14";
 		FileInputStream file = new FileInputStream(new File(filePath));
 		Workbook workbook = WorkbookFactory.create(file);

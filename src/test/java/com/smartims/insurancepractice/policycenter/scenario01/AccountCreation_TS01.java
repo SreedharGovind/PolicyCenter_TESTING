@@ -19,7 +19,6 @@ public class AccountCreation_TS01 {
 
 	public void accountCreation(ChromeDriver driver, Actions actions) throws IOException {
 		AccountCreationVO pvo = new AccountCreationVO();
-
 		WebElement menuOption = driver.findElement(By.id(ConstantsClassPC.desktopMenuOPtions));
 		actions.moveToElement(menuOption).perform();
 		driver.findElement(By.xpath(ConstantsClassPC.actionsMenu)).click();

@@ -13,7 +13,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtils_TS02 {
 	public static String getCellValueByLabel(String label) throws IOException {
 
-		String filePath = "C:\\\\Users\\\\GovindaSreedhar.Kopp.SMARTIMS\\\\eclipse-workspace\\\\PolicyCenter\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
 		String sheetName = "TS_02";
 
 		FileInputStream file = new FileInputStream(new File(filePath));

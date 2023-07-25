@@ -20,7 +20,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class ExcelUtils_TS25{
 	public static String getCellValueByLabel(String label) throws IOException {
 
-		String filePath = "C:\\\\Users\\\\GovindaSreedhar.Kopp.SMARTIMS\\\\eclipse-workspace\\\\PolicyCenter\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
 		String sheetName = "TS_25";
 
 		FileInputStream file = new FileInputStream(new File(filePath));
