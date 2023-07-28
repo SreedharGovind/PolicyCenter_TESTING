@@ -14,10 +14,10 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtils_TS24{
 	public static String getCellValueByLabel(String label) throws IOException {
 
-//		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
 		String sheetName = "TS_24";
 
-		FileInputStream file = new FileInputStream(new File("PolicyCenterDataNew.xlsx"));
+		FileInputStream file = new FileInputStream(new File(filePath));
 		Workbook workbook = WorkbookFactory.create(file);
 
 		Sheet sheet = workbook.getSheet(sheetName);
