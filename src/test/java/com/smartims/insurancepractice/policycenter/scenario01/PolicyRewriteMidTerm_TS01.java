@@ -20,7 +20,7 @@ public class PolicyRewriteMidTerm_TS01 {
 		midTermVO.setRewriteMidTermOfferingsSelection(
 				ExcelUtils_TS01.getCellValueByLabel("rewriteMidTermOfferingsSelection"));
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteMidTermOfferingsSelection))
-		.sendKeys(midTermVO.getRewriteMidTermOfferingsSelection());
+				.sendKeys(midTermVO.getRewriteMidTermOfferingsSelection());
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteMidTermToInfoScreen)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteMidTermQuote)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteMidTermPolicyIssue)).click();

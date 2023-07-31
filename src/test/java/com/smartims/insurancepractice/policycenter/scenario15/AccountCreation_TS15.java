@@ -19,12 +19,12 @@ public class AccountCreation_TS15 {
 		driver.findElement(By.xpath(Constants.clickonActions)).click();
 		driver.findElement(By.xpath(Constants.clickOnNewAccount)).click();
 
-		avo.setFirstName(ExcelUtils_TS15. getCellValueByLabel("firstname"));
-		avo.setLastName(ExcelUtils_TS15. getCellValueByLabel("lastname"));
-		avo.setAddressLine1(ExcelUtils_TS15. getCellValueByLabel("addressLine1"));
-		avo.setState(ExcelUtils_TS15. getCellValueByLabel("state"));
-		avo.setAddressType(ExcelUtils_TS15. getCellValueByLabel("addressType"));
-		avo.setOrganizationName(ExcelUtils_TS15. getCellValueByLabel("organizationName"));
+		avo.setFirstName(ExcelUtils_TS15.getCellValueByLabel("firstname"));
+		avo.setLastName(ExcelUtils_TS15.getCellValueByLabel("lastname"));
+		avo.setAddressLine1(ExcelUtils_TS15.getCellValueByLabel("addressLine1"));
+		avo.setState(ExcelUtils_TS15.getCellValueByLabel("state"));
+		avo.setAddressType(ExcelUtils_TS15.getCellValueByLabel("addressType"));
+		avo.setOrganizationName(ExcelUtils_TS15.getCellValueByLabel("organizationName"));
 
 		driver.findElement(By.name(Constants.fristName)).sendKeys(avo.getFirstName(), Keys.TAB);
 		driver.findElement(By.name(Constants.lastName)).sendKeys(avo.getLastName(), Keys.TAB);

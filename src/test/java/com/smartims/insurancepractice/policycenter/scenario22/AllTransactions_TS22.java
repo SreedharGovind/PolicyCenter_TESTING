@@ -17,12 +17,10 @@ public class AllTransactions_TS22 {
 		AccountCreation_TS22 ac = new AccountCreation_TS22();
 		ac.accountCreation(drivers, actions);
 
-
 		// create Submission
 		PolicyIssuance_TS22 sub = new PolicyIssuance_TS22();
 		sub.submission22(drivers, actions);
 
-	
 		// Policy Change
 		PolicyChange_TS22 pc = new PolicyChange_TS22();
 		pc.policyChange22(drivers, actions);
@@ -34,7 +32,7 @@ public class AllTransactions_TS22 {
 		// PolicyReinstatement22
 		PolicyReinstatement_TS22 pr = new PolicyReinstatement_TS22();
 		pr.policyReinstatement22(drivers, actions);
-	
+
 		// policy Renewal
 		PolicyManualRenewal_TS22 ar = new PolicyManualRenewal_TS22();
 		ar.policyRenew(drivers, actions);

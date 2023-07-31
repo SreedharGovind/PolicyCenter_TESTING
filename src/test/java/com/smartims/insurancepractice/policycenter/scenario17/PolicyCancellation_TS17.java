@@ -11,7 +11,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyCancellationVO
 
 import PolicyCenterTransactions.Constants;
 
-
 public class PolicyCancellation_TS17 {
 	void cancelpolicy(ChromeDriver driver, Actions action) throws Exception {
 		PolicyCancellationVO cvo = new PolicyCancellationVO();

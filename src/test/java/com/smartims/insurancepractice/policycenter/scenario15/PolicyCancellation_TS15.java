@@ -12,8 +12,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyCancellationVO
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class PolicyCancellation_TS15 {
 	void cancelpolicy(ChromeDriver driver, Actions action) throws Exception {
 		PolicyCancellationVO cvo = new PolicyCancellationVO();
@@ -23,11 +21,11 @@ public class PolicyCancellation_TS15 {
 		action.moveToElement(Trans).perform();
 		Trans.click();
 		driver.findElement(By.xpath(Constants.cancelPolicy)).click();
-		cvo.setPolicyCancellationSource(ExcelUtils_TS15. getCellValueByLabel("policyCancellationSource"));
+		cvo.setPolicyCancellationSource(ExcelUtils_TS15.getCellValueByLabel("policyCancellationSource"));
 		cvo.setPolicyCancellationReasonDescription(
-				ExcelUtils_TS15. getCellValueByLabel("policyCancellationReasonDescription"));
-		cvo.setPolicyCancellationReason(ExcelUtils_TS15. getCellValueByLabel("policyCancellationReason"));
-		cvo.setCancellationEffectiveDate(ExcelUtils_TS15. getCellValueByLabel("cancellationEffectiveDate"));
+				ExcelUtils_TS15.getCellValueByLabel("policyCancellationReasonDescription"));
+		cvo.setPolicyCancellationReason(ExcelUtils_TS15.getCellValueByLabel("policyCancellationReason"));
+		cvo.setCancellationEffectiveDate(ExcelUtils_TS15.getCellValueByLabel("cancellationEffectiveDate"));
 
 		// Selecting the Source
 

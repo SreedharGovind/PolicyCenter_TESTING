@@ -9,8 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyCancellationVO;
 
-import PolicyCenterTransactions.Constants;
-;
+import PolicyCenterTransactions.Constants;;
 
 public class PolicyCancellation_TS14 {
 	void cancelpolicy(ChromeDriver driver, Actions action) throws Exception {

@@ -14,15 +14,15 @@ public class PolicyReinstatement_TS24 {
 	public void policyReinstatement(ChromeDriver driver, Actions actions) throws IOException {
 		PolicyReinstatementVO reinstateVO = new PolicyReinstatementVO();
 
-	
 		driver.findElement(By.xpath(ConstantsClassPC.transactions)).click();
 		driver.findElement(By.id(ConstantsClassPC.reinstatePolicyID)).click();
 		reinstateVO.setReinstatementReason(ExcelUtils_TS24.getCellValueByLabel("reinstatementReason"));
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementReason))
-		.sendKeys(reinstateVO.getReinstatementReason());
-		reinstateVO.setReinstatementReasonDescription(ExcelUtils_TS24.getCellValueByLabel("reinstatementReasonDescription"));
+				.sendKeys(reinstateVO.getReinstatementReason());
+		reinstateVO.setReinstatementReasonDescription(
+				ExcelUtils_TS24.getCellValueByLabel("reinstatementReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementReasonDescription))
-		.sendKeys(reinstateVO.getReinstatementReasonDescription());
+				.sendKeys(reinstateVO.getReinstatementReasonDescription());
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementQuote)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.reinstateButton)).click();
 		driver.switchTo().alert().accept();

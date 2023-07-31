@@ -4,14 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import com.smartims.insurancepractice.policycenter.policyVO.PolicyAutoRenewalVO;
-
 import PolicyCenterTransactions.ConstantsClassPC;
 
 public class PolicyRenewal_TS26 {
 
 	public void policyRenew(ChromeDriver driver, Actions actions) throws InterruptedException {
-		PolicyAutoRenewalVO pvo = new PolicyAutoRenewalVO();
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.PolicyRenewOption)).click();
 		Thread.sleep(2000);

@@ -8,25 +8,15 @@ import org.openqa.selenium.interactions.Actions;
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class SearchForpolicy {
-	void searchForPolicy(ChromeDriver driver,Actions action) {
+	void searchForPolicy(ChromeDriver driver, Actions action) {
 
 		// search for the policy
 		WebElement menuOption = driver.findElement(By.id(Constants.policyTab));
 		action.moveToElement(menuOption).perform();
 		driver.findElement(By.xpath(Constants.policySearchTab)).click();
 
-		driver.findElement(By.name(Constants.enterPolicyNumber)).sendKeys("9698562836",
-				Keys.ENTER);
-		
-		
-		
-
-		
-
-	
+		driver.findElement(By.name(Constants.enterPolicyNumber)).sendKeys("9698562836", Keys.ENTER);
 
 	}
 

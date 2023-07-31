@@ -13,11 +13,10 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
 import PolicyCenterTransactions.Constants;
 import PolicyCenterTransactions.ConstantsClassPC;
 
-
 public class PolicyIssuance_TS12 {
 	void newSubmission(ChromeDriver driver, Actions action) throws Exception {
 
-		PolicyIssuanceVO svo =new PolicyIssuanceVO();
+		PolicyIssuanceVO svo = new PolicyIssuanceVO();
 
 		// New submission
 		driver.findElement(By.xpath(Constants.clickOnNewSubbmission)).click();
@@ -75,16 +74,16 @@ public class PolicyIssuance_TS12 {
 		svo.setVehicle1VIN(ExcelUtils_TS12.getCellValueByLabel("vehicle1VIN"));
 		svo.setVehicle1LicenseState(ExcelUtils_TS12.getCellValueByLabel("vehicle1LicenseState"));
 		svo.setVehicle1CostNew(ExcelUtils_TS12.getCellValueByLabel("vehicle1CostNew"));
-		svo.setVehicle1AIExisingPersonIntrestType(ExcelUtils_TS12.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
-		
+		svo.setVehicle1AIExisingPersonIntrestType(
+				ExcelUtils_TS12.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
+
 		svo.setVehicle2Type(ExcelUtils_TS12.getCellValueByLabel("vehicle2Type"));
 		svo.setVehicle2VIN(ExcelUtils_TS12.getCellValueByLabel("vehicle2VIN"));
 		System.out.println(svo.getVehicle2VIN());
 		svo.setVehicle2LicenseState(ExcelUtils_TS12.getCellValueByLabel("vehicle2LicenseState"));
 		svo.setVehicle2CostNew(ExcelUtils_TS12.getCellValueByLabel("vehicle2CostNew"));
-		svo.setVehicle2AIExisingPersonIntrestType(ExcelUtils_TS12.getCellValueByLabel("vehicle2AIExisingPersonIntrestType"));
-
-		
+		svo.setVehicle2AIExisingPersonIntrestType(
+				ExcelUtils_TS12.getCellValueByLabel("vehicle2AIExisingPersonIntrestType"));
 
 //		svo.setVehicle1comprehensive(ExcelUtils13.getCellValueByLabel("vehicle1comprehensive"));
 
@@ -101,7 +100,6 @@ public class PolicyIssuance_TS12 {
 				"//*[@id=\"SubmissionWizard-SubmissionWizard_PreQualificationScreen-PreQualQuestionSetsDV-QuestionSetsDV-0-QuestionSetLV-0-QuestionModalInput-ChoiceSelectInput_NoPost\"]/div/div/select"))
 				.sendKeys(svo.getIsApplicantCurrentlyInsured(), Keys.ENTER);
 
-		
 //		// Changing the primary name insured details
 
 		WebElement primary = driver.findElement(By.id(
@@ -174,12 +172,12 @@ public class PolicyIssuance_TS12 {
 //				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-WrittenDate"))
 //				.sendKeys("05/11/2023", Keys.ENTER);
 //Thread.sleep(2000);
-		WebElement click=driver.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]"));
+		WebElement click = driver
+				.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]"));
 		action.moveToElement(click).perform();
 		click.click();
-		
-		driver.findElement(By.id("SubmissionWizard-Next")).click();
 
+		driver.findElement(By.id("SubmissionWizard-Next")).click();
 
 		// >>>>>>>>> Adding Existing Driver <<<<<<<<<< 
 		driver.findElement(By.id(Constants.addDriver)).click();
@@ -215,7 +213,7 @@ public class PolicyIssuance_TS12 {
 		driver.findElement(By.xpath(Constants.clickOnRolesTab)).click();
 		svo.setExistingDriverYearFirstLicensed(ExcelUtils_TS12.getCellValueByLabel("existingDriverYearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC.existingDriverYearFirstLicensed))
-		.sendKeys(svo.getExistingDriverYearFirstLicensed());
+				.sendKeys(svo.getExistingDriverYearFirstLicensed());
 		svo.setExistingDriverNumberOfAccidentsPolicyLevel(
 				ExcelUtils_TS12.getCellValueByLabel("existingDriverNumberOfAccidentsPolicyLevel"));
 		Select roles = new Select(
@@ -311,8 +309,6 @@ public class PolicyIssuance_TS12 {
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-0-PolicyContactRolePanelSet-DriverNumberOfViolations")));
 		select10.selectByValue("0");
 
-
-
 		// Click on Next for the Vehicles Screen 
 		driver.findElement(By.id(Constants.submissionWizardNext)).click();
 
@@ -348,16 +344,18 @@ public class PolicyIssuance_TS12 {
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-annualmiles_DV"));
 		milage.sendKeys("30000");
 
-
-
 		// -------------------Vehicles Screen, Adding a Vehicle2------------------- 
 		driver.findElement(By.id(Constants.addVechile)).click();
 //		driver.findElement(By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-VehicleDetailCardTab")).click();
-		
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-Type_DV")).sendKeys(svo.getVehicle2Type(),Keys.TAB);
+
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-Type_DV"))
+				.sendKeys(svo.getVehicle2Type(), Keys.TAB);
 		// VIN 
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-Vin_DV")).sendKeys(svo.getVehicle2VIN(), Keys.ENTER, Keys.TAB,
-				Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB);
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-Vin_DV"))
+				.sendKeys(svo.getVehicle2VIN(), Keys.ENTER, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB,
+						Keys.TAB);
 		driver.findElement(By.name(
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-LicenseState_DV"))
 				.sendKeys(svo.getVehicle2LicenseState(), Keys.ENTER);
@@ -429,7 +427,8 @@ public class PolicyIssuance_TS12 {
 		}
 
 		// -------------------PA Coverage Screen of vehicle2------------------- 
-		WebElement vehicle2coverage=driver.findElement(By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-PAPerVehiclePanelSet-VehicleCoveragesLV-1-VehicleNumber"));
+		WebElement vehicle2coverage = driver.findElement(By.id(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-PAPerVehiclePanelSet-VehicleCoveragesLV-1-VehicleNumber"));
 		action.moveToElement(vehicle2coverage).perform();
 		vehicle2coverage.click();
 		String v2coverage = "Collision";

@@ -3,7 +3,6 @@ package com.smartims.insurancepractice.policycenter.scenario02;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -26,7 +25,8 @@ public class PolicyIssuance_TS02 {
 		driver.findElement(By.xpath(ConstantsClassPC.OfferingsScreen)).sendKeys(pvo.getOfferingsSelection());
 		driver.findElement(By.xpath(ConstantsClassPC.next)).click();
 		pvo.setIsApplicantCurrentlyInsured(ExcelUtils_TS02.getCellValueByLabel("isApplicantCurrentlyInsured"));
-		driver.findElement(By.xpath(ConstantsClassPC.qualificationsScreen)).sendKeys(pvo.getIsApplicantCurrentlyInsured());
+		driver.findElement(By.xpath(ConstantsClassPC.qualificationsScreen))
+				.sendKeys(pvo.getIsApplicantCurrentlyInsured());
 		driver.findElement(By.xpath(ConstantsClassPC.next1)).click();
 		pvo.setTermType(ExcelUtils_TS02.getCellValueByLabel("termType"));
 		driver.findElement(By.xpath(ConstantsClassPC.termType)).sendKeys(pvo.getTermType());
@@ -104,7 +104,8 @@ public class PolicyIssuance_TS02 {
 		driver.findElement(By.xpath(ConstantsClassPC.existingAI)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.existingAIselect)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleAIExisingPerson)).click();
-		pvo.setVehicle1AIExisingPersonIntrestType(ExcelUtils_TS02.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
+		pvo.setVehicle1AIExisingPersonIntrestType(
+				ExcelUtils_TS02.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleAIExisingPersonIntrestType))
 				.sendKeys(pvo.getVehicle1AIExisingPersonIntrestType());
 		driver.findElement(By.xpath(ConstantsClassPC.vehiclesDetails)).click();

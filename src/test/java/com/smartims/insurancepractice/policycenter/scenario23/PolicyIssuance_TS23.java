@@ -27,12 +27,12 @@ public class PolicyIssuance_TS23 {
 		driver.findElement(By.xpath(ConstantsClassPC.next)).click();
 		pvo.setIsApplicantCurrentlyInsured(ExcelUtils_TS23.getCellValueByLabel("isApplicantCurrentlyInsured"));
 		driver.findElement(By.xpath(ConstantsClassPC.qualificationsScreen))
-		.sendKeys(pvo.getIsApplicantCurrentlyInsured());
+				.sendKeys(pvo.getIsApplicantCurrentlyInsured());
 		driver.findElement(By.xpath(ConstantsClassPC.next1)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.secondaryaNamedInsured)).click();
 		pvo.setSecondaryNamedInsured(ExcelUtils_TS23.getCellValueByLabel("secondaryNamedInsured"));
 		driver.findElement(By.xpath(ConstantsClassPC.secondaryaNamedInsuredNewPerson))
-		.sendKeys(pvo.getSecondaryNamedInsured());
+				.sendKeys(pvo.getSecondaryNamedInsured());
 		pvo.setSNIFirstname(ExcelUtils_TS23.getCellValueByLabel("SNIFirstname"));
 		driver.findElement(By.xpath(ConstantsClassPC.SNIFirstname)).sendKeys(pvo.getSNIFirstname());
 		pvo.setSNILastname(ExcelUtils_TS23.getCellValueByLabel("SNILastname"));
@@ -87,7 +87,7 @@ public class PolicyIssuance_TS23 {
 		pvo.setDriver1YearFirstLicensed(ExcelUtils_TS23.getCellValueByLabel("driver1YearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC.driver1YearFirstLicensed))
 
-		.sendKeys(pvo.getDriver1YearFirstLicensed());
+				.sendKeys(pvo.getDriver1YearFirstLicensed());
 
 		driver.findElement(By.xpath(ConstantsClassPC.driver1GoodStudentDiscount)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.driver1QualifiesGoodDriverDiscount)).click();
@@ -125,11 +125,11 @@ public class PolicyIssuance_TS23 {
 		driver.findElement(By.id(ConstantsClassPC.assignDriver)).click();
 		pvo.setVehicle1Driver1Assignment(ExcelUtils_TS23.getCellValueByLabel("vehicle1Driver1Assignment"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverAssignment))
-		.sendKeys(pvo.getVehicle1Driver1Assignment());
+				.sendKeys(pvo.getVehicle1Driver1Assignment());
 		pvo.setVehicle1Driver1Percentage(ExcelUtils_TS23.getCellValueByLabel("vehicle1Driver1Percentage"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverPercentage)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverPercentage))
-		.sendKeys(pvo.getVehicle1Driver1Percentage());
+				.sendKeys(pvo.getVehicle1Driver1Percentage());
 		pvo.setVehicle1CostNew(ExcelUtils_TS23.getCellValueByLabel("vehicle1CostNew"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCostNew)).sendKeys(pvo.getVehicle1CostNew());
 		driver.findElement(By.xpath(ConstantsClassPC.quoteAtVehicleScreen)).click();

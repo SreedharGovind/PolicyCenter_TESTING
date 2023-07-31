@@ -15,19 +15,18 @@ public class AllTransactions_TS09 {
 
 		PolicyIssuance_TS09 submission = new PolicyIssuance_TS09();
 		submission.newSubmission(driver, action);
-		
+
 		PolicyChange1_TS09 change = new PolicyChange1_TS09();
 		change.changePolicy(driver, action);
 //		
-		PolicyCancellation_TS09 cancel =new PolicyCancellation_TS09();
+		PolicyCancellation_TS09 cancel = new PolicyCancellation_TS09();
 		cancel.policyCancellation(driver, action);
 //		
 		Reinstatepolicy_TS09 reinstate = new Reinstatepolicy_TS09();
 		reinstate.reinstatePolicy(driver, action);
-		
+
 		PolicyAutoRenewal_TS09 renew = new PolicyAutoRenewal_TS09();
 		renew.policyRenewal(driver, action);
-		
 
 //		
 	}

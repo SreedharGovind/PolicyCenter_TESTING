@@ -13,8 +13,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyChange_TS25 {
 	void policychange(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		PolicyChangeVO cvo = new PolicyChangeVO();
-		PolicyChangeVO pvo = new PolicyChangeVO();
-		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();	
+		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.changePolicy)).click();
 		cvo.setPolicyChangeEffectiveDate(ExcelUtils_TS25.getCellValueByLabel("policyChangeEffectiveDate"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeEffectiveDate))

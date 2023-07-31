@@ -36,12 +36,10 @@ public class AllTransactions_TS18 {
 		// policyRewrite
 		PolicyRewriteFullTerm_TS18 pre = new PolicyRewriteFullTerm_TS18();
 		pre.policyRewriteFullTerm18(drivers, actions);
-		
+
 		// policy Manual Renewal
 		PolicyManualRenewal_TS20 ar = new PolicyManualRenewal_TS20();
 		ar.policyRenew(drivers, actions);
 	}
 
-	}
-
-
+}

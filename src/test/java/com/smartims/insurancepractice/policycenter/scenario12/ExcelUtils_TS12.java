@@ -9,11 +9,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class ExcelUtils_TS12{
+import PolicyCenterTransactions.CommonClass;
+
+public class ExcelUtils_TS12 {
 	public static String getCellValueByLabel(String label) throws Exception {
-		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+
+		FileInputStream file = new FileInputStream(new File(CommonClass.excelFilePath));
 		String sheetname = "TS_12";
-		FileInputStream file = new FileInputStream(new File(filePath));
 		Workbook workbook = WorkbookFactory.create(file);
 
 		Sheet sheet = workbook.getSheet(sheetname);

@@ -9,15 +9,13 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
 
-import PolicyCenterTransactions.Constants;
-;
+import PolicyCenterTransactions.Constants;;
 
 public class PolicyChange_TS14 {
 	void changePolicy(ChromeDriver driver, Actions action) throws Exception {
 
 		// new transaction
-	    PolicyChangeVO pcvo= new PolicyChangeVO();
-	    
+		PolicyChangeVO pcvo = new PolicyChangeVO();
 
 		WebElement Trans = driver.findElement(By.xpath(Constants.newTransaction));
 		action.moveToElement(Trans).perform();
@@ -27,15 +25,15 @@ public class PolicyChange_TS14 {
 		// changing the effective date
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS14.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS14.getCellValueByLabel("policyChangeDescription"));
-		pcvo.setPolicyChangeDriver1MaritalStatus(ExcelUtils_TS14.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
+		pcvo.setPolicyChangeDriver1MaritalStatus(
+				ExcelUtils_TS14.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
 
 		driver.findElement(
 				By.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[1]/div[2]/div/div/input"))
 				.sendKeys(pcvo.getPolicyChangeEffectiveDate(), Keys.TAB);
-		
-		
 
-		driver.findElement(By.name(Constants.policyChangeDescription)).sendKeys(pcvo.getPolicyChangeDescription(), Keys.ENTER);
+		driver.findElement(By.name(Constants.policyChangeDescription)).sendKeys(pcvo.getPolicyChangeDescription(),
+				Keys.ENTER);
 		driver.findElement(By.id("StartPolicyChange-StartPolicyChangeScreen-NewPolicyChange")).click();
 
 		// driver screen martial status

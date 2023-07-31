@@ -1,4 +1,4 @@
-	package com.smartims.insurancepractice.policycenter.scenario12;
+package com.smartims.insurancepractice.policycenter.scenario12;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,11 +10,10 @@ import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 
 import PolicyCenterTransactions.Constants;
 
-
 public class AccountCreation_TS12 {
 	void createAccount(ChromeDriver driver, Actions action) throws Exception {
-		
-       AccountCreationVO avo = new AccountCreationVO();
+
+		AccountCreationVO avo = new AccountCreationVO();
 		WebElement menuOption = driver.findElement(By.id(Constants.actionsMenu));
 		action.moveToElement(menuOption).perform();
 		driver.findElement(By.xpath(Constants.clickonActions)).click();

@@ -17,7 +17,7 @@ public class PolicyAutoRenewal_TS23 {
 	void policyRenewal(ChromeDriver driver, Actions actions) throws Exception {
 
 		PolicyAutoRenewalVO pr = new PolicyAutoRenewalVO();
-		
+
 		pr.setTestingSystemClockDate(ExcelUtils_TS23.getCellValueByLabel("TestingSystemClockDate"));
 		pr.setTestingSystemClockTime(ExcelUtils_TS23.getCellValueByLabel("TestingSystemClockTime"));
 		Robot robot = new Robot();

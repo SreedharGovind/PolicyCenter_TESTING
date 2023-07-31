@@ -9,8 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class PolicyManualRenewal_TS12 {
 	void renewalpolicy(ChromeDriver driver, Actions action) {
 		// public static void main(String[] args) {
@@ -30,10 +28,11 @@ public class PolicyManualRenewal_TS12 {
 		WebElement click = driver.findElement(By.id("RenewalWizard-Next"));
 		action.moveToElement(click).perform();
 //		click.click();
-		 driver.findElement(By.id("RenewalWizard-Next")).click();
+		driver.findElement(By.id("RenewalWizard-Next")).click();
 
 		// Edit Policy Transaction
-		driver.findElement(By.id("RenewalWizard-LOBWizardStepGroup-RenewalWizard_DifferencesScreen-JobWizardToolbarButtonSet-EditPolicyWorkflow"))
+		driver.findElement(By.id(
+				"RenewalWizard-LOBWizardStepGroup-RenewalWizard_DifferencesScreen-JobWizardToolbarButtonSet-EditPolicyWorkflow"))
 				.click();
 
 		// Quote in Offering screen

@@ -24,20 +24,20 @@ public class PolicyCancellation_TS08 {
 		Select sourcecncl = new Select(driver.findElement(By.xpath(ConstantsClassPC.policyCancellationSource)));
 		sourcecncl.selectByVisibleText(cvo.getPolicyCancellationSource());
 		System.out.println(cvo.getPolicyCancellationSource());
-		
+
 		cvo.setPolicyCancellationReason(ExcelUtils_TS08.getCellValueByLabel("policyCancellationReason"));
 		Select reasondrpdwn = new Select(driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReason)));
 		reasondrpdwn.selectByVisibleText(cvo.getPolicyCancellationReason());
-	
+
 		cvo.setCancellationEffectiveDate(ExcelUtils_TS08.getCellValueByLabel("cancellationEffectiveDate"));
 		driver.findElement(By.id(ConstantsClassPC.cancelDateIcon)).click();
 		WebElement date = driver.findElement(By.name(ConstantsClassPC.cancellationEffectiveDateID));
 		date.sendKeys(cvo.getCancellationEffectiveDate());
-	
+
 		cvo.setPolicyCancellationReasonDescription(
 				ExcelUtils_TS08.getCellValueByLabel("policyCancellationReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReasonDescription))
-		.sendKeys(cvo.getPolicyCancellationReasonDescription());
+				.sendKeys(cvo.getPolicyCancellationReasonDescription());
 		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.StartCancellationID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationBindOptions)).click();

@@ -45,8 +45,8 @@ public class PolicyChange_TS21 {
 				"//*[@id=\"StartPolicyChange-StartPolicyChangeScreen-StartPolicyChangeDV-EffectiveDate\"]/div/input"))
 				.sendKeys(pcvo.getPolicyChangeEffectiveDate());
 
-		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription)).sendKeys(pcvo.getPolicyChangeDescription(),
-				Keys.ENTER);
+		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription))
+				.sendKeys(pcvo.getPolicyChangeDescription(), Keys.ENTER);
 
 		WebElement policyChangeNext = driver.findElement(By.xpath(ConstantsClass18.policyChangeScreenNextButton));
 		actions.moveToElement(policyChangeNext).perform();

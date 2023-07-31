@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
-import com.smartims.insurancepractice.policycenter.scenario02.ExcelUtils_TS02;
 
 import PolicyCenterTransactions.ConstantsClassPC;
 
@@ -29,12 +28,12 @@ public class PolicyIssuance_TS01 {
 		driver.findElement(By.xpath(ConstantsClassPC.next)).click();
 		pvo.setIsApplicantCurrentlyInsured(ExcelUtils_TS01.getCellValueByLabel("isApplicantCurrentlyInsured"));
 		driver.findElement(By.xpath(ConstantsClassPC.qualificationsScreen))
-		.sendKeys(pvo.getIsApplicantCurrentlyInsured());
+				.sendKeys(pvo.getIsApplicantCurrentlyInsured());
 		driver.findElement(By.xpath(ConstantsClassPC.next1)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.secondaryaNamedInsured)).click();
 		pvo.setSecondaryNamedInsured(ExcelUtils_TS01.getCellValueByLabel("secondaryNamedInsured"));
 		driver.findElement(By.xpath(ConstantsClassPC.secondaryaNamedInsuredNewPerson))
-		.sendKeys(pvo.getSecondaryNamedInsured());
+				.sendKeys(pvo.getSecondaryNamedInsured());
 		pvo.setSNIFirstname(ExcelUtils_TS01.getCellValueByLabel("SNIFirstname"));
 		driver.findElement(By.xpath(ConstantsClassPC.SNIFirstname)).sendKeys(pvo.getSNIFirstname());
 		pvo.setSNILastname(ExcelUtils_TS01.getCellValueByLabel("SNILastname"));
@@ -71,7 +70,7 @@ public class PolicyIssuance_TS01 {
 		pvo.setExistingDriverYearFirstLicensed(ExcelUtils_TS01.getCellValueByLabel("existingDriverYearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC.existingDriverYearFirstLicensed1)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.existingDriverYearFirstLicensed1))
-		.sendKeys(pvo.getExistingDriverYearFirstLicensed());
+				.sendKeys(pvo.getExistingDriverYearFirstLicensed());
 		pvo.setExistingDriverNumberOfAccidentsPolicyLevel(
 				ExcelUtils_TS01.getCellValueByLabel("existingDriverNumberOfAccidentsPolicyLevel"));
 		Select roles = new Select(
@@ -106,11 +105,11 @@ public class PolicyIssuance_TS01 {
 		driver.findElement(By.id(ConstantsClassPC.assignDriver)).click();
 		pvo.setVehicle1Driver1Assignment(ExcelUtils_TS01.getCellValueByLabel("vehicle1Driver1Assignment"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverAssignment))
-		.sendKeys(pvo.getVehicle1Driver1Assignment());
+				.sendKeys(pvo.getVehicle1Driver1Assignment());
 		pvo.setVehicle1Driver1Percentage(ExcelUtils_TS01.getCellValueByLabel("vehicle1Driver1Percentage"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverPercentage)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverPercentage))
-		.sendKeys(pvo.getVehicle1Driver1Percentage());
+				.sendKeys(pvo.getVehicle1Driver1Percentage());
 		pvo.setVehicle1CostNew(ExcelUtils_TS01.getCellValueByLabel("vehicle1CostNew"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCostNew)).sendKeys(pvo.getVehicle1CostNew());
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleAI)).click();
@@ -121,7 +120,7 @@ public class PolicyIssuance_TS01 {
 		pvo.setVehicle1AIExisingPersonIntrestType(
 				ExcelUtils_TS01.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleAIExisingPersonIntrestType))
-		.sendKeys(pvo.getVehicle1AIExisingPersonIntrestType());
+				.sendKeys(pvo.getVehicle1AIExisingPersonIntrestType());
 		driver.findElement(By.xpath(ConstantsClassPC.toPACoverages)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCollison)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.toRiskAnalysIsScreen)).click();

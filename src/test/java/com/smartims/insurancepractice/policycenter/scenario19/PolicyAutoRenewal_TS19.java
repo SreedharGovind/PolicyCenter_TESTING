@@ -72,10 +72,10 @@ public class PolicyAutoRenewal_TS19 {
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockDate)).clear();
 
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockDate))
-		.sendKeys(pr.getTestingSystemClockCurrentDate());
+				.sendKeys(pr.getTestingSystemClockCurrentDate());
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime))
-		.sendKeys(pr.getTestingSystemClockCurrentTime());
+				.sendKeys(pr.getTestingSystemClockCurrentTime());
 		driver.findElement(By.xpath(ConstantsClassPC.policyRenewalChangeDateButton)).click();
 		WebElement policyRenewalStartRunButton1 = driver.findElement(By.id(ConstantsClassPC.autoRenewalsettings));
 		actions.moveToElement(policyRenewalStartRunButton1).perform();

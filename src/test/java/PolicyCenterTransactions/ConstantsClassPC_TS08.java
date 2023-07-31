@@ -2,7 +2,6 @@ package PolicyCenterTransactions;
 
 public class ConstantsClassPC_TS08 {
 
-	
 	public static final String newSubmission = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div[1]/div[4]/div[1]/div[2]/div/div/div[2]");
 	public static final String newSubmissionScreen = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div/div/div/div[2]/div/div/div[2]/table/tbody/tr[10]/td[1]/div/div/div");
 	public static final String OfferingsScreen = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div/div/div[2]/div/div/div/select");

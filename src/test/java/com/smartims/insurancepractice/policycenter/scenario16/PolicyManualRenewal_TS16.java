@@ -22,7 +22,7 @@ public class PolicyManualRenewal_TS16 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyRenewBindingOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.PolicyRenewIssueNow)).click();
 		driver.switchTo().alert().accept();
-		
+
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 	}
 

@@ -9,7 +9,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyManualRenewal_TS22 {
 
 	public void policyRenew(ChromeDriver driver, Actions actions) throws InterruptedException {
-		
+
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.PolicyRenewOption)).click();
 		Thread.sleep(2000);
@@ -20,7 +20,7 @@ public class PolicyManualRenewal_TS22 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyRenewBindingOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.PolicyRenewIssueNow)).click();
 		driver.switchTo().alert().accept();
-		
+
 	}
 
 }

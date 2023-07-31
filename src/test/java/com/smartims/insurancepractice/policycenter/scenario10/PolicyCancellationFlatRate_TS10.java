@@ -30,7 +30,7 @@ public class PolicyCancellationFlatRate_TS10 {
 		cvo.setPolicyCancellationReasonDescription(
 				ExcelUtils_TS10.getCellValueByLabel("policyCancellationFlatRateReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReasonDescription))
-		.sendKeys(cvo.getPolicyCancellationReasonDescription());
+				.sendKeys(cvo.getPolicyCancellationReasonDescription());
 		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.StartCancellationID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationBindOptions)).click();

@@ -21,12 +21,12 @@ public class AccountCreation_TS09 {
 		driver.findElement(By.xpath(Constants.clickonActions)).click();
 		driver.findElement(By.xpath(Constants.clickOnNewAccount)).click();
 
-		avo.setFirstName(ExcelUtils_TS13. getCellValueByLabel("firstname"));
-		avo.setLastName(ExcelUtils_TS13. getCellValueByLabel("lastname"));
-		avo.setAddressLine1(ExcelUtils_TS13. getCellValueByLabel("addressLine1"));
-		avo.setState(ExcelUtils_TS13. getCellValueByLabel("state"));
-		avo.setAddressType(ExcelUtils_TS13. getCellValueByLabel("addressType"));
-		avo.setOrganizationName(ExcelUtils_TS13. getCellValueByLabel("organizationName"));
+		avo.setFirstName(ExcelUtils_TS13.getCellValueByLabel("firstname"));
+		avo.setLastName(ExcelUtils_TS13.getCellValueByLabel("lastname"));
+		avo.setAddressLine1(ExcelUtils_TS13.getCellValueByLabel("addressLine1"));
+		avo.setState(ExcelUtils_TS13.getCellValueByLabel("state"));
+		avo.setAddressType(ExcelUtils_TS13.getCellValueByLabel("addressType"));
+		avo.setOrganizationName(ExcelUtils_TS13.getCellValueByLabel("organizationName"));
 
 		driver.findElement(By.name(Constants.fristName)).sendKeys(avo.getFirstName(), Keys.TAB);
 		driver.findElement(By.name(Constants.lastName)).sendKeys(avo.getLastName(), Keys.TAB);
@@ -60,7 +60,8 @@ public class AccountCreation_TS09 {
 		driver.findElement(By.xpath(Constants.clickOnaddressType)).click();
 		action.moveToElement(address).perform();
 //		driver.findElement(By.xpath(Constants.HomeAdressType)).click();
-		driver.findElement(By.xpath("//*[@id=\"CreateAccount-CreateAccountScreen-CreateAccountDV-AddressType\"]/div/div/select"))
+		driver.findElement(
+				By.xpath("//*[@id=\"CreateAccount-CreateAccountScreen-CreateAccountDV-AddressType\"]/div/div/select"))
 				.sendKeys(avo.getAddressType(), Keys.ENTER);
 		driver.findElement(By.name(Constants.producerCode)).click();
 		driver.findElement(By.xpath(Constants.searchOragnization)).click();

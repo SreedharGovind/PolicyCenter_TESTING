@@ -9,14 +9,16 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class ExcelUtils_TS13{
+import PolicyCenterTransactions.CommonClass;
+
+public class ExcelUtils_TS13 {
 	public static String getCellValueByLabel(String label) throws Exception {
-		String filePath = "C:\\\\Users\\\\GovindaSreedhar.Kopp.SMARTIMS\\\\eclipse-workspace\\\\PolicyCenter\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
-		String sheetname = "TS_13";
-		FileInputStream file = new FileInputStream(new File(filePath));
+
+		FileInputStream file = new FileInputStream(new File(CommonClass.excelFilePath));
+		String sheetName = "TS_13";
 		Workbook workbook = WorkbookFactory.create(file);
 
-		Sheet sheet = workbook.getSheet(sheetname);
+		Sheet sheet = workbook.getSheet(sheetName);
 		for (Row row : sheet) {
 
 			for (Cell cell : row) {

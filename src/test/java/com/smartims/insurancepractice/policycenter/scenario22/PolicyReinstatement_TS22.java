@@ -23,8 +23,7 @@ public class PolicyReinstatement_TS22 {
 		PolicyReinstatementVO prvo = new PolicyReinstatementVO();
 
 		prvo.setReinstatementReason(ExcelUtils_TS22.getCellValueByLabel("reinstatementReason"));
-		prvo.setReinstatementReasonDescription(
-				ExcelUtils_TS22.getCellValueByLabel("reinstatementReasonDescription"));
+		prvo.setReinstatementReasonDescription(ExcelUtils_TS22.getCellValueByLabel("reinstatementReasonDescription"));
 
 		driver.findElement(By.xpath(ConstantsClass18.newTransactionButton)).click();
 

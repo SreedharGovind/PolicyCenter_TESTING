@@ -10,11 +10,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Reinstatepolicy_TS17 {
 
-	//public static void main(String[] args) throws InterruptedException {
+	// public static void main(String[] args) throws InterruptedException {
 
-		void reinstatePolicy(ChromeDriver driver,Actions action) throws Exception {
+	void reinstatePolicy(ChromeDriver driver, Actions action) throws Exception {
 
-		
 		// new transaction reinstate
 
 		WebElement Trans = driver.findElement(By.xpath(
@@ -27,17 +26,21 @@ public class Reinstatepolicy_TS17 {
 				.click();
 
 		// Giving the Reasom and Description
-		Select Reason= new Select(driver.findElement(
+		Select Reason = new Select(driver.findElement(
 				By.name("ReinstatementWizard-ReinstatementWizard_ReinstatePolicyScreen-ReinstatePolicyDV-ReasonCode")));
 		Reason.selectByValue("other");
-		
-		driver.findElement(By.name("ReinstatementWizard-ReinstatementWizard_ReinstatePolicyScreen-ReinstatePolicyDV-ReasonDescription")).sendKeys("othe",Keys.ENTER);
 
-		//driver.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[2]/div/div[2]"))
-				//.click();
+		driver.findElement(By.name(
+				"ReinstatementWizard-ReinstatementWizard_ReinstatePolicyScreen-ReinstatePolicyDV-ReasonDescription"))
+				.sendKeys("othe", Keys.ENTER);
+
+		// driver.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[2]/div/div[2]"))
+		// .click();
 
 		// quote
-		driver.findElement(By.id("ReinstatementWizard-Job_RiskAnalysisScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote")).click();	
+		driver.findElement(By.id(
+				"ReinstatementWizard-Job_RiskAnalysisScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote"))
+				.click();
 
 		// reinstate the policy
 		driver.findElement(

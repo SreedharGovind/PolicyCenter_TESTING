@@ -1,6 +1,5 @@
 package com.smartims.insurancepractice.policycenter.scenario24;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,13 +10,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class ExcelUtils_TS24{
+import PolicyCenterTransactions.CommonClass;
+
+public class ExcelUtils_TS24 {
 	public static String getCellValueByLabel(String label) throws IOException {
 
-		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+		FileInputStream file = new FileInputStream(new File(CommonClass.excelFilePath));
 		String sheetName = "TS_24";
-
-		FileInputStream file = new FileInputStream(new File(filePath));
 		Workbook workbook = WorkbookFactory.create(file);
 
 		Sheet sheet = workbook.getSheet(sheetName);
@@ -35,5 +34,4 @@ public class ExcelUtils_TS24{
 		return null;
 	}
 
-	
 }

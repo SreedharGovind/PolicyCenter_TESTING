@@ -68,8 +68,8 @@ public class ConstantsClass03 {
 	public static final String submissionexistingDriverNumberOfViolationsAccountLevel = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[2]/div[2]/div/div[3]/div[2]/table/tbody/tr[3]/td/div/div/div[2]/table/tbody/tr[3]/td[3]/div/div/div/div/select");
 	public static final String vehicle1VIN = ("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-Vin_DV");
 	public static final String vehicle1LicenseState = ("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-LicenseState_DV");
-	public static final String vehicle1CostNew= ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/input");
-	public static final String vehicleCostNew= ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/input");
+	public static final String vehicle1CostNew = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/input");
+	public static final String vehicleCostNew = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/input");
 
 	public static final String submissioncheckbox = ("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-PAPerVehiclePanelSet-VehicleCoverageDetailsCV-PersonalAuto_VehicleCoverageDetailDV-0-CoverageInputSet-CovPatternInputGroup-_checkbox");
 	public static final String pNIDOB = ("NewAdditionalNamedInsuredPopup-ContactDetailScreen-NewPolicyContactRoleDetailsCV-PolicyContactDetailsDV-PolicyContactRoleNameInputSet-DateOfBirth");
@@ -190,7 +190,7 @@ public class ConstantsClass03 {
 
 	public static final String renewaledit = ("RenewalWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-JobWizardToolbarButtonSet-EditPolicy");
 
-	public static final String PolicyChangeUnselectVehicle2= ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[1]/div/div[2]/table/tbody/tr[3]/td[1]/div/input");
+	public static final String PolicyChangeUnselectVehicle2 = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[1]/div/div[2]/table/tbody/tr[3]/td[1]/div/input");
 
 	public static final String vehiclecheckbox = ("PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesLV-0-_Checkbox");
 
@@ -213,11 +213,10 @@ public class ConstantsClass03 {
 	public static final String submissionnextXpath = ("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div");
 
 	public static final String RenewOption = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[10]/div[1]/div[1]/div[1]/div[2]/div/div[3]/div[3]/div/div[2]";
-	
 
 	public static final String changeDOB = ("PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-PolicyContactRoleNameInputSet-DateOfBirth");
 
-    public static final String changequote = ("PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote");
+	public static final String changequote = ("PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote");
 
 	public static final String assignDriver = ("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-AddDriver");
 
@@ -259,7 +258,7 @@ public class ConstantsClass03 {
 
 	public static final String medicalLimit = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div[2]/div[2]/div/div[1]/div[5]/div[2]/div/div[2]/div/div/div/select");
 
-	public static final String removeVehicle2= ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[2]/div[3]/div/div[2]");
+	public static final String removeVehicle2 = ("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[2]/div[3]/div/div[2]");
 
 	public static final String newpolicychange = ("StartPolicyChange-StartPolicyChangeScreen-NewPolicyChange");
 
@@ -270,7 +269,6 @@ public class ConstantsClass03 {
 	public static final String issuequote = ("IssuanceWizard-OfferingScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote");
 
 	public static final String issuepolicy1 = ("IssuanceWizard-IssuanceWizard_QuoteScreen-JobWizardToolbarButtonSet-Issue");
-	
 
 	public static final String driver1NumberOfAccidentsPolicyLevel = ("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-0-PolicyContactRolePanelSet-PolicyDriverNumberOfAccidents");
 

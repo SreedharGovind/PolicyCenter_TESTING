@@ -24,7 +24,7 @@ public class PolicyChange_TS22 {
 
 		PolicyChangeVO pcvo = new PolicyChangeVO();
 		ExcelUtils_TS22 eu22 = new ExcelUtils_TS22();
-		
+
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS22.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS22.getCellValueByLabel("policyChangeDescription"));
 
@@ -42,14 +42,16 @@ public class PolicyChange_TS22 {
 
 		pcvo.setPolicyChangeOOSNewDriver1Firstname(
 				ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1Firstname"));
-		pcvo.setPolicyChangeOOSNewDriver1Lastname(ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1Lastname"));
+		pcvo.setPolicyChangeOOSNewDriver1Lastname(
+				ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1Lastname"));
 		pcvo.setPolicyChangeOOSNewdriver1dateOfBirth(
 				ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewdriver1dateOfBirth"));
 		pcvo.setPolicyChangeOOSNewDriver1Addressline1(
 				ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1Addressline1"));
 		pcvo.setPolicyChangeOOSNewDriver1City(ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1City"));
 		pcvo.setPolicyChangeOOSNewDriver1State(ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1State"));
-		pcvo.setPolicyChangeOOSNewDriver1Zipcode(ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1Zipcode"));
+		pcvo.setPolicyChangeOOSNewDriver1Zipcode(
+				ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1Zipcode"));
 		pcvo.setPolicyChangeOOSNewDriver1AddressType(
 				ExcelUtils_TS22.getCellValueByLabel("policyChangeOOSNewDriver1AddressType"));
 		pcvo.setPolicyChangeOOSNewDriver1LicenseNumber(
@@ -72,8 +74,8 @@ public class PolicyChange_TS22 {
 				"//*[@id=\"StartPolicyChange-StartPolicyChangeScreen-StartPolicyChangeDV-EffectiveDate\"]/div/input"))
 				.sendKeys(pcvo.getPolicyChangeEffectiveDate());
 
-		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription)).sendKeys(pcvo.getPolicyChangeDescription(),
-				Keys.ENTER);
+		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription))
+				.sendKeys(pcvo.getPolicyChangeDescription(), Keys.ENTER);
 
 		WebElement policyChangeNext = driver.findElement(By.xpath(ConstantsClass18.policyChangeScreenNextButton));
 		actions.moveToElement(policyChangeNext).perform();
@@ -196,7 +198,8 @@ public class PolicyChange_TS22 {
 
 		driver.findElement(By.xpath(ConstantsClass18.polChangeVehicleScrnCreateVehicle)).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(ConstantsClass18.polChangeVehicleVIN)).sendKeys(pcvo.getPolicyChangeOOSVehicle1VIN());
+		driver.findElement(By.xpath(ConstantsClass18.polChangeVehicleVIN))
+				.sendKeys(pcvo.getPolicyChangeOOSVehicle1VIN());
 
 		driver.findElement(By.xpath(ConstantsClass18.polChangeVehicleScrnLicenseState))
 				.sendKeys(pcvo.getPolicyChangeOOSVehicle1LicenseState());

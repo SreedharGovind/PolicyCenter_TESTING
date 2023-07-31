@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyCancellationVO;
-import com.smartims.insurancepractice.policycenter.policyVO.PolicyRescindCancellationVO;
 import com.smartims.insurancepractice.policycenter.scenario01.ExcelUtils_TS01;
 
 import PolicyCenterTransactions.ConstantsClassPC;
@@ -24,7 +23,7 @@ public class PolicyProRataCancellation_TS02 {
 		cvo.setPolicyCancellationSource(ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataSource"));
 		Select sourcecncl = new Select(driver.findElement(By.xpath(ConstantsClassPC.policyCancellationSource)));
 		sourcecncl.selectByVisibleText(cvo.getPolicyCancellationSource());
-       Thread.sleep(1000);
+		Thread.sleep(1000);
 		cvo.setPolicyCancellationReason(ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataReason"));
 		Select reasondrpdwn = new Select(driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReason)));
 		reasondrpdwn.selectByVisibleText(cvo.getPolicyCancellationReason());
@@ -36,7 +35,7 @@ public class PolicyProRataCancellation_TS02 {
 		cvo.setPolicyCancellationReasonDescription(
 				ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReasonDescription))
-		.sendKeys(cvo.getPolicyCancellationReasonDescription());
+				.sendKeys(cvo.getPolicyCancellationReasonDescription());
 		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.StartCancellationID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationBindOptions)).click();

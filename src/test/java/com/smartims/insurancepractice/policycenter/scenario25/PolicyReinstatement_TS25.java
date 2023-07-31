@@ -19,11 +19,11 @@ public class PolicyReinstatement_TS25 {
 		driver.findElement(By.id(ConstantsClassPC.reinstatePolicyID)).click();
 		reinstateVO.setReinstatementReason(ExcelUtils_TS25.getCellValueByLabel("reinstatementReason"));
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementReason))
-		.sendKeys(reinstateVO.getReinstatementReason());
+				.sendKeys(reinstateVO.getReinstatementReason());
 		reinstateVO.setReinstatementReasonDescription(
 				ExcelUtils_TS25.getCellValueByLabel("reinstatementReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementReasonDescription))
-		.sendKeys(reinstateVO.getReinstatementReasonDescription());
+				.sendKeys(reinstateVO.getReinstatementReasonDescription());
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementQuote)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.reinstateButton)).click();
 		Alert alert = driver.switchTo().alert();

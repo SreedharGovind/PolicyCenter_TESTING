@@ -3,8 +3,6 @@ package com.smartims.insurancepractice.policycenter.scenario16;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import com.smartims.insurancepractice.policycenter.scenario14.PolicyManualRenewal_TS14;
-
 import PolicyCenterTransactions.CommonClass;
 
 public class AllTransactions16 {
@@ -23,9 +21,8 @@ public class AllTransactions16 {
 
 		PolicyChange2_TS16 change2 = new PolicyChange2_TS16();
 		change2.changePolicy(driver, action);
-		
-		
-		PolicyManualRenewal_TS16  renew = new PolicyManualRenewal_TS16();
+
+		PolicyManualRenewal_TS16 renew = new PolicyManualRenewal_TS16();
 		renew.policyRenew(driver, action);
 	}
 

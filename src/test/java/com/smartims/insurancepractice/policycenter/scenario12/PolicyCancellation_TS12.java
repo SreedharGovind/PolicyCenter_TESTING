@@ -11,8 +11,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyCancellationVO
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class PolicyCancellation_TS12 {
 	void cancelpolicy(ChromeDriver driver, Actions action) throws Exception {
 		PolicyCancellationVO cvo = new PolicyCancellationVO();
@@ -43,10 +41,9 @@ public class PolicyCancellation_TS12 {
 				By.xpath("//*[@id=\"StartCancellation-StartCancellationScreen-CancelPolicyDV-Reason\"]/div/div/select"))
 				.sendKeys(cvo.getPolicyCancellationReason());
 
-
 		// cancelling the policy
-			WebElement cancel=	driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation"));
-			action.moveToElement(cancel).perform();
+		WebElement cancel = driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation"));
+		action.moveToElement(cancel).perform();
 //			cancel.click();
 		driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation")).click();
 
@@ -58,7 +55,7 @@ public class PolicyCancellation_TS12 {
 		driver.findElement(By.xpath(Constants.cancelNow)).click();
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
-		
+
 		driver.findElement(By.xpath(Constants.viewPolicy)).click();
 
 	}

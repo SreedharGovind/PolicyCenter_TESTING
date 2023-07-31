@@ -11,8 +11,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class PolicyChange_TS15 {
 	void changePolicy(ChromeDriver driver, Actions action) throws Exception {
 
@@ -26,20 +24,21 @@ public class PolicyChange_TS15 {
 		driver.manage().window().maximize();
 		// changing the effective date
 
-		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS15. getCellValueByLabel("policyChangeEffectiveDate"));
-		pcvo.setPolicyChangeDescription(ExcelUtils_TS15. getCellValueByLabel("policyChangeDescription"));
+		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS15.getCellValueByLabel("policyChangeEffectiveDate"));
+		pcvo.setPolicyChangeDescription(ExcelUtils_TS15.getCellValueByLabel("policyChangeDescription"));
 
-		pcvo.setPolicyChangeSNIRelationship(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNIRelationship"));
-		pcvo.setPolicyChangeSNIFirstname(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNIFirstname"));
-		pcvo.setPolicyChangeSNILastname(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNILastname"));
-		pcvo.setPolicyChangeSNIDOB(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNIDOB"));
-		pcvo.setPolicyChangeSNIAddressLine1(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNIAddressLine1"));
-		pcvo.setPolicyChangeSNIAddressType(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNIAddressType"));
-		pcvo.setPolicyChangeSNIZipcode(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNIZipcode"));
-		pcvo.setPolicyChangeSNILicenseNumber(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNILicenseNumber"));
-		pcvo.setPolicyChangeSNILicenseState(ExcelUtils_TS15. getCellValueByLabel("policyChangeSNILicenseState"));
+		pcvo.setPolicyChangeSNIRelationship(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNIRelationship"));
+		pcvo.setPolicyChangeSNIFirstname(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNIFirstname"));
+		pcvo.setPolicyChangeSNILastname(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNILastname"));
+		pcvo.setPolicyChangeSNIDOB(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNIDOB"));
+		pcvo.setPolicyChangeSNIAddressLine1(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNIAddressLine1"));
+		pcvo.setPolicyChangeSNIAddressType(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNIAddressType"));
+		pcvo.setPolicyChangeSNIZipcode(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNIZipcode"));
+		pcvo.setPolicyChangeSNILicenseNumber(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNILicenseNumber"));
+		pcvo.setPolicyChangeSNILicenseState(ExcelUtils_TS15.getCellValueByLabel("policyChangeSNILicenseState"));
 
-		pcvo.setPolicyChangeDriver1MaritalStatus(ExcelUtils_TS15. getCellValueByLabel("policyChangeDriver1MaritalStatus"));
+		pcvo.setPolicyChangeDriver1MaritalStatus(
+				ExcelUtils_TS15.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
 
 		driver.findElement(
 				By.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[1]/div[2]/div/div/input"))

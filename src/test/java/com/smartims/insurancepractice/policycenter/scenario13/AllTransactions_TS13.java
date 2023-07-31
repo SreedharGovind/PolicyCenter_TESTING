@@ -18,8 +18,7 @@ public class AllTransactions_TS13 {
 
 		PolicyChange_TS13 change = new PolicyChange_TS13();
 		change.changePolicy(driver, action);
-		
-		
+
 		PolicyCancellation_TS13 cancel = new PolicyCancellation_TS13();
 		cancel.cancelpolicy(driver, action);
 

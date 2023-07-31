@@ -108,7 +108,7 @@ public class PolicyIssuance_TS21 {
 			WebElement newPerson1 = driver.findElement(By.xpath(ConstantsClass18.selectANIPerson));
 			actions.moveToElement(newPerson1).perform();
 			newPerson1.click();
-			//		driver.findElement(By.xpath(ConstantsClass.realationToSecondaryNamedInsured)).sendKeys("Husband");
+			// driver.findElement(By.xpath(ConstantsClass.realationToSecondaryNamedInsured)).sendKeys("Husband");
 			driver.findElement(By.xpath(ConstantsClass18.aniFirstname)).sendKeys(svo.getANIFirstname());
 			driver.findElement(By.xpath(ConstantsClass18.aniLastname)).sendKeys(svo.getANILastname());
 			driver.findElement(By.xpath(ConstantsClass18.aniAddressline1)).sendKeys(svo.getANIAddressLine1());
@@ -126,7 +126,7 @@ public class PolicyIssuance_TS21 {
 		select2.selectByIndex(1);
 		driver.findElement(By.id(
 				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon"))
-		.click();
+				.click();
 		driver.findElement(By.id("SubmissionWizard-Next")).click();
 		boolean newDriverValue = svo.getDriver1Firstname().isBlank();
 
@@ -152,9 +152,9 @@ public class PolicyIssuance_TS21 {
 			Select addTypeNewDriver = new Select(driver.findElement(By.xpath(ConstantsClass18.newDriveraddressType)));
 			addTypeNewDriver.selectByIndex(3);
 			driver.findElement(By.xpath(ConstantsClass18.newDriverlicenseNumber))
-			.sendKeys(svo.getDriver1LicenseNumber(), Keys.TAB);
+					.sendKeys(svo.getDriver1LicenseNumber(), Keys.TAB);
 			driver.findElement(By.xpath(ConstantsClass18.newDriverliscenceState))
-			.sendKeys(svo.getDriver1LicenseState());
+					.sendKeys(svo.getDriver1LicenseState());
 			driver.findElement(By.xpath(ConstantsClass18.newDriverupdateButton)).click();
 
 			// Click on Roles Tab
@@ -162,7 +162,7 @@ public class PolicyIssuance_TS21 {
 			actions.moveToElement(roles).perform();
 			roles.click();
 			driver.findElement(By.name(ConstantsClass18.newDriverlicensedYear))
-			.sendKeys(svo.getDriver1YearFirstLicensed(), Keys.TAB);
+					.sendKeys(svo.getDriver1YearFirstLicensed(), Keys.TAB);
 			// Accidents or Violation Summary
 			Select select7 = new Select(
 					driver.findElement(By.xpath(ConstantsClass18.newDriverNumOfAccidentsPolicyLevel)));
@@ -180,14 +180,14 @@ public class PolicyIssuance_TS21 {
 
 		}
 
-		//		--------------- Vehicle 1 ---------------
+		// --------------- Vehicle 1 ---------------
 
 		driver.findElement(By.xpath(ConstantsClass18.addVehicle)).click();
 
 		driver.findElement(By.xpath(ConstantsClass18.vinNumber)).sendKeys(svo.getVehicle1VIN());
 
 		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen))
-		.sendKeys(svo.getVehicle1LicenseState());
+				.sendKeys(svo.getVehicle1LicenseState());
 
 		driver.findElement(By.xpath(ConstantsClass18.assignVehicleDriver)).click();
 
