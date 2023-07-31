@@ -85,13 +85,10 @@ public class PolicyIssuance_TS08 {
 
 		pvo.setSNIAddressLine1(ExcelUtils_TS08.getCellValueByLabel("SNIAddressLine1"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.SNIAddressLine1)).sendKeys(pvo.getSNIAddressLine1());
-		
-
 
 		pvo.setSNICity(ExcelUtils_TS08.getCellValueByLabel("SNICity"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.SNICity)).sendKeys(pvo.getSNICity());
-		
-		
+
 		pvo.setSNIState(ExcelUtils_TS08.getCellValueByLabel("SNIState"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.SNIState)).sendKeys(pvo.getSNIState());
 
@@ -114,7 +111,7 @@ public class PolicyIssuance_TS08 {
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.toDriversScreen)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.AddDriverButton)).click();
-         Thread.sleep(2000);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.existingDriverType)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.existingDrivername)).click();
@@ -129,7 +126,7 @@ public class PolicyIssuance_TS08 {
 		driver.findElement(By.xpath(ConstantsClassPC.toRoles)).click();
 		pvo.setExistingDriverYearFirstLicensed(ExcelUtils_TS08.getCellValueByLabel("existingDriverYearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC.existingDriverYearFirstLicensed1))
-		.sendKeys(pvo.getExistingDriverYearFirstLicensed());
+				.sendKeys(pvo.getExistingDriverYearFirstLicensed());
 		pvo.setExistingDriverNumberOfAccidentsPolicyLevel(
 				ExcelUtils_TS08.getCellValueByLabel("existingDriverNumberOfAccidentsPolicyLevel"));
 		Select roles = new Select(
@@ -150,10 +147,8 @@ public class PolicyIssuance_TS08 {
 		Select roles4 = new Select(
 				driver.findElement(By.xpath(ConstantsClassPC.existingDriverNumberOfViolationsAccountLevel1)));
 		roles4.selectByValue(pvo.getExistingDriverNumberOfViolationsAccountLevel());
-		
-		
-		driver.findElement(By.xpath(ConstantsClassPC_TS08.toVehiclesScreen )).click();
 
+		driver.findElement(By.xpath(ConstantsClassPC_TS08.toVehiclesScreen)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.vehicle1AddOrRemove)).click();
 
@@ -187,8 +182,6 @@ public class PolicyIssuance_TS08 {
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS08.CoveragesNext)).click();
 
-		
-
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1Collison)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC.toRiskAnalysIsScreen)).click();
@@ -197,7 +190,7 @@ public class PolicyIssuance_TS08 {
 
 		driver.findElement(By.id("SubmissionWizard-SubmissionWizard_QuoteScreen-JobWizardToolbarButtonSet-BindOptions"))
 
-		.click();
+				.click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.issue)).click();
 

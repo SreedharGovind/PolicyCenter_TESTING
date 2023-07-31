@@ -25,7 +25,7 @@ public class PolicyChange_TS07 {
 
 		pvo.setPolicyChangeDescription(ExcelUtils_TS07.getCellValueByLabel("policyChangeDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDescription))
-		.sendKeys(pvo.getPolicyChangeDescription());
+				.sendKeys(pvo.getPolicyChangeDescription());
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.StartPolicyChangeNextButton)).click();
 
 		WebElement OfferingsDropdown = driver.findElement(By.xpath(ConstantsClassPC_TS07.OfferingSelection));
@@ -48,32 +48,32 @@ public class PolicyChange_TS07 {
 		pvo.setPolicyChangeExistingDriverYearFirstLicensed(
 				ExcelUtils_TS07.getCellValueByLabel("policyChangeExistingDriverYearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeExistingDriverYearFirstLicensed))
-		.sendKeys(pvo.getPolicyChangeExistingDriverYearFirstLicensed());
+				.sendKeys(pvo.getPolicyChangeExistingDriverYearFirstLicensed());
 		;
 
 		pvo.setPolicyChangeDriver1Firstname(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1Firstname"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1Firstname))
-		.sendKeys(pvo.getPolicyChangeDriver1Firstname());
+				.sendKeys(pvo.getPolicyChangeDriver1Firstname());
 
 		pvo.setPolicyChangeDriver1Lastname(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1Lastname"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1Lastname))
-		.sendKeys(pvo.getPolicyChangeDriver1Lastname());
+				.sendKeys(pvo.getPolicyChangeDriver1Lastname());
 
 		pvo.setPolicyChangeDriver1dateOfBirth(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1dateOfBirth"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1dateOfBirth))
-		.sendKeys(pvo.getPolicyChangeDriver1dateOfBirth());
+				.sendKeys(pvo.getPolicyChangeDriver1dateOfBirth());
 
 		pvo.setPolicyChangeDriver1Address1(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1Address1"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1Address1))
-		.sendKeys(pvo.getPolicyChangeDriver1Address1());
+				.sendKeys(pvo.getPolicyChangeDriver1Address1());
 
 		pvo.setPolicyChangeDriver1City(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1City"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1City))
-		.sendKeys(pvo.getPolicyChangeDriver1City());
+				.sendKeys(pvo.getPolicyChangeDriver1City());
 
 		pvo.setPolicyChangeDriver1ZIPCode(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1ZIPCode"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1ZIPCode))
-		.sendKeys(pvo.getPolicyChangeDriver1ZIPCode(), Keys.TAB, Keys.TAB);
+				.sendKeys(pvo.getPolicyChangeDriver1ZIPCode(), Keys.TAB, Keys.TAB);
 
 		pvo.setPolicyChangeDriver1State(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1LicenseState"));
 		WebElement State = driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1State));
@@ -90,7 +90,7 @@ public class PolicyChange_TS07 {
 		pvo.setPolicyChangeDriver1LicenseNumber(
 				ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1LicenseNumber"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1LicenseNumber))
-		.sendKeys(pvo.getPolicyChangeDriver1LicenseNumber());
+				.sendKeys(pvo.getPolicyChangeDriver1LicenseNumber());
 
 		pvo.setPolicyChangeDriver1LicenseState(ExcelUtils_TS07.getCellValueByLabel("policyChangeDriver1LicenseState"));
 		WebElement LicenseState = driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1LicenseState));
@@ -129,13 +129,13 @@ public class PolicyChange_TS07 {
 
 		pvo.setPolicyChangeVehicle1VIN(ExcelUtils_TS07.getCellValueByLabel("policyChangeVehicle1VIN"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1VIN))
-		.sendKeys(pvo.getPolicyChangeVehicle1VIN());
+				.sendKeys(pvo.getPolicyChangeVehicle1VIN());
 
 		pvo.setPolicyChangeVehicle1CostNew(ExcelUtils_TS07.getCellValueByLabel("policyChangeVehicle1CostNew"));
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1CostNew))
 
-		.sendKeys(pvo.getPolicyChangeVehicle1CostNew());
+				.sendKeys(pvo.getPolicyChangeVehicle1CostNew());
 
 		pvo.setPolicyChangeDriver1LicenseState(ExcelUtils_TS07.getCellValueByLabel("policyChangeVehicle1LicenseState"));
 		WebElement PolicyChangeVehicleLicenseState = driver
@@ -146,7 +146,7 @@ public class PolicyChange_TS07 {
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.Driver1Assignment)).click();
 		driver.findElement(By.xpath(
 				"/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div/div[1]/div[17]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div/div[2]"))
-		.click();
+				.click();
 		WebElement DriverAssignemnt = driver
 				.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1Driver1Assignment));
 		DriverAssignemnt.clear();
@@ -154,7 +154,7 @@ public class PolicyChange_TS07 {
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.VehiclesNextButton)).click();
 
-	driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1Comprehensive)).click();
+		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1Comprehensive)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeQuoteButton)).click();
 		Thread.sleep(2000);

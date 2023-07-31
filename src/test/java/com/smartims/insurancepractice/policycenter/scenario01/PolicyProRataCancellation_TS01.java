@@ -2,7 +2,6 @@ package com.smartims.insurancepractice.policycenter.scenario01;
 
 import java.io.IOException;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,7 +37,7 @@ public class PolicyProRataCancellation_TS01 {
 		cvo.setPolicyCancellationReasonDescription(
 				ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReasonDescription))
-		.sendKeys(cvo.getPolicyCancellationReasonDescription());
+				.sendKeys(cvo.getPolicyCancellationReasonDescription());
 		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.StartCancellationID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationBindOptions)).click();

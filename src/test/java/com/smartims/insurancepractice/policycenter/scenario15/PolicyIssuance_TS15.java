@@ -15,8 +15,7 @@ import PolicyCenterTransactions.Constants;
 public class PolicyIssuance_TS15 {
 	void newSubmission(ChromeDriver driver, Actions action) throws Exception {
 
-		PolicyIssuanceVO svo =new PolicyIssuanceVO();
-
+		PolicyIssuanceVO svo = new PolicyIssuanceVO();
 
 		// New submission
 		driver.findElement(By.xpath(Constants.clickOnNewSubbmission)).click();
@@ -25,33 +24,32 @@ public class PolicyIssuance_TS15 {
 		driver.findElement(By.xpath(Constants.selectProduct)).click();
 
 //		svo.setDefaultEffectiveDate(ExcelUtils15. getCellValueByLabel("defaultEffectiveDate"));
-		svo.setOfferingsSelection(ExcelUtils_TS15. getCellValueByLabel("offeringsSelection"));
-		svo.setIsApplicantCurrentlyInsured(ExcelUtils_TS15. getCellValueByLabel("isApplicantCurrentlyInsured"));
-		
-//		svo.setDateQuoteNeeded(ExcelUtils15. getCellValueByLabel("dateQuoteNeeded"));
-		svo.setTermType(ExcelUtils_TS15. getCellValueByLabel("termType"));
-		svo.setEffectiveDate(ExcelUtils_TS15. getCellValueByLabel("effectiveDate"));
-		svo.setWrittenDate(ExcelUtils_TS15. getCellValueByLabel("writtenDate"));
-		
-		svo.setSNIRelationship(ExcelUtils_TS15. getCellValueByLabel("relationship"));
-		svo.setSNIFirstname(ExcelUtils_TS15. getCellValueByLabel("SNIFirstname"));
-		svo.setSNILastname(ExcelUtils_TS15. getCellValueByLabel("SNILastname"));
-		svo.setSNIDOB(ExcelUtils_TS15. getCellValueByLabel("SNIDOB"));
-		svo.setSNIAddressLine1(ExcelUtils_TS15. getCellValueByLabel("SNIAddressLine1"));
-		svo.setSNIState(ExcelUtils_TS15. getCellValueByLabel("SNIState"));
-		svo.setSNIAddressType(ExcelUtils_TS15. getCellValueByLabel("SNIAddressType"));
-		svo.setSNILicenseNumber(ExcelUtils_TS15. getCellValueByLabel("SNILicenseNumber"));
-		svo.setSNILicenseState(ExcelUtils_TS15. getCellValueByLabel("SNILicenseState"));
-		
-		
-		svo.setExistingDriverYearFirstLicensed(ExcelUtils_TS15. getCellValueByLabel("existingDriverYearFirstLicensed"));
-		svo.setExistingDriverLicenseNumber(ExcelUtils_TS15. getCellValueByLabel("existingDriverLicenseNumber"));
-		svo.setExistingDriverLicenseState(ExcelUtils_TS15. getCellValueByLabel("existingDriverLicenseState"));
-		svo.setExistingDriverdateOfBirth(ExcelUtils_TS15. getCellValueByLabel("existingDriverdateOfBirth"));
+		svo.setOfferingsSelection(ExcelUtils_TS15.getCellValueByLabel("offeringsSelection"));
+		svo.setIsApplicantCurrentlyInsured(ExcelUtils_TS15.getCellValueByLabel("isApplicantCurrentlyInsured"));
 
-		svo.setVehicle1VIN(ExcelUtils_TS15. getCellValueByLabel("vehicle1VIN"));
-		svo.setVehicle1LicenseState(ExcelUtils_TS15. getCellValueByLabel("vehicle1LicenseState"));
-		svo.setVehicle1CostNew(ExcelUtils_TS15. getCellValueByLabel("vehicle1CostNew"));
+//		svo.setDateQuoteNeeded(ExcelUtils15. getCellValueByLabel("dateQuoteNeeded"));
+		svo.setTermType(ExcelUtils_TS15.getCellValueByLabel("termType"));
+		svo.setEffectiveDate(ExcelUtils_TS15.getCellValueByLabel("effectiveDate"));
+		svo.setWrittenDate(ExcelUtils_TS15.getCellValueByLabel("writtenDate"));
+
+		svo.setSNIRelationship(ExcelUtils_TS15.getCellValueByLabel("relationship"));
+		svo.setSNIFirstname(ExcelUtils_TS15.getCellValueByLabel("SNIFirstname"));
+		svo.setSNILastname(ExcelUtils_TS15.getCellValueByLabel("SNILastname"));
+		svo.setSNIDOB(ExcelUtils_TS15.getCellValueByLabel("SNIDOB"));
+		svo.setSNIAddressLine1(ExcelUtils_TS15.getCellValueByLabel("SNIAddressLine1"));
+		svo.setSNIState(ExcelUtils_TS15.getCellValueByLabel("SNIState"));
+		svo.setSNIAddressType(ExcelUtils_TS15.getCellValueByLabel("SNIAddressType"));
+		svo.setSNILicenseNumber(ExcelUtils_TS15.getCellValueByLabel("SNILicenseNumber"));
+		svo.setSNILicenseState(ExcelUtils_TS15.getCellValueByLabel("SNILicenseState"));
+
+		svo.setExistingDriverYearFirstLicensed(ExcelUtils_TS15.getCellValueByLabel("existingDriverYearFirstLicensed"));
+		svo.setExistingDriverLicenseNumber(ExcelUtils_TS15.getCellValueByLabel("existingDriverLicenseNumber"));
+		svo.setExistingDriverLicenseState(ExcelUtils_TS15.getCellValueByLabel("existingDriverLicenseState"));
+		svo.setExistingDriverdateOfBirth(ExcelUtils_TS15.getCellValueByLabel("existingDriverdateOfBirth"));
+
+		svo.setVehicle1VIN(ExcelUtils_TS15.getCellValueByLabel("vehicle1VIN"));
+		svo.setVehicle1LicenseState(ExcelUtils_TS15.getCellValueByLabel("vehicle1LicenseState"));
+		svo.setVehicle1CostNew(ExcelUtils_TS15.getCellValueByLabel("vehicle1CostNew"));
 
 //		svo.setVehicle1comprehensive(ExcelUtils13. getCellValueByLabel("vehicle1comprehensive"));
 
@@ -62,8 +60,7 @@ public class PolicyIssuance_TS15 {
 //		driver.findElement(By.name("NewSubmission-NewSubmissionScreen-ProductSettingsDV-DefaultPPEffDate"))
 //				.sendKeys(svo.getDefaultEffectiveDate(), Keys.ENTER);
 
-		driver.findElement(
-				By.xpath("//*[@id=\"SubmissionWizard-OfferingScreen-OfferingSelection\"]/div/div/select"))
+		driver.findElement(By.xpath("//*[@id=\"SubmissionWizard-OfferingScreen-OfferingSelection\"]/div/div/select"))
 				.sendKeys(svo.getOfferingsSelection(), Keys.TAB);
 
 		driver.findElement(By.id("SubmissionWizard-Next")).click();
@@ -89,8 +86,7 @@ public class PolicyIssuance_TS15 {
 //		driver.findElement(By.name(
 //				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-DateQuoteNeeded"))
 //				.sendKeys(svo.getDateQuoteNeeded(), Keys.TAB);
-		
-		
+
 //		Adding seconadry Insured
 		WebElement seconadry = driver.findElement(By.id(
 				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-SecondaryNamedInsuredInputSet-ChangeSecondaryNamedInsuredButton-ChangeSecondaryNamedInsuredButtonMenuIcon"));
@@ -134,12 +130,16 @@ public class PolicyIssuance_TS15 {
 		driver.findElement(By.xpath(
 				"//*[@id=\"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-TermType\"]/div/div/select"))
 				.sendKeys(svo.getTermType(), Keys.TAB);
-		
+
 //		//Effective Date
 //		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate")).clear();
-		driver.findElement(By.id("SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon")).click();
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate")).sendKeys(svo.getEffectiveDate(),Keys.ENTER);
-		
+		driver.findElement(By.id(
+				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon"))
+				.click();
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate"))
+				.sendKeys(svo.getEffectiveDate(), Keys.ENTER);
+
 //		 Writtendate
 //		driver.findElement(By.name(
 //				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-WrittenDate"))
@@ -152,14 +152,14 @@ public class PolicyIssuance_TS15 {
 //		driver.findElement(By.name(
 //				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-WrittenDate"))
 //				.sendKeys(svo.getWrittenDate(), Keys.ENTER);
-		WebElement click=driver.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]"));
+		WebElement click = driver
+				.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[1]/div[3]/div[2]/div[3]/div/div[2]"));
 		action.moveToElement(click).perform();
 		click.click();
-		
+
 		driver.findElement(By.id("SubmissionWizard-Next")).click();
 
-
-		// >>>>>>>>> Add  Existing Driver <<<<<<<<<< 
+		// >>>>>>>>> Add Existing Driver <<<<<<<<<< 
 		driver.findElement(By.id(Constants.addDriver)).click();
 		WebElement existdriver = driver.findElement(By.id(
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriversLV_tb-AddDriver-AddExistingContact"));
@@ -170,10 +170,16 @@ public class PolicyIssuance_TS15 {
 		driver.findElement(By.xpath(
 				"/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[3]/div[3]/div[1]/div"))
 				.click();
-		//Exist Driver license
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-LicenseInputSet-LicenseNumber")).clear();
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-LicenseInputSet-LicenseNumber")).sendKeys(svo.getExistingDriverLicenseNumber(),Keys.TAB);
-		driver.findElement(By.xpath("//*[@id=\"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-LicenseInputSet-LicenseState\"]/div/div/select")).sendKeys(svo.getExistingDriverLicenseState());
+		// Exist Driver license
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-LicenseInputSet-LicenseNumber"))
+				.clear();
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-LicenseInputSet-LicenseNumber"))
+				.sendKeys(svo.getExistingDriverLicenseNumber(), Keys.TAB);
+		driver.findElement(By.xpath(
+				"//*[@id=\"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-LicenseInputSet-LicenseState\"]/div/div/select"))
+				.sendKeys(svo.getExistingDriverLicenseState());
 
 		driver.findElement(By.name(
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-PolicyContactDetailsDV-PolicyContactRoleNameInputSet-DateOfBirth"))
@@ -190,20 +196,28 @@ public class PolicyIssuance_TS15 {
 //				.click();
 
 //		driver.findElement(By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-0-PolicyContactRolePanelSet-PolicyDriverInfoDV-ApplicableGoodDriverDiscount_0")).click();
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverInfoDV-yearlicensed")).clear();
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverInfoDV-yearlicensed"))
+				.clear();
 
-		driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverInfoDV-yearlicensed")).sendKeys("1990", Keys.TAB);
+		driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverInfoDV-yearlicensed"))
+				.sendKeys("1990", Keys.TAB);
 
 		// Accidents or Violation Summary 
-		Select select3 = new Select(driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverNumberOfAccidents")));
+		Select select3 = new Select(driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverNumberOfAccidents")));
 		select3.selectByValue("0");
-		Select select4 = new Select(driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-DriverNumberOfAccidents")));
+		Select select4 = new Select(driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-DriverNumberOfAccidents")));
 		select4.selectByValue("0");
-		Select select5 = new Select(driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverNumberOfViolations")));
+		Select select5 = new Select(driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-PolicyDriverNumberOfViolations")));
 		select5.selectByValue("0");
-		Select select6 = new Select(driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-DriverNumberOfViolations")));
+		Select select6 = new Select(driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriverDetailsCV-1-PolicyContactRolePanelSet-DriverNumberOfViolations")));
 		select6.selectByValue("0");
-		
+
 //		driver.findElement(By.id("SubmissionWizard-Next")).click();
 
 		// Click on Next for the Vehicles Screen 
@@ -218,11 +232,10 @@ public class PolicyIssuance_TS15 {
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-LicenseState_DV"))
 				.sendKeys(svo.getVehicle1LicenseState(), Keys.ENTER);
 		// Giving the cost of vechile
-		WebElement cost =driver.findElement(By.name("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-CostNew_DV"));
+		WebElement cost = driver.findElement(By.name(
+				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-CostNew_DV"));
 		cost.sendKeys(svo.getVehicle1CostNew(), Keys.ENTER);
 
-
-		
 		// Assing driver to vechile
 		WebElement assing = driver.findElement(By.id(
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-AddDriver"));
@@ -233,12 +246,12 @@ public class PolicyIssuance_TS15 {
 				.click();
 //		driver.findElement(By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-PersonalAuto_VehicleDV-PersonalAuto_AssignDriversInputSet-DriverPctLV-0-_Checkbox")).click();
 		driver.findElement(By.id("SubmissionWizard-Next")).click();
-		
+
 //		driver.findElement(By.id(Constants.submissionWizardNext)).click();
 
 		// -------------------PA Coverage Screen------------------- 
 
-		String coverage ="collision";
+		String coverage = "collision";
 
 		if (coverage != null && coverage.equalsIgnoreCase("Comprehensive")) {
 			driver.findElement(By.name(

@@ -14,12 +14,9 @@ public class AllTransactions_TS21 {
 		AccountCreation_TS21 ac = new AccountCreation_TS21();
 		ac.accountCreation(drivers, actions);
 
-		
 		// create Submission
 		PolicyIssuance_TS21 sub = new PolicyIssuance_TS21();
 		sub.submission21(drivers, actions);
-
-	
 
 		// Policy Change
 		PolicyChange_TS21 pc = new PolicyChange_TS21();

@@ -3,20 +3,18 @@ package com.smartims.insurancepractice.policycenter.scenario24;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import com.smartims.insurancepractice.policycenter.scenario23.AccountCreation_TS23;
-
 import PolicyCenterTransactions.CommonClass;
 
 public class AllTransaction_TS24 {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver =CommonClass.getchromedriver();
+		ChromeDriver driver = CommonClass.getchromedriver();
 
 		Actions actions = new Actions(driver);
 		AccountCreation_TS24 create = new AccountCreation_TS24();
 		create.AccountCreation(driver, actions);
-		System.out.println("Account Created"); 
-		
+		System.out.println("Account Created");
+
 		PolicyIssuance_TS24 n = new PolicyIssuance_TS24();
 		n.policyCreation(driver, actions);
 

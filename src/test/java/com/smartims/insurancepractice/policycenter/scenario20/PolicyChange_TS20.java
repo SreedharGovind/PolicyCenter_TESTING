@@ -44,8 +44,8 @@ public class PolicyChange_TS20 {
 		driver.findElement(By.xpath(
 				"//*[@id=\"StartPolicyChange-StartPolicyChangeScreen-StartPolicyChangeDV-EffectiveDate\"]/div/input"))
 				.sendKeys(pcvo.getPolicyChangeEffectiveDate());
-		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription)).sendKeys(pcvo.getPolicyChangeDescription(),
-				Keys.ENTER);
+		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription))
+				.sendKeys(pcvo.getPolicyChangeDescription(), Keys.ENTER);
 
 		WebElement policyChangeNext = driver.findElement(By.xpath(ConstantsClass18.policyChangeScreenNextButton));
 		actions.moveToElement(policyChangeNext).perform();
@@ -80,7 +80,8 @@ public class PolicyChange_TS20 {
 		WebElement existingContactButton = driver
 				.findElement(By.xpath(ConstantsClass18.polChangeAdditionalInterestTabAddExistingContact));
 		actions.moveToElement(existingContactButton).perform();
-		WebElement existingContact = driver.findElement(By.xpath(ConstantsClass18.polChangeAdditionalInterestAddContact));
+		WebElement existingContact = driver
+				.findElement(By.xpath(ConstantsClass18.polChangeAdditionalInterestAddContact));
 		actions.moveToElement(existingContact).perform();
 		existingContact.click();
 

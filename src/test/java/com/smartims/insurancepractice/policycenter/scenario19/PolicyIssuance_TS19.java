@@ -144,7 +144,7 @@ public class PolicyIssuance_TS19 {
 		select2.selectByIndex(1);
 		driver.findElement(By.id(
 				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon"))
-		.click();
+				.click();
 
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext)).click();
 
@@ -161,15 +161,15 @@ public class PolicyIssuance_TS19 {
 		actions.moveToElement(existingDriver1).perform();
 		existingDriver1.click();
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverDateOfBirth))
-		.sendKeys(svo.getExistingDriverdateOfBirth());
+				.sendKeys(svo.getExistingDriverdateOfBirth());
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverLicenseNumber))
-		.sendKeys(svo.getExistingDriverLicenseNumber(), Keys.TAB);
+				.sendKeys(svo.getExistingDriverLicenseNumber(), Keys.TAB);
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverLicenseState))
-		.sendKeys(svo.getExistingDriverLicenseState());
+				.sendKeys(svo.getExistingDriverLicenseState());
 
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverRolesTab)).click();
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverYearFirstLicensed))
-		.sendKeys(svo.getExistingDriverYearFirstLicensed(), Keys.TAB);
+				.sendKeys(svo.getExistingDriverYearFirstLicensed(), Keys.TAB);
 		// Accidents or Violation Summary
 		Select select3 = new Select(
 				driver.findElement(By.xpath(ConstantsClass18.existingDriverNumOfAccidentsPolicyLevel)));
@@ -192,7 +192,7 @@ public class PolicyIssuance_TS19 {
 		driver.findElement(By.xpath(ConstantsClass18.vinNumber)).sendKeys(svo.getVehicle1VIN());
 
 		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen))
-		.sendKeys(svo.getVehicle1LicenseState());
+				.sendKeys(svo.getVehicle1LicenseState());
 
 		driver.findElement(By.xpath(ConstantsClass18.assignVehicleDriver)).click();
 
@@ -228,7 +228,7 @@ public class PolicyIssuance_TS19 {
 
 		driver.findElement(By.xpath(
 				"//*[@id=\"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-AdditionalCoveragesTab\"]/div"))
-		.click();
+				.click();
 
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext5)).click();
 		driver.findElement(By.xpath(ConstantsClass18.riskAnalysisScreen)).click();

@@ -18,18 +18,18 @@ public class PolicyReinstatement_TS07 {
 		driver.findElement(By.id(ConstantsClassPC.reinstatePolicyID)).click();
 		reinstateVO.setReinstatementReason(ExcelUtils_TS07.getCellValueByLabel("reinstatementReason"));
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementReason))
-		.sendKeys(reinstateVO.getReinstatementReason());
+				.sendKeys(reinstateVO.getReinstatementReason());
 		reinstateVO.setReinstatementReasonDescription(
 				ExcelUtils_TS07.getCellValueByLabel("reinstatementReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementReasonDescription))
-		.sendKeys(reinstateVO.getReinstatementReasonDescription());
+				.sendKeys(reinstateVO.getReinstatementReasonDescription());
 		driver.findElement(By.xpath(ConstantsClassPC.reinstatementQuote)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.reinstateButton)).click();
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		driver.findElement(By.xpath(ConstantsClassPC.alert)).click();
 		Thread.sleep(1000);
-		//		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
+		// driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 
 	}
 

@@ -17,9 +17,6 @@ import PolicyCenterTransactions.ConstantsClass18;
 import PolicyCenterTransactions.ConstantsClassPC;
 import PolicyCenterTransactions.ConstantsClassPC_TS10;
 
-
-
-
 public class PolicyIssuance_TS10 {
 
 	void submission22(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
@@ -78,7 +75,8 @@ public class PolicyIssuance_TS10 {
 		svo.setVehicle2Driver1Percentage(ExcelUtils_TS10.getCellValueByLabel("vehicle2Driver1Percentage"));
 		svo.setVehicle2CostNew(ExcelUtils_TS10.getCellValueByLabel("vehicle2CostNew"));
 
-		svo.setVehicle1AINewPersonIntrestType(ExcelUtils_TS10.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
+		svo.setVehicle1AINewPersonIntrestType(
+				ExcelUtils_TS10.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
 
 		Thread.sleep(1000);
 
@@ -192,10 +190,10 @@ public class PolicyIssuance_TS10 {
 		driver.findElement(By.xpath(ConstantsClass18.newDriveraddressLine1)).sendKeys(svo.getDriver1Address1());
 		driver.findElement(By.xpath(ConstantsClass18.newDriverzipcode)).sendKeys(svo.getDriver1ZIPCode(), Keys.TAB,
 				Keys.ENTER, Keys.TAB);
-		
+
 		Select addTypeNewDriver = new Select(driver.findElement(By.xpath(ConstantsClass18.newDriveraddressType)));
 		addTypeNewDriver.selectByVisibleText(svo.getDriver1AdressType());
-		
+
 		driver.findElement(By.xpath(ConstantsClass18.newDriverlicenseNumber)).sendKeys(svo.getDriver1LicenseNumber(),
 				Keys.TAB);
 		driver.findElement(By.xpath(ConstantsClass18.newDriverliscenceState)).sendKeys(svo.getDriver1LicenseState());
@@ -275,7 +273,7 @@ public class PolicyIssuance_TS10 {
 				ExcelUtils_TS10.getCellValueByLabel("vehicle2AIExisingPersonIntrestType"));
 		System.out.println(svo.getVehicle2AIExisingPersonIntrestType());
 		driver.findElement(By.xpath(ConstantsClassPC.vehicle2AIExisingPersonIntrestType))
-		.sendKeys(svo.getVehicle2AIExisingPersonIntrestType());
+				.sendKeys(svo.getVehicle2AIExisingPersonIntrestType());
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext)).click();
 
 		WebElement checkBox = driver.findElement(By.name(ConstantsClass18.collisonCovCheckBox));
@@ -301,8 +299,7 @@ public class PolicyIssuance_TS10 {
 		driver.findElement(By.id(ConstantsClass18.quoteButtonOfferingsScreen)).click();
 		driver.findElement(By.id(ConstantsClass18.issueButton)).click();
 
-	driver.switchTo().alert().accept();
-		
+		driver.switchTo().alert().accept();
 
 		driver.findElement(By.xpath(ConstantsClass18.viewPolicySubmission)).click();
 

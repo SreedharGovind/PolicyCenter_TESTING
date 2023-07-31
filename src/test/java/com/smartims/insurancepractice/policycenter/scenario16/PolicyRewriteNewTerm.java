@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 
 import PolicyCenterTransactions.Constants;
 
-
 public class PolicyRewriteNewTerm {
 	// public static void main(String[] args) {
 	void rewriteNewTerm(ChromeDriver driver, Actions action) {
@@ -27,25 +26,34 @@ public class PolicyRewriteNewTerm {
 //		driver.findElement(By.xpath(
 //				"/html/body/form/div/div[2]/div[2]/div[2]/div/div[6]/div/div/div/div[2]/div/div/div/select/option[2]"))
 //				.click();
-		driver.findElement(By.name("RewriteWizard-OfferingScreen-OfferingSelection")).sendKeys("basic Program",Keys.ENTER);
+		driver.findElement(By.name("RewriteWizard-OfferingScreen-OfferingSelection")).sendKeys("basic Program",
+				Keys.ENTER);
 		// next
 //		driver.findElement(By.id("RewriteWizavrd-Next")).click();
 
 		// policy info
-		//term type
-		driver.findElement(By.name("RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-TermType")).sendKeys("Annual",Keys.ENTER);
-		
-		//effective Date
+		// term type
+		driver.findElement(By.name(
+				"RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-TermType"))
+				.sendKeys("Annual", Keys.ENTER);
+
+		// effective Date
 //		driver.findElement(By.name("RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate")).clear();
-		driver.findElement(By.id("RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon")).click();
-		driver.findElement(By.name("RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate")).sendKeys("09/08/2023",Keys.ENTER);
-		
-		WebElement quote =driver.findElement(By.id(
+		driver.findElement(By.id(
+				"RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon"))
+				.click();
+		driver.findElement(By.name(
+				"RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-RewriteWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate"))
+				.sendKeys("09/08/2023", Keys.ENTER);
+
+		WebElement quote = driver.findElement(By.id(
 				"RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote"));
-         action.moveToElement(quote).perform();
-         quote.click();
-         
-         driver.findElement(By.id("RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote")).click();
+		action.moveToElement(quote).perform();
+		quote.click();
+
+		driver.findElement(By.id(
+				"RewriteWizard-LOBWizardStepGroup-RewriteWizard_PolicyInfoScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote"))
+				.click();
 		// Issue policy
 		driver.findElement(By.id("RewriteWizard-RewriteWizard_QuoteScreen-JobWizardToolbarButtonSet-BindRewrite"))
 				.click();

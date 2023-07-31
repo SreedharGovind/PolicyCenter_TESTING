@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -54,12 +53,12 @@ public class PolicyRewriteFullTerm_TS10 {
 		driver.findElement(By.xpath(ConstantsClassPC.toRiskAnalysisScreenRewriteNewTerm)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteNewTermUWApprove)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteNewTermUWApproveOK)).click();
-		
+
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteNewTermPolicyIssue)).click();
-	 driver.switchTo().alert().accept();
+		driver.switchTo().alert().accept();
 
 		driver.findElement(By.xpath(ConstantsClass18.jobCompleteScreenViewPolicyLink)).click();
-	
+
 	}
 
 }

@@ -10,11 +10,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import PolicyCenterTransactions.CommonClass;
+
 public class ExcelUtils_TS20 {
 	public static String getCellValueByLabel(String label) throws IOException {
-		String filePath = "C:\\\\Users\\\\GovindaSreedhar.Kopp.SMARTIMS\\\\eclipse-workspace\\\\PolicyCenter\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+
+		FileInputStream file = new FileInputStream(new File(CommonClass.excelFilePath));
 		String sheetName = "TS_20";
-		FileInputStream file = new FileInputStream(new File(filePath));
 		Workbook workbook = WorkbookFactory.create(file);
 		Sheet sheet = workbook.getSheet(sheetName);
 		for (Row row : sheet) {

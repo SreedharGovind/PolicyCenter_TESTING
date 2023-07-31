@@ -3,24 +3,20 @@ package com.smartims.insurancepractice.policycenter.scenario07;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
+import PolicyCenterTransactions.CommonClass;
 
 public class ExcelUtils_TS07 {
 	public static String getCellValueByLabel(String label) throws IOException {
 
-		String filePath = "\\\\PolicyCenter_TESTING\\\\Dataexcel\\\\PolicyCenterDataNew.xlsx";
+		FileInputStream file = new FileInputStream(new File(CommonClass.excelFilePath));
 		String sheetname = "TS_07";
-		FileInputStream file = new FileInputStream(new File(filePath));
 		Workbook workbook = WorkbookFactory.create(file);
 
 		Sheet sheet = workbook.getSheet(sheetname);
@@ -43,5 +39,4 @@ public class ExcelUtils_TS07 {
 		return sheetname;
 	}
 
-	
 }

@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import com.smartims.insurancepractice.policycenter.policyVO.PolicyAutoRenewalVO;
-
 import PolicyCenterTransactions.ConstantsClassPC;
 
 public class PolicyManualRenewal_TS18 {

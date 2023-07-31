@@ -1,7 +1,5 @@
 package PolicyCenterTransactions;
 
-import org.openqa.selenium.By;
-
 public class ConstantsClassPC {
 
 	public static final String url = "http://localhost:8180/pc/PolicyCenter.do";
@@ -199,7 +197,7 @@ public class ConstantsClassPC {
 	public static final String policyChangeClickOnAI = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[5]/div[3]/div/div/div[2]";
 	public static final String policyChangeAIOtherContacts = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[5]/div[1]";
 	public static final String policyChangeANIClickOnOtherContacts = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[5]/div[1]";
-	public static final String policyChangeAIExistingPersons= "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[1]/div[2]";
+	public static final String policyChangeAIExistingPersons = "/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/table/tbody/tr/td/div[3]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[1]/div[2]";
 
 	// under writing issue
 	public static final String policyChangeUWToRiskAnalysis = "/html/body/form/div/div[2]/div[1]/div[1]/div/div[3]/div[3]/div/div[3]";
@@ -364,7 +362,7 @@ public class ConstantsClassPC {
 	// AutoRenewal
 
 	public static final String internalTools = "//*[@id=\"InternalToolsTabBar-UnsupportedToolsTab\"]/div[3]";
-	
+
 	public static final String testingSystemClock = "//*[@id=\"InternalToolsTabBar-UnsupportedToolsTab-UnsupportedTools_SystemClock\"]/div";
 
 	public static final String testingSystemClockDate = "//*[@id=\"SystemClock-SystemClockScreen-Date\"]/div/input[1]";
@@ -382,7 +380,7 @@ public class ConstantsClassPC {
 	public static final String serverToolsMenuActionsButton = "ServerTools-InternalToolsMenuActions";
 
 	public static final String returnToPolicyCenterOption = "//*[@id=\"ServerTools-InternalToolsMenuActions-ReturnToApp\"]/div";
-	public static final String  autoRenewalsettings = "gw-TabBarWidget--settings";
+	public static final String autoRenewalsettings = "gw-TabBarWidget--settings";
 	public static final String returnToPolicyCenterOption2 = "InternalToolsTabBar-ReturnTabBarLink";
 
 //	policy renewal

@@ -14,7 +14,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
-import PolicyCenterTransactions.ExcelUtils;
 
 public class PolicyIssuance_TS20 {
 
@@ -35,8 +34,8 @@ public class PolicyIssuance_TS20 {
 		svo.setIsApplicantCurrentlyInsured(ExcelUtils_TS20.getCellValueByLabel("isApplicantCurrentlyInsured"));
 
 		svo.setEffectiveDate(ExcelUtils_TS20.getCellValueByLabel("effectiveDate"));
-		svo.setSNIFirstname(ExcelUtils.getCellValueByLabel("SNIFirstname"));
-		svo.setANIFirstname(ExcelUtils.getCellValueByLabel("ANIFirstname"));
+		svo.setSNIFirstname(ExcelUtils_TS20.getCellValueByLabel("SNIFirstname"));
+		svo.setANIFirstname(ExcelUtils_TS20.getCellValueByLabel("ANIFirstname"));
 
 		svo.setDriver1Firstname(ExcelUtils_TS20.getCellValueByLabel("driver1Firstname"));
 		svo.setDriver1Lastname(ExcelUtils_TS20.getCellValueByLabel("driver1Lastname"));
@@ -88,8 +87,8 @@ public class PolicyIssuance_TS20 {
 			driver.findElement(By.xpath(ConstantsClass18.sniLastname)).sendKeys(svo.getSNILastname());
 			driver.findElement(By.xpath(ConstantsClass18.sniAddressline1)).sendKeys(svo.getSNIAddressLine1());
 
-			driver.findElement(By.xpath(ConstantsClass18.sniZipcode)).sendKeys(svo.getSNIZipcode(), Keys.TAB, Keys.ENTER,
-					Keys.TAB);
+			driver.findElement(By.xpath(ConstantsClass18.sniZipcode)).sendKeys(svo.getSNIZipcode(), Keys.TAB,
+					Keys.ENTER, Keys.TAB);
 			Select addTypeSecIns = new Select(driver.findElement(By.xpath(ConstantsClass18.sniAddressType)));
 			addTypeSecIns.selectByIndex(3);
 			driver.findElement(By.xpath(ConstantsClass18.sniScreenUpdateButton)).click();
@@ -111,8 +110,8 @@ public class PolicyIssuance_TS20 {
 			driver.findElement(By.xpath(ConstantsClass18.aniFirstname)).sendKeys(svo.getANIFirstname());
 			driver.findElement(By.xpath(ConstantsClass18.aniLastname)).sendKeys(svo.getANILastname());
 			driver.findElement(By.xpath(ConstantsClass18.aniAddressline1)).sendKeys(svo.getANIAddressLine1());
-			driver.findElement(By.xpath(ConstantsClass18.aniZipcode)).sendKeys(svo.getANIZIPcode(), Keys.TAB, Keys.ENTER,
-					Keys.TAB);
+			driver.findElement(By.xpath(ConstantsClass18.aniZipcode)).sendKeys(svo.getANIZIPcode(), Keys.TAB,
+					Keys.ENTER, Keys.TAB);
 			Select addressTypeAddIns = new Select(driver.findElement(By.xpath(ConstantsClass18.aniAddressType)));
 			addressTypeAddIns.selectByIndex(3);
 			WebElement updateButton = driver.findElement(By.xpath(ConstantsClass18.aniScreenUpdateButton));
@@ -159,9 +158,10 @@ public class PolicyIssuance_TS20 {
 					Keys.ENTER, Keys.TAB);
 			Select addTypeNewDriver = new Select(driver.findElement(By.xpath(ConstantsClass18.newDriveraddressType)));
 			addTypeNewDriver.selectByIndex(3);
-			driver.findElement(By.xpath(ConstantsClass18.newDriverlicenseNumber)).sendKeys(svo.getDriver1LicenseNumber(),
-					Keys.TAB);
-			driver.findElement(By.xpath(ConstantsClass18.newDriverliscenceState)).sendKeys(svo.getDriver1LicenseState());
+			driver.findElement(By.xpath(ConstantsClass18.newDriverlicenseNumber))
+					.sendKeys(svo.getDriver1LicenseNumber(), Keys.TAB);
+			driver.findElement(By.xpath(ConstantsClass18.newDriverliscenceState))
+					.sendKeys(svo.getDriver1LicenseState());
 			driver.findElement(By.xpath(ConstantsClass18.newDriverupdateButton)).click();
 
 			// Click on Roles Tab
@@ -193,7 +193,8 @@ public class PolicyIssuance_TS20 {
 
 		driver.findElement(By.xpath(ConstantsClass18.vinNumber)).sendKeys(svo.getVehicle1VIN());
 
-		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen)).sendKeys(svo.getVehicle1LicenseState());
+		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen))
+				.sendKeys(svo.getVehicle1LicenseState());
 
 		driver.findElement(By.xpath(ConstantsClass18.assignVehicleDriver)).click();
 
@@ -214,7 +215,8 @@ public class PolicyIssuance_TS20 {
 
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(ConstantsClass18.vinNumber)).sendKeys(svo.getVehicle2VIN());
-		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen2)).sendKeys(svo.getVehicle2LicenseState());
+		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen2))
+				.sendKeys(svo.getVehicle2LicenseState());
 
 		driver.findElement(By.xpath(ConstantsClass18.assignVehicleDriver2)).click();
 
@@ -237,7 +239,8 @@ public class PolicyIssuance_TS20 {
 		actions.moveToElement(otherContact).perform();
 		otherContact.click();
 
-		Select additionalInterestType = new Select(driver.findElement(By.xpath(ConstantsClass18.additionalInterestType)));
+		Select additionalInterestType = new Select(
+				driver.findElement(By.xpath(ConstantsClass18.additionalInterestType)));
 		additionalInterestType.selectByVisibleText(svo.getVehicle1AINewPersonIntrestType());
 
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext)).click();

@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
 
 import PolicyCenterTransactions.ConstantsClassPC;
@@ -15,7 +14,6 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyIssuance_TS25 {
 
 	public void policyCreation(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
-		AccountCreationVO avo = new AccountCreationVO();
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
 		driver.findElement(By.xpath(ConstantsClassPC.newSubmission)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.defaultEffectiveDate)).clear();
@@ -27,12 +25,12 @@ public class PolicyIssuance_TS25 {
 		driver.findElement(By.xpath(ConstantsClassPC.next)).click();
 		pvo.setIsApplicantCurrentlyInsured(ExcelUtils_TS25.getCellValueByLabel("isApplicantCurrentlyInsured"));
 		driver.findElement(By.xpath(ConstantsClassPC.qualificationsScreen))
-		.sendKeys(pvo.getIsApplicantCurrentlyInsured());
+				.sendKeys(pvo.getIsApplicantCurrentlyInsured());
 		driver.findElement(By.xpath(ConstantsClassPC.next1)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.secondaryaNamedInsured)).click();
 		pvo.setSecondaryNamedInsured(ExcelUtils_TS25.getCellValueByLabel("secondaryNamedInsured"));
 		driver.findElement(By.xpath(ConstantsClassPC.secondaryaNamedInsuredNewPerson))
-		.sendKeys(pvo.getSecondaryNamedInsured());
+				.sendKeys(pvo.getSecondaryNamedInsured());
 		pvo.setSNIFirstname(ExcelUtils_TS25.getCellValueByLabel("SNIFirstname"));
 		driver.findElement(By.xpath(ConstantsClassPC.SNIFirstname)).sendKeys(pvo.getSNIFirstname());
 		pvo.setSNILastname(ExcelUtils_TS25.getCellValueByLabel("SNILastname"));
@@ -85,7 +83,7 @@ public class PolicyIssuance_TS25 {
 		driver.findElement(By.xpath(ConstantsClassPC.toRoles)).click();
 		pvo.setDriver1YearFirstLicensed(ExcelUtils_TS25.getCellValueByLabel("driver1YearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC.driver1YearFirstLicensed))
-		.sendKeys(pvo.getDriver1YearFirstLicensed());
+				.sendKeys(pvo.getDriver1YearFirstLicensed());
 		pvo.setDriver1NumberOfAccidentsPolicyLevel(
 				ExcelUtils_TS25.getCellValueByLabel("driver1NumberOfAccidentsPolicyLevel"));
 		Select roles = new Select(driver.findElement(By.xpath(ConstantsClassPC.driver1NumberOfAccidentsPolicyLevel)));
@@ -118,11 +116,11 @@ public class PolicyIssuance_TS25 {
 		driver.findElement(By.id(ConstantsClassPC.assignDriver)).click();
 		pvo.setVehicle1Driver1Assignment(ExcelUtils_TS25.getCellValueByLabel("vehicle1Driver1Assignment"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverAssignment))
-		.sendKeys(pvo.getVehicle1Driver1Assignment());
+				.sendKeys(pvo.getVehicle1Driver1Assignment());
 		pvo.setVehicle1Driver1Percentage(ExcelUtils_TS25.getCellValueByLabel("vehicle1Driver1Percentage"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverPercentage)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleDriverPercentage))
-		.sendKeys(pvo.getVehicle1Driver1Percentage());
+				.sendKeys(pvo.getVehicle1Driver1Percentage());
 		pvo.setVehicle1CostNew(ExcelUtils_TS25.getCellValueByLabel("vehicle1CostNew"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCostNew)).sendKeys(pvo.getVehicle1CostNew());
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleAI)).click();
@@ -133,7 +131,7 @@ public class PolicyIssuance_TS25 {
 		pvo.setVehicle1AIExisingPersonIntrestType(
 				ExcelUtils_TS25.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleAIExisingPersonIntrestType))
-		.sendKeys(pvo.getVehicle1AIExisingPersonIntrestType());
+				.sendKeys(pvo.getVehicle1AIExisingPersonIntrestType());
 
 		driver.findElement(By.xpath(ConstantsClassPC.quoteAtVehicleScreen)).click();
 		driver.findElement(By.id(ConstantsClassPC.policyBindOptions)).click();

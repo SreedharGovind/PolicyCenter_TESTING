@@ -1,4 +1,5 @@
 package com.smartims.insurancepractice.policycenter.scenario05;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -10,9 +11,10 @@ import org.openqa.selenium.interactions.Actions;
 import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 
 import PolicyCenterTransactions.ConstantsClass03;
+
 public class Accountcreation_TS05 {
 	void policyCreateAccount(ChromeDriver driver, Actions action) throws IOException {
-        AccountCreationVO aco = new AccountCreationVO();
+		AccountCreationVO aco = new AccountCreationVO();
 		aco.setFirstName(ExcelUtils_TS05.getCellValueByLabel("firstname"));
 		aco.setLastName(ExcelUtils_TS05.getCellValueByLabel("lastname"));
 		aco.setZIPcode(ExcelUtils_TS05.getCellValueByLabel("zipcode"));
@@ -40,7 +42,5 @@ public class Accountcreation_TS05 {
 		driver.findElement(By.id(ConstantsClass03.searchbutton)).click();
 		driver.findElement(By.id(ConstantsClass03.select)).click();
 		driver.findElement(By.id(ConstantsClass03.update)).click();
-	}}
-
-	
-
+	}
+}

@@ -11,8 +11,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class PolicyChange_TS13 {
 	void changePolicy(ChromeDriver driver, Actions action) throws Exception {
 
@@ -27,7 +25,8 @@ public class PolicyChange_TS13 {
 		// changing the effective date
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS13.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS13.getCellValueByLabel("policyChangeDescription"));
-		pcvo.setPolicyChangeDriver1MaritalStatus(ExcelUtils_TS13.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
+		pcvo.setPolicyChangeDriver1MaritalStatus(
+				ExcelUtils_TS13.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
 
 		driver.findElement(
 				By.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[1]/div[2]/div/div/input"))

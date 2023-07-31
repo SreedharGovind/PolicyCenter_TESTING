@@ -38,10 +38,10 @@ public class PolicyCancellation_TS19 {
 
 		Select reasondrpdwn = new Select(driver.findElement(By.xpath(ConstantsClass18.cancellationReasonSelection)));
 		reasondrpdwn.selectByVisibleText(pc.getPolicyCancellationReason());
-		Thread.sleep(2000); 
+		Thread.sleep(2000);
 		WebElement ReasonDescription1 = driver.findElement(By.xpath(ConstantsClass18.cancellationReasonDescription));
 		actions.moveToElement(ReasonDescription1).perform();
-		Thread.sleep(2000); 
+		Thread.sleep(2000);
 		WebElement cancelEffDateIcon = driver
 				.findElement(By.id("StartCancellation-StartCancellationScreen-CancelPolicyDV-CancelDate_dateIcon"));
 		actions.moveToElement(cancelEffDateIcon).perform();

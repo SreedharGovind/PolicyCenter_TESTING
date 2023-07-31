@@ -177,7 +177,8 @@ public class PolicyChange2_TS16 {
 //		checkBox.sendKeys("Comprehensive");
 		action.moveToElement(checkBox).perform();
 		System.out.println(checkBox.isSelected());
-		driver.findElement(By.name("PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-PAPerVehiclePanelSet-VehicleCoverageDetailsCV-PersonalAuto_VehicleCoverageDetailDV-0-CoverageInputSet-CovPatternInputGroup-_checkbox"))
+		driver.findElement(By.name(
+				"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-PAPerVehiclePanelSet-VehicleCoverageDetailsCV-PersonalAuto_VehicleCoverageDetailDV-0-CoverageInputSet-CovPatternInputGroup-_checkbox"))
 				.click();
 //		checkBox.click();
 		driver.findElement(By.id("PolicyChangeWizard-Next")).click();

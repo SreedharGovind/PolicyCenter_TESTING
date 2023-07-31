@@ -52,7 +52,8 @@ public class PolicyRewriteFullTerm_TS21 {
 		actions.moveToElement(AllRiskInsurance).perform();
 		AllRiskInsurance.click();
 
-		Select select1 = new Select(driver.findElement(By.xpath(ConstantsClass18.rewriteFullTermProducerCodeSelection)));
+		Select select1 = new Select(
+				driver.findElement(By.xpath(ConstantsClass18.rewriteFullTermProducerCodeSelection)));
 		select1.selectByIndex(1);
 
 		WebElement Quote = driver.findElement(By.xpath(ConstantsClass18.rewriteFullTermQuoteButton));

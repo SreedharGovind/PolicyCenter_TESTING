@@ -34,7 +34,7 @@ public class PolicyCancellation_TS26 {
 		cvo.setPolicyCancellationReasonDescription(
 				ExcelUtils_TS26.getCellValueByLabel("policyCancellationReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReasonDescription))
-		.sendKeys(cvo.getPolicyCancellationReasonDescription());
+				.sendKeys(cvo.getPolicyCancellationReasonDescription());
 		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.StartCancellationID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationBindOptions)).click();

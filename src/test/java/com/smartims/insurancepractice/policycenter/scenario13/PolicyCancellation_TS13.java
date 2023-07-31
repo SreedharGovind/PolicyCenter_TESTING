@@ -58,9 +58,9 @@ public class PolicyCancellation_TS13 {
 			WebElement cancel=	driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation"));
 //			action.moveToElement(cancel).perform();
 			cancel.click();
-driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation")).click();
-				
-		// Bind options cancel Now
+			driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation")).click();
+
+			// Bind options cancel Now
 
 		WebElement bindoption = driver.findElement(By.id(Constants.cancellationWizardBindoptions));
 		action.moveToElement(bindoption).perform();

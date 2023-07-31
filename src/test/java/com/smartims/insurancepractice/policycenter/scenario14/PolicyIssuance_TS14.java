@@ -16,8 +16,7 @@ import PolicyCenterTransactions.Constants;
 public class PolicyIssuance_TS14 {
 	void newSubmission(ChromeDriver driver, Actions action) throws Exception {
 
-		PolicyIssuanceVO svo =new PolicyIssuanceVO();
-
+		PolicyIssuanceVO svo = new PolicyIssuanceVO();
 
 		// New submission
 		driver.findElement(By.xpath(Constants.clickOnNewSubbmission)).click();
@@ -65,8 +64,8 @@ public class PolicyIssuance_TS14 {
 		svo.setVehicle1LicenseState(ExcelUtils_TS14.getCellValueByLabel("vehicle1LicenseState"));
 		svo.setVehicle1CostNew(ExcelUtils_TS14.getCellValueByLabel("vehicle1CostNew"));
 
-		svo.setVehicle1AIExisingPersonIntrestType(ExcelUtils_TS14.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
-	
+		svo.setVehicle1AIExisingPersonIntrestType(
+				ExcelUtils_TS14.getCellValueByLabel("vehicle1AIExisingPersonIntrestType"));
 
 		driver.findElement(By.xpath("//*[@id=\"SubmissionWizard-OfferingScreen-OfferingSelection\"]/div/div/select"))
 				.sendKeys(svo.getOfferingsSelection(), Keys.TAB);
@@ -101,7 +100,7 @@ public class PolicyIssuance_TS14 {
 		WebElement next = driver.findElement(By.id("SubmissionWizard-Next"));
 		action.moveToElement(next).perform();
 		next.click();
-		
+
 		driver.findElement(By.id("SubmissionWizard-Next")).click();
 
 		// >>>>>>>>> Add Existing Driver <<<<<<<<<< 
@@ -269,7 +268,6 @@ public class PolicyIssuance_TS14 {
 
 		String coverage = "collision";
 
-		
 		if (coverage != null && coverage.equalsIgnoreCase("Comprehensive")) {
 			driver.findElement(By.name(
 					"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-PAPerVehiclePanelSet-VehicleCoverageDetailsCV-PersonalAuto_VehicleCoverageDetailDV-0-CoverageInputSet-CovPatternInputGroup-_checkbox"))

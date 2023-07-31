@@ -12,7 +12,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 
 import PolicyCenterTransactions.ConstantsClassPC;
 
-
 public class AccountCreation_TS10 {
 
 	public static void main(String[] args) throws IOException {
@@ -51,7 +50,6 @@ public class AccountCreation_TS10 {
 		WebElement Update = driver.findElement(By.xpath(ConstantsClassPC.updateButton));
 		actions.moveToElement(Update).perform();
 		Update.click();
-
 
 	}
 }

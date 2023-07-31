@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 
 import PolicyCenterTransactions.ConstantsClassPC;
+
 public class AccountCreation_TS24 {
 
 	public static void main(String[] args) throws IOException {
@@ -49,7 +50,6 @@ public class AccountCreation_TS24 {
 		WebElement Update = driver.findElement(By.xpath(ConstantsClassPC.updateButton));
 		actions.moveToElement(Update).perform();
 		Update.click();
-
 
 	}
 }

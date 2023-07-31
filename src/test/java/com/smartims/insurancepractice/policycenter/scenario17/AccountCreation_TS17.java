@@ -10,8 +10,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class AccountCreation_TS17 {
 	void createAccount(ChromeDriver driver, Actions action) throws Exception {
 		AccountCreationVO avo = new AccountCreationVO();

@@ -23,8 +23,8 @@ public class PolicyChange1_TS09 {
 		driver.findElement(By.xpath(Constants.changePolicy)).click();
 		driver.manage().window().maximize();
 		// changing the effective date
-		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS09. getCellValueByLabel("policyChangeEffectiveDate"));
-		pcvo.setPolicyChangeDescription(ExcelUtils_TS09. getCellValueByLabel("policyChangeDescription"));
+		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS09.getCellValueByLabel("policyChangeEffectiveDate"));
+		pcvo.setPolicyChangeDescription(ExcelUtils_TS09.getCellValueByLabel("policyChangeDescription"));
 
 		driver.findElement(
 				By.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[1]/div[2]/div/div/input"))

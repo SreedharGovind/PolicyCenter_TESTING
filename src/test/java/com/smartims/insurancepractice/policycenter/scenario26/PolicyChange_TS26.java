@@ -19,10 +19,10 @@ public class PolicyChange_TS26 {
 		driver.findElement(By.xpath(ConstantsClassPC.changePolicy)).click();
 		cvo.setPolicyChangeEffectiveDate(ExcelUtils_TS26.getCellValueByLabel("policyChangeEffectiveDate"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeEffectiveDate))
-		.sendKeys(cvo.getPolicyChangeEffectiveDate());
+				.sendKeys(cvo.getPolicyChangeEffectiveDate());
 		cvo.setPolicyChangeDescription(ExcelUtils_TS26.getCellValueByLabel("policyChangeDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeDescription))
-		.sendKeys(cvo.getPolicyChangeDescription());
+				.sendKeys(cvo.getPolicyChangeDescription());
 		driver.findElement(By.xpath(ConstantsClassPC.toPolicyOfferings)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.toPolicyChangeDriver)).click();
 		Thread.sleep(2000);

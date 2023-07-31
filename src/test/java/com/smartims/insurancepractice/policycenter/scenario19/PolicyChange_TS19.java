@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
-import com.smartims.insurancepractice.policycenter.scenario22.ExcelUtils_TS22;
 
 import PolicyCenterTransactions.ConstantsClass18;
 
@@ -32,7 +31,8 @@ public class PolicyChange_TS19 {
 				ExcelUtils_TS19.getCellValueByLabel("policyChangeExistingDriverdateOfBirth"));
 
 		pcvo.setPolicyChangeVehicle1VIN(ExcelUtils_TS19.getCellValueByLabel("policyChangeVehicle1VIN"));
-		pcvo.setPolicyChangeVehicle1LicenseState(ExcelUtils_TS19.getCellValueByLabel("policyChangeVehicle1LicenseState"));
+		pcvo.setPolicyChangeVehicle1LicenseState(
+				ExcelUtils_TS19.getCellValueByLabel("policyChangeVehicle1LicenseState"));
 		pcvo.setPolicyChangeVehicle1Driver1Percentage(
 				ExcelUtils_TS19.getCellValueByLabel("policyChangeVehicle1Driver1Percentage"));
 		pcvo.setPolicyChangeVehicle1CostNew(ExcelUtils_TS19.getCellValueByLabel("policyChangeVehicle1CostNew"));
@@ -128,10 +128,8 @@ public class PolicyChange_TS19 {
 				"//*[@id=\"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-JobWizardToolbarButtonSet-WithdrawJob\"]/div"));
 		actions.moveToElement(withdrawTransactionButton).perform();
 		withdrawTransactionButton.click();
-		
-		 driver.switchTo().alert().accept();
-	
-		
+
+		driver.switchTo().alert().accept();
 
 	}
 }

@@ -17,9 +17,9 @@ import PolicyCenterTransactions.ConstantsClassPC_TS07;
 public class PolicyIssuance_TS07 {
 
 	public void policyCreation(ChromeDriver driver, Actions actions) throws IOException {
-		
+
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
-		
+
 //		driver.findElement(By.xpath(ConstantsClassPC1.accountsTab)).click();
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.newSubmission)).click();
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.newSubmissionScreen)).click();
@@ -34,7 +34,7 @@ public class PolicyIssuance_TS07 {
 		pvo.setSecondaryNamedInsured(ExcelUtils_TS07.getCellValueByLabel("secondaryNamedInsured"));
 		System.out.println(pvo.getSecondaryNamedInsured());
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.secondaryaNamedInsuredNewPerson))
-		.sendKeys(pvo.getSecondaryNamedInsured());
+				.sendKeys(pvo.getSecondaryNamedInsured());
 		pvo.setSNIFirstname(ExcelUtils_TS07.getCellValueByLabel("SNIFirstname"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.SNIFirstname)).sendKeys(pvo.getSNIFirstname());
 		pvo.setSNILastname(ExcelUtils_TS07.getCellValueByLabel("SNILastname"));
@@ -65,11 +65,11 @@ public class PolicyIssuance_TS07 {
 		ExistingDriver1.click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.toRoles)).click();
-		
+
 		pvo.setExistingDriverYearFirstLicensed(ExcelUtils_TS07.getCellValueByLabel("existingDriverYearFirstLicensed"));
 		driver.findElement(By.xpath(ConstantsClassPC.existingDriverYearFirstLicensed1)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.existingDriverYearFirstLicensed1))
-		.sendKeys(pvo.getExistingDriverYearFirstLicensed());
+				.sendKeys(pvo.getExistingDriverYearFirstLicensed());
 		pvo.setExistingDriverNumberOfAccidentsPolicyLevel(
 				ExcelUtils_TS07.getCellValueByLabel("existingDriverNumberOfAccidentsPolicyLevel"));
 		Select roles = new Select(
@@ -90,7 +90,6 @@ public class PolicyIssuance_TS07 {
 		Select roles4 = new Select(
 				driver.findElement(By.xpath(ConstantsClassPC.existingDriverNumberOfViolationsAccountLevel1)));
 		roles4.selectByValue(pvo.getExistingDriverNumberOfViolationsAccountLevel());
-		
 
 //		pvo.setExistingDriverYearFirstLicensed(ExcelUtils_TS07.getCellValueByLabel("existingDriverYearFirstLicensed"));
 //
@@ -138,11 +137,13 @@ public class PolicyIssuance_TS07 {
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1VIN)).sendKeys(pvo.getVehicle1VIN());
 
 		pvo.setVehicle1LicenseState(ExcelUtils_TS07.getCellValueByLabel("vehicle1LicenseState"));
-		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1LicenseState)).sendKeys(pvo.getVehicle1LicenseState());
+		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1LicenseState))
+				.sendKeys(pvo.getVehicle1LicenseState());
 
 		pvo.setVehicle1LicenseState(ExcelUtils_TS07.getCellValueByLabel("vehicle1LicenseState"));
 
-		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1LicenseState)).sendKeys(pvo.getVehicle1LicenseState());
+		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1LicenseState))
+				.sendKeys(pvo.getVehicle1LicenseState());
 
 		pvo.setVehicle1GaragedAt(ExcelUtils_TS07.getCellValueByLabel("vehicle1GaragedAt"));
 
@@ -153,7 +154,7 @@ public class PolicyIssuance_TS07 {
 		pvo.setVehicle1Driver1Assignment(ExcelUtils_TS07.getCellValueByLabel("vehicle1Driver1Assignment"));
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1Driver1Assignment))
-		.sendKeys(pvo.getVehicle1Driver1Assignment());
+				.sendKeys(pvo.getVehicle1Driver1Assignment());
 
 		pvo.setVehicle1Driver1Percentage(ExcelUtils_TS07.getCellValueByLabel("vehicle1Driver1Percentage"));
 
@@ -161,7 +162,7 @@ public class PolicyIssuance_TS07 {
 		System.out.println(pvo.getVehicle1Driver1Percentage());
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1Driver1Percentage))
-		.sendKeys(pvo.getVehicle1Driver1Percentage());
+				.sendKeys(pvo.getVehicle1Driver1Percentage());
 
 		pvo.setVehicle1CostNew(ExcelUtils_TS07.getCellValueByLabel("vehicle1CostNew"));
 
@@ -185,7 +186,7 @@ public class PolicyIssuance_TS07 {
 
 		driver.findElement(By.id("SubmissionWizard-SubmissionWizard_QuoteScreen-JobWizardToolbarButtonSet-BindOptions"))
 
-		.click();
+				.click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.issue)).click();
 
@@ -197,7 +198,7 @@ public class PolicyIssuance_TS07 {
 
 				.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/div/div/div[4]/div[2]/div/div/div/div[2]"))
 
-		.click();
+				.click();
 
 	}
 }

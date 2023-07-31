@@ -11,8 +11,6 @@ import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
 
 import PolicyCenterTransactions.Constants;
 
-
-
 public class PolicyChange_TS12 {
 	void changePolicy(ChromeDriver driver, Actions action) throws Exception {
 
@@ -27,7 +25,8 @@ public class PolicyChange_TS12 {
 		// changing the effective date
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS12.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS12.getCellValueByLabel("policyChangeDescription"));
-		pcvo.setPolicyChangeDriver1MaritalStatus(ExcelUtils_TS12.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
+		pcvo.setPolicyChangeDriver1MaritalStatus(
+				ExcelUtils_TS12.getCellValueByLabel("policyChangeDriver1MaritalStatus"));
 
 		driver.findElement(
 				By.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[5]/div/div/div[1]/div[2]/div/div/input"))
@@ -55,7 +54,9 @@ public class PolicyChange_TS12 {
 				"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriversLV-1-_Checkbox"));
 		action.moveToElement(removedriver).perform();
 		removedriver.click();
-		driver.findElement(By.id("PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriversLV_tb-Remove")).click();
+		driver.findElement(By.id(
+				"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-PADriversPanelSet-DriversListDetailPanel-DriversLV_tb-Remove"))
+				.click();
 		driver.findElement(By.id(
 				"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PADriversScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote"))
 				.click();

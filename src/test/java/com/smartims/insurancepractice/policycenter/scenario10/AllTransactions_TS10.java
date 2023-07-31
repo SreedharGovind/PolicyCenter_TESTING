@@ -19,7 +19,7 @@ public class AllTransactions_TS10 {
 //		// Policy Issuance Transaction
 		PolicyIssuance_TS10 issuance = new PolicyIssuance_TS10();
 		issuance.submission22(drivers, actions);
-		
+
 		PolicyChange_TS10 change = new PolicyChange_TS10();
 		change.policyChange(drivers, actions);
 
@@ -34,13 +34,12 @@ public class AllTransactions_TS10 {
 //		// Policy Renewal Transaction
 		PolicyManaulRenewal_TS10 Renewal = new PolicyManaulRenewal_TS10();
 		Renewal.policyRenew(drivers, actions);
-		
+
 		// Policy CancellationFlatRate Transaction
-		
+
 		PolicyCancellationFlatRate_TS10 cancellationFlatRate = new PolicyCancellationFlatRate_TS10();
 		cancellationFlatRate.policyCancellation(drivers, actions);
 
-		
 //		// Policy Rewrite Transaction
 		PolicyRewriteFullTerm_TS10 rewrite = new PolicyRewriteFullTerm_TS10();
 		rewrite.policyRewriteFullTerm(drivers, actions);
