@@ -3,12 +3,12 @@ package com.smartims.insurancepractice.policycenter.scenario26;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import PolicyCenterTransactions.ExcelUtils;
+import PolicyCenterTransactions.CommonClass;
 
 public class AllTransactions_TS26 {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = ExcelUtils.getChromeDriver();
+		ChromeDriver driver = CommonClass.getchromedriver();
 
 		Actions actions = new Actions(driver);
 		AccountCreation_TS26 create = new AccountCreation_TS26();
