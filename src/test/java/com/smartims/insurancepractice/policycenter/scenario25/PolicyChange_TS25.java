@@ -25,7 +25,6 @@ public class PolicyChange_TS25 {
 		driver.findElement(By.xpath(ConstantsClassPC.toPolicyChangeDriver)).click();
 		cvo.setPolicyChangeDriver1LicenseNumber(
 				ExcelUtils_TS25.getCellValueByLabel("policyChangeExistingDriverLicenseNumber"));
-		System.out.println(cvo.getPolicyChangeDriver1LicenseNumber());
 		driver.findElement(By.xpath(ConstantsClassPC.ExistingDriverLicenseNumber)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.ExistingDriverLicenseNumber))
 				.sendKeys(cvo.getPolicyChangeDriver1LicenseNumber());

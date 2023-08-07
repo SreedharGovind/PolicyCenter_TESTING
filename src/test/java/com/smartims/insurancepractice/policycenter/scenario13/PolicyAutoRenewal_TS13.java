@@ -44,7 +44,7 @@ public class PolicyAutoRenewal_TS13 {
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime)).sendKeys(pr.getTestingSystemClockTime());
 		driver.findElement(By.xpath(ConstantsClassPC.policyRenewalChangeDateButton)).click();
-
+		Thread.sleep(1000);
 		WebElement serverToolsButton = driver.findElement(By.xpath(ConstantsClassPC.serverTools));
 		actions.moveToElement(serverToolsButton).perform();
 		serverToolsButton.click();

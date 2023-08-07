@@ -66,7 +66,6 @@ public class PolicyIssuance_TS25 {
 		pvo.setDriver1Address1(ExcelUtils_TS25.getCellValueByLabel("driver1Address1"));
 		driver.findElement(By.xpath(ConstantsClassPC.driver1Address1)).sendKeys(pvo.getDriver1Address1());
 		pvo.setDriver1ZIPCode(ExcelUtils_TS25.getCellValueByLabel("driver1ZIPCode"));
-		System.out.println(pvo.getDriver1ZIPCode());
 		driver.findElement(By.xpath(ConstantsClassPC.driver1ZIPCode)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.driver1ZIPCode)).sendKeys(pvo.getDriver1ZIPCode());
 		pvo.setDriver1City(ExcelUtils_TS25.getCellValueByLabel("driver1City"));
