@@ -29,5 +29,4 @@ public class CommonClass {
 		driver.findElement(By.name(ConstantsClassPC.supervisorpassword)).sendKeys(pvo.getPassword(), Keys.ENTER);
 		return driver;
 	}
-
 }
