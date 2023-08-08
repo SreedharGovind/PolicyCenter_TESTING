@@ -14,9 +14,6 @@ import PolicyCenterTransactions.ConstantsClassPC;
 
 public class AccountCreation_TS01 {
 
-	public static void main(String[] args) throws IOException {
-	}
-
 	public void accountCreation(ChromeDriver driver, Actions actions) throws IOException {
 		AccountCreationVO pvo = new AccountCreationVO();
 		WebElement menuOption = driver.findElement(By.id(ConstantsClassPC.desktopMenuOPtions));
