@@ -20,20 +20,20 @@ public class PolicyProRataCancellation_TS02 {
 		driver.findElement(By.xpath(ConstantsClassPC.transactions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.cancelPolicy)).click();
 
-		cvo.setPolicyCancellationSource(ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataSource"));
+		cvo.setPolicyCancellationSource(ExcelUtils_TS02.getCellValueByLabel("policyCancellationProrataSource"));
 		Select sourcecncl = new Select(driver.findElement(By.xpath(ConstantsClassPC.policyCancellationSource)));
 		sourcecncl.selectByVisibleText(cvo.getPolicyCancellationSource());
 		Thread.sleep(1000);
-		cvo.setPolicyCancellationReason(ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataReason"));
+		cvo.setPolicyCancellationReason(ExcelUtils_TS02.getCellValueByLabel("policyCancellationProrataReason"));
 		Select reasondrpdwn = new Select(driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReason)));
 		reasondrpdwn.selectByVisibleText(cvo.getPolicyCancellationReason());
-		cvo.setCancellationEffectiveDate(ExcelUtils_TS01.getCellValueByLabel("cancellationEffectiveDatePorata"));
+		cvo.setCancellationEffectiveDate(ExcelUtils_TS02.getCellValueByLabel("cancellationEffectiveDateProrata"));
 		driver.findElement(By.id(ConstantsClassPC.cancelDateIcon)).click();
 		WebElement date = driver.findElement(By.name(ConstantsClassPC.cancellationEffectiveDateID));
 		date.sendKeys(cvo.getCancellationEffectiveDate());
 
 		cvo.setPolicyCancellationReasonDescription(
-				ExcelUtils_TS01.getCellValueByLabel("policyCancellationPorataReasonDescription"));
+				ExcelUtils_TS02.getCellValueByLabel("policyCancellationProrataReasonDescription"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyCancellationReasonDescription))
 				.sendKeys(cvo.getPolicyCancellationReasonDescription());
 		Thread.sleep(1000);

@@ -16,7 +16,6 @@ public class PolicyCancellation_TS01 {
 	PolicyCancellationVO cvo = new PolicyCancellationVO();
 
 	public void policyCancellation(ChromeDriver driver, Actions actions) throws InterruptedException, IOException {
-		// driver.findElement(By.id(ConstantsClassPC.policyTabBar)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.transactions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.cancelPolicy)).click();
 
