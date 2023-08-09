@@ -36,7 +36,6 @@ public class PolicyChange_TS24 {
 		Thread.sleep(1000);
 		WebElement move = driver.findElement(By.xpath(ConstantsClassPC.policyChangeAIOtherContacts));
 		actions.moveToElement(move).perform();
-//		driver.findElement(By.xpath(ConstantsClassPC.policyChangeAIOtherContacts)).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeClickOnAI)).click();
 		pvo.setPolicyChangeVehicle1AIExisingPersonIntrestType(
