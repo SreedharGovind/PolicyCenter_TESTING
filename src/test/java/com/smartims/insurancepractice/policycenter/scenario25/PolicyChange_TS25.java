@@ -46,6 +46,7 @@ public class PolicyChange_TS25 {
 		cvo.setPolicyChangeVehicle1CostNew(ExcelUtils_TS25.getCellValueByLabel("policyChangeVehicle2CostNew"));
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeVehicle1CostNew))
 				.sendKeys(cvo.getPolicyChangeVehicle1CostNew());
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeAssignVehicle1Driver1)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeVehicle1Driver1Assignment)).click();
 		cvo.setPolicyChangeVehicle1Driver1Percentage(

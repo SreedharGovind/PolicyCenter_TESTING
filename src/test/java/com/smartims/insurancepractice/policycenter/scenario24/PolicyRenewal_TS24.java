@@ -20,7 +20,7 @@ public class PolicyRenewal_TS24 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyRenewBindingOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.PolicyRenewIssueNow)).click();
 		driver.switchTo().alert().accept();
-		driver.findElement(By.id(ConstantsClassPC.policyTabBar)).click();
+		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 
 	}
 

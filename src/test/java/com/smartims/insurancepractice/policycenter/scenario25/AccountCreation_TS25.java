@@ -15,8 +15,6 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class AccountCreation_TS25 {
 	public void AccountCreation(ChromeDriver driver, Actions actions) throws IOException {
 		AccountCreationVO pvo = new AccountCreationVO();
-
-		// Navigate to the webpage
 		WebElement menuOption = driver.findElement(By.id(ConstantsClassPC.desktopMenuOPtions));
 		actions.moveToElement(menuOption).perform();
 		driver.findElement(By.xpath(ConstantsClassPC.actionsMenu)).click();
