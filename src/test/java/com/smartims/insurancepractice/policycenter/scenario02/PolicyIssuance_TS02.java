@@ -13,6 +13,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 
 public class PolicyIssuance_TS02 {
 	PolicyIssuanceVO pvo = new PolicyIssuanceVO();
+	SeleniumToExcel_TS02 seleniumToExcel = new SeleniumToExcel_TS02();
 
 	public void policyCreation(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		Thread.sleep(2000);
@@ -129,6 +130,7 @@ public class PolicyIssuance_TS02 {
 		pvo.setVehicle1CostNew(ExcelUtils_TS02.getCellValueByLabel("vehicle1CostNew"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCostNew)).sendKeys(pvo.getVehicle1CostNew());
 		driver.findElement(By.xpath(ConstantsClassPC.quoteAtVehicleScreen)).click();
+		seleniumToExcel.premium(driver, "Issuance");
 		driver.findElement(By.id(ConstantsClassPC.policyBindOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyIssue)).click();
 		driver.switchTo().alert().accept();

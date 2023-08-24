@@ -12,6 +12,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 
 public class PolicyChange_TS02 {
 	PolicyChangeVO cvo = new PolicyChangeVO();
+	SeleniumToExcel_TS02 seleniumToExcel = new SeleniumToExcel_TS02();
 
 	public void policychange(ChromeDriver driver, Actions actions) throws IOException {
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
@@ -58,6 +59,7 @@ public class PolicyChange_TS02 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeVehicle1Type))
 				.sendKeys(cvo.getPolicyChangeVehicle1Type());
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeQuote)).click();
+		seleniumToExcel.premium(driver, "Change");
 		driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeUWToRiskAnalysis)).click();
