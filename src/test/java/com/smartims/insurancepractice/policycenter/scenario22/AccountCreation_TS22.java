@@ -13,7 +13,7 @@ import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import PolicyCenterTransactions.ConstantsClassPC;
 
 public class AccountCreation_TS22 {
-	public void accountCreation(ChromeDriver driver, Actions actions) throws IOException {
+	public void accountCreation(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		AccountCreationVO pvo = new AccountCreationVO();
 
 		WebElement menuOption = driver.findElement(By.id(ConstantsClassPC.desktopMenuOPtions));
@@ -37,6 +37,7 @@ public class AccountCreation_TS22 {
 		driver.findElement(By.xpath(ConstantsClassPC.ZIP_code)).sendKeys(String.valueOf(pvo.getZIPcode()));
 		pvo.setAddressType(ExcelUtils_TS22.getCellValueByLabel("addressType"));
 		driver.findElement(By.xpath(ConstantsClassPC.addressType)).sendKeys(pvo.getAddressType());
+		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.searchOrganization)).click();
 		pvo.setOrganizationName(ExcelUtils_TS22.getCellValueByLabel("organizationName"));
 		driver.findElement(By.name(ConstantsClassPC.searchOrganizationName)).sendKeys(pvo.getOrganizationName(),
