@@ -13,7 +13,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyRewriteMidTerm_TS02 {
 
 	PolicyRewriteMidTermVO midTermVO = new PolicyRewriteMidTermVO();
-
+	SeleniumToExcel_TS02 seleniumToExcel = new SeleniumToExcel_TS02();
 	public void rewriteMidTerm(ChromeDriver driver, Actions actions) throws IOException {
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteRemainderOfTerm)).click();
@@ -23,7 +23,9 @@ public class PolicyRewriteMidTerm_TS02 {
 				.sendKeys(midTermVO.getRewriteMidTermOfferingsSelection());
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteMidTermToInfoScreen)).click();
 		driver.findElement(By.id(ConstantsClassPC.rewriteMidTermQuoteID)).click();
-		driver.findElement(By.id(ConstantsClassPC.rewriteMidTermPolicyIssueID)).click();
+		
+		seleniumToExcel.premium(driver, "RewriteMidTerm");
+	//	driver.findElement(By.id(ConstantsClassPC.rewriteMidTermPolicyIssueID)).click();
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 	}

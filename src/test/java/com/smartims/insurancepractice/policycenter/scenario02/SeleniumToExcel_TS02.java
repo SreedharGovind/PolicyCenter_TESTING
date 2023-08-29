@@ -28,6 +28,15 @@ public class SeleniumToExcel_TS02 {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
+		
+		
+		if (transaction == "ReWriteMidTerm") {
+			return driver.findElement(By.xpath(
+					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
+		}
+		
+		
+		
 
 		return null;
 	}
@@ -38,6 +47,7 @@ public class SeleniumToExcel_TS02 {
 		Workbook workbook = new XSSFWorkbook(fis);
 		Sheet sheet = workbook.getSheetAt(0);
 		WebElement data = this.premiumValue(driver, transaction);
+		System.out.println(transaction);
 		String capturedData = data.getText();
 		for (Row row : sheet) {
 			for (Cell cell : row) {
