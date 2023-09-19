@@ -17,6 +17,7 @@ public class AllTransactions_TS01 {
 		PolicyIssuance_TS01 n = new PolicyIssuance_TS01();
 		n.policyCreation(driver, actions);
 		System.out.println("Policy Creation TS01");
+		Thread.sleep(1000);
 
 		PolicyChange_TS01 c = new PolicyChange_TS01();
 		c.policychange(driver, actions);
