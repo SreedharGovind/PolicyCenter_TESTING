@@ -69,6 +69,7 @@ public class PolicyCancellation_TS13 {
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		driver.findElement(By.xpath(Constants.viewPolicy)).click();
+		Thread.sleep(1000);
 
 	}
 
