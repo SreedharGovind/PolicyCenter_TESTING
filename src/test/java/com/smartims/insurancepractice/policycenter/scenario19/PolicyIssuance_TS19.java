@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
@@ -19,10 +18,8 @@ public class PolicyIssuance_TS19 {
 
 	void submission19(ChromeDriver driver, Actions actions) throws IOException {
 
-		AccountCreationVO pvo = new AccountCreationVO();
 		PolicyIssuanceVO svo = new PolicyIssuanceVO();
-
-		ExcelUtils_TS19 eu19 = new ExcelUtils_TS19();
+		SeleniumToExcel_TS19 seleniumToExcel = new SeleniumToExcel_TS19();
 
 		svo.setQuoteType(ExcelUtils_TS19.getCellValueByLabel("QuoteType"));
 		svo.setDefaultBaseState(ExcelUtils_TS19.getCellValueByLabel("DefaultBaseState"));
@@ -145,18 +142,14 @@ public class PolicyIssuance_TS19 {
 		driver.findElement(By.id(
 				"SubmissionWizard-LOBWizardStepGroup-SubmissionWizard_PolicyInfoScreen-SubmissionWizard_PolicyInfoDV-PolicyInfoInputSet-EffectiveDate_dateIcon"))
 				.click();
-
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext)).click();
 
 		// ----------------------Adding a Existing Driver--------------------
-
 		WebElement addExistingDriver = driver.findElement(By.xpath(ConstantsClass18.addDriver));
 		actions.moveToElement(addExistingDriver).perform();
 		addExistingDriver.click();
-
 		WebElement existingDriver = driver.findElement(By.xpath(ConstantsClass18.existingDriverLabelSelection));
 		actions.moveToElement(existingDriver).perform();
-
 		WebElement existingDriver1 = driver.findElement(By.xpath(ConstantsClass18.existingDriver1Selection));
 		actions.moveToElement(existingDriver1).perform();
 		existingDriver1.click();
@@ -166,7 +159,6 @@ public class PolicyIssuance_TS19 {
 				.sendKeys(svo.getExistingDriverLicenseNumber(), Keys.TAB);
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverLicenseState))
 				.sendKeys(svo.getExistingDriverLicenseState());
-
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverRolesTab)).click();
 		driver.findElement(By.xpath(ConstantsClass18.existingDriverYearFirstLicensed))
 				.sendKeys(svo.getExistingDriverYearFirstLicensed(), Keys.TAB);
@@ -184,52 +176,36 @@ public class PolicyIssuance_TS19 {
 				driver.findElement(By.xpath(ConstantsClass18.existingDriverNumOfViolationsAccountLevel)));
 		select6.selectByVisibleText(svo.getExistingDriverNumberOfViolationsAccountLevel());
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext)).click();
-
 		driver.findElement(By.xpath(ConstantsClass18.addVehicle)).click();
-
-		// VIN
-
 		driver.findElement(By.xpath(ConstantsClass18.vinNumber)).sendKeys(svo.getVehicle1VIN());
-
 		driver.findElement(By.xpath(ConstantsClass18.licenseStateVehicleScreen))
 				.sendKeys(svo.getVehicle1LicenseState());
-
 		driver.findElement(By.xpath(ConstantsClass18.assignVehicleDriver)).click();
-
 		WebElement addDriver = driver.findElement(By.xpath(ConstantsClass18.selectDriverToVehicle));
 		actions.moveToElement(addDriver).perform();
 		addDriver.click();
-
 		WebElement vehicleCost = driver.findElement(By.xpath(ConstantsClass18.vehicleCostNew));
 		actions.moveToElement(vehicleCost).perform();
 		vehicleCost.sendKeys(svo.getVehicle1CostNew());
-
 		driver.findElement(By.xpath(ConstantsClass18.additionalInterestCardTab)).click();
 		driver.findElement(By.xpath(ConstantsClass18.additionalInterestTabAddContactButton)).click();
-
 		WebElement otherContactButton = driver
 				.findElement(By.xpath(ConstantsClass18.additionalInterestTabAddOtherContact));
 		actions.moveToElement(otherContactButton).perform();
-
 		WebElement otherContact = driver.findElement(By.xpath(
 				"//*[@id=\"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-AdditionalInterestDetailsDV-AdditionalInterestLV_tb-AddContactsButton-AddOtherContact-1-acctContact\"]/div"));
 		actions.moveToElement(otherContact).perform();
 		otherContact.click();
-
 		Select additionalInterestType = new Select(
 				driver.findElement(By.xpath(ConstantsClass18.additionalInterestType)));
 		additionalInterestType.selectByValue("LESSOR");
-
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext)).click();
-
 		WebElement checkBox = driver.findElement(By.name(ConstantsClass18.comprehensiveCovCheckBox));
 		actions.moveToElement(checkBox).perform();
 		checkBox.click();
-
 		driver.findElement(By.xpath(
 				"//*[@id=\"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PersonalAutoScreen-AdditionalCoveragesTab\"]/div"))
 				.click();
-
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext5)).click();
 		driver.findElement(By.xpath(ConstantsClass18.riskAnalysisScreen)).click();
 		driver.findElement(By.id(ConstantsClass18.submissionWizardNext6)).click();
@@ -246,11 +222,10 @@ public class PolicyIssuance_TS19 {
 		driver.findElement(By.xpath(ConstantsClass18.newTransactionButton)).click();
 		driver.findElement(By.xpath(ConstantsClass18.issuePolicyOption)).click();
 		driver.findElement(By.id(ConstantsClass18.quoteButtonOfferingsScreen)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS19");
 		driver.findElement(By.id(ConstantsClass18.issueButton)).click();
-
 		Alert alert2 = driver.switchTo().alert();
 		alert2.accept();
-
 		driver.findElement(By.xpath(ConstantsClass18.viewPolicySubmission)).click();
 
 	}
