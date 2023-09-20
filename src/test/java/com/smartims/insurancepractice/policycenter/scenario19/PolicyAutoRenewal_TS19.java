@@ -17,10 +17,8 @@ public class PolicyAutoRenewal_TS19 {
 	void policyRenewal(ChromeDriver driver, Actions actions) throws Exception {
 
 		PolicyAutoRenewalVO pr = new PolicyAutoRenewalVO();
-
 		pr.setTestingSystemClockDate(ExcelUtils_TS01.getCellValueByLabel("TestingSystemClockDate"));
 		pr.setTestingSystemClockTime(ExcelUtils_TS01.getCellValueByLabel("TestingSystemClockTime"));
-
 		Robot robot = new Robot();
 		Thread.sleep(1000);
 		robot.keyPress(KeyEvent.VK_ALT);
@@ -29,18 +27,14 @@ public class PolicyAutoRenewal_TS19 {
 		robot.keyRelease(KeyEvent.VK_T);
 		robot.keyRelease(KeyEvent.VK_SHIFT);
 		robot.keyRelease(KeyEvent.VK_ALT);
-
 		WebElement internalToolsButton = driver.findElement(By.xpath(ConstantsClassPC.internalTools));
 		actions.moveToElement(internalToolsButton).perform();
 		internalToolsButton.click();
-
 		WebElement testingSystemClock = driver.findElement(By.xpath(ConstantsClassPC.testingSystemClock));
 		actions.moveToElement(testingSystemClock).perform();
 		testingSystemClock.click();
-
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockDate)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockDate)).sendKeys(pr.getTestingSystemClockDate());
-
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime)).clear();
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime)).sendKeys(pr.getTestingSystemClockTime());
 		driver.findElement(By.xpath(ConstantsClassPC.policyRenewalChangeDateButton)).click();
@@ -48,29 +42,22 @@ public class PolicyAutoRenewal_TS19 {
 		WebElement serverToolsButton = driver.findElement(By.xpath(ConstantsClassPC.serverTools));
 		actions.moveToElement(serverToolsButton).perform();
 		serverToolsButton.click();
-
 		WebElement batchProcessButton = driver.findElement(By.xpath(ConstantsClassPC.batchProcessInfo));
 		actions.moveToElement(batchProcessButton).perform();
 		batchProcessButton.click();
-
 		WebElement policyRenewalStartRunButton = driver
 				.findElement(By.xpath(ConstantsClassPC.policyRenewalStartRunButton));
 		actions.moveToElement(policyRenewalStartRunButton).perform();
 		policyRenewalStartRunButton.click();
-
 		pr.setTestingSystemClockCurrentDate(ExcelUtils_TS01.getCellValueByLabel("TestingSystemClockCurrentDate"));
 		pr.setTestingSystemClockCurrentTime(ExcelUtils_TS01.getCellValueByLabel("TestingSystemClockCurrentTime"));
-
 		WebElement internalToolsButton1 = driver.findElement(By.xpath(ConstantsClassPC.internalTools));
 		actions.moveToElement(internalToolsButton1).perform();
 		internalToolsButton1.click();
-
 		WebElement testingSystemClock1 = driver.findElement(By.xpath(ConstantsClassPC.testingSystemClock));
 		actions.moveToElement(testingSystemClock1).perform();
 		testingSystemClock1.click();
-
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockDate)).clear();
-
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockDate))
 				.sendKeys(pr.getTestingSystemClockCurrentDate());
 		driver.findElement(By.xpath(ConstantsClassPC.testingSystemClockTime)).clear();
