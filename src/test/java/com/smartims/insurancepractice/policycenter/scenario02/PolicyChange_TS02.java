@@ -59,7 +59,7 @@ public class PolicyChange_TS02 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeVehicle1Type))
 				.sendKeys(cvo.getPolicyChangeVehicle1Type());
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeQuote)).click();
-		seleniumToExcel.premium(driver, "Change");
+		seleniumToExcel.premium(driver, "PolicyChangeTS02");
 		driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeUWToRiskAnalysis)).click();

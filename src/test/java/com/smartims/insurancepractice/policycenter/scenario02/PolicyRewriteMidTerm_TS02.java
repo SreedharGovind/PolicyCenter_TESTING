@@ -24,8 +24,7 @@ public class PolicyRewriteMidTerm_TS02 {
 		driver.findElement(By.xpath(ConstantsClassPC.rewriteMidTermToInfoScreen)).click();
 		driver.findElement(By.id(ConstantsClassPC.rewriteMidTermQuoteID)).click();
 		
-		seleniumToExcel.premium(driver, "RewriteMidTerm");
-	//	driver.findElement(By.id(ConstantsClassPC.rewriteMidTermPolicyIssueID)).click();
+		seleniumToExcel.premium(driver, "PolicyRewriteMidTermTS02");
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 	}

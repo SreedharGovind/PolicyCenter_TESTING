@@ -130,7 +130,7 @@ public class PolicyIssuance_TS02 {
 		pvo.setVehicle1CostNew(ExcelUtils_TS02.getCellValueByLabel("vehicle1CostNew"));
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCostNew)).sendKeys(pvo.getVehicle1CostNew());
 		driver.findElement(By.xpath(ConstantsClassPC.quoteAtVehicleScreen)).click();
-		seleniumToExcel.premium(driver, "Issuance");
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS02");
 		driver.findElement(By.id(ConstantsClassPC.policyBindOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyIssue)).click();
 		driver.switchTo().alert().accept();

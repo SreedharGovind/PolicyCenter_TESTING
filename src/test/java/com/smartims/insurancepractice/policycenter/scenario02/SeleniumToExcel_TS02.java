@@ -19,12 +19,12 @@ public class SeleniumToExcel_TS02 {
 
 	WebElement premiumValue(ChromeDriver driver, String transaction) {
 
-		if (transaction == "Issuance") {
+		if (transaction == "PolicyIssuanceTS02") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"SubmissionWizard-SubmissionWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
 
-		if (transaction == "Change") {
+		if (transaction == "PolicyChangeTS02") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
