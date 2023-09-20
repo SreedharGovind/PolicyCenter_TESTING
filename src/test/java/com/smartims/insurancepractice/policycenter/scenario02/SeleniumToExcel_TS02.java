@@ -29,12 +29,10 @@ public class SeleniumToExcel_TS02 {
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
 		
-		
-		if (transaction == "ReWriteMidTerm") {
+		if (transaction == "PolicyRewriteMidTermTS02") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
-		
 		return null;
 	}
 
