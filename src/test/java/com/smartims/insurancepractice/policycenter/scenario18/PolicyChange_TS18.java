@@ -18,11 +18,11 @@ public class PolicyChange_TS18 {
 	void policyChange18(ChromeDriver driver, Actions actions) throws IOException {
 
 		PolicyChangeVO pcvo = new PolicyChangeVO();
+		SeleniumToExcel_TS18 seleniumToExcel = new SeleniumToExcel_TS18();
 
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS18.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS18.getCellValueByLabel("policyChangeDescription"));
 		pcvo.setPolicyChangeOfferingsSelection(ExcelUtils_TS18.getCellValueByLabel("policyChangeOfferingsSelection"));
-
 		driver.findElement(By.xpath(ConstantsClass18.newTransactionButton2)).click();
 		driver.findElement(By.xpath(ConstantsClass18.changePolicyOption)).click();
 		driver.findElement(By.xpath(
@@ -30,21 +30,14 @@ public class PolicyChange_TS18 {
 				.sendKeys(pcvo.getPolicyChangeEffectiveDate());
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeDescription))
 				.sendKeys(pcvo.getPolicyChangeDescription(), Keys.ENTER);
-
 		WebElement policyChangeNext = driver.findElement(By.xpath(ConstantsClass18.policyChangeScreenNextButton));
 		actions.moveToElement(policyChangeNext).perform();
 		policyChangeNext.click();
-
-		// offerings Screen
 		Select offerings = new Select(driver.findElement(By.xpath(ConstantsClass18.offeringsTypeSelection)));
 		offerings.selectByVisibleText(pcvo.getPolicyChangeOfferingsSelection());
-
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
-
 		driver.findElement(By.xpath(ConstantsClass18.polChangeTermType)).sendKeys(Keys.ENTER);
-
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
-
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
 		driver.findElement(By.xpath(ConstantsClass18.polChangeAdditionalCoverageTab)).sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
@@ -52,6 +45,7 @@ public class PolicyChange_TS18 {
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
 		driver.findElement(By.xpath(ConstantsClass18.policyPreviewTab)).sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath(ConstantsClass18.polChangeQuoteButton)).click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS18");
 		driver.findElement(By.xpath(ConstantsClass18.polChangeBindOption)).click();
 		Alert alert2 = driver.switchTo().alert();
 		alert2.accept();
