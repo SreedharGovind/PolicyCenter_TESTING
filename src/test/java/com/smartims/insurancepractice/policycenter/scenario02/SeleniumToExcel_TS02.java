@@ -35,9 +35,6 @@ public class SeleniumToExcel_TS02 {
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
 		
-		
-		
-
 		return null;
 	}
 
