@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.policycenter.scenario02;
+package com.smartims.insurancepractice.policycenter.scenario19;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,21 +15,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeleniumToExcel_TS02 {
+public class SeleniumToExcel_TS19 {
 
 	WebElement premiumValue(ChromeDriver driver, String transaction) {
 
-		if (transaction == "PolicyIssuanceTS02") {
+		if (transaction == "PolicyIssuanceTS19") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"SubmissionWizard-SubmissionWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
 
-		if (transaction == "PolicyChangeTS02") {
-			return driver.findElement(By.xpath(
-					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
-		}
-		
-		if (transaction == "PolicyRewriteMidTermTS02") {
+		if (transaction == "PolicyChangeTS19") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
@@ -42,7 +37,6 @@ public class SeleniumToExcel_TS02 {
 		Workbook workbook = new XSSFWorkbook(fis);
 		Sheet sheet = workbook.getSheetAt(0);
 		WebElement data = this.premiumValue(driver, transaction);
-		System.out.println(transaction);
 		String capturedData = data.getText();
 		for (Row row : sheet) {
 			for (Cell cell : row) {
@@ -62,5 +56,4 @@ public class SeleniumToExcel_TS02 {
 		fos.close();
 
 	}
-
 }
