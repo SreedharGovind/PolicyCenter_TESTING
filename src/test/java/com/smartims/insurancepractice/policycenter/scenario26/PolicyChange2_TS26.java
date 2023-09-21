@@ -16,6 +16,8 @@ public class PolicyChange2_TS26 {
 	void policychange(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		PolicyChangeVO cvo = new PolicyChangeVO();
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
+		SeleniumToExcel_TS26 seleniumToExcel = new SeleniumToExcel_TS26();
+
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.changePolicy)).click();
 		cvo.setPolicyChangeEffectiveDate(ExcelUtils_TS26.getCellValueByLabel("policyChangeOOSEffectiveDate"));
@@ -107,6 +109,7 @@ public class PolicyChange2_TS26 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeVehicleToPACoverages)).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeQuote)).click();
+		seleniumToExcel.premium(driver, "PolicyChange2TS26");
 		driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();

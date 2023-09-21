@@ -16,42 +16,51 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumToExcel_TS24 {
-
+	 static int currentColumnIndex = 0;
 	WebElement premiumValue(ChromeDriver driver, String transaction) {
 
-		if (transaction == "Issuance") {
+		if (transaction == "PolicyIssuanceTS24") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"SubmissionWizard-SubmissionWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
 
-		if (transaction == "Change") {
+		if (transaction == "PolicyChangeTS24") {
 			return driver.findElement(By.xpath(
-					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
+					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
 		}
-
+		
+		if (transaction == "PolicyChange2TS24") {
+			return driver.findElement(By.xpath(
+					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
+		}
+		
+		
+	
 		return null;
 	}
 
 	public void premium(ChromeDriver driver, String transaction) throws IOException {
-
 		FileInputStream fis = new FileInputStream(new File("premium calculations.xlsx"));
 		Workbook workbook = new XSSFWorkbook(fis);
 		Sheet sheet = workbook.getSheetAt(0);
 		WebElement data = this.premiumValue(driver, transaction);
+		System.out.println(transaction);
 		String capturedData = data.getText();
 		for (Row row : sheet) {
 			for (Cell cell : row) {
 				if (cell != null && cell.getCellType() == CellType.STRING
 						&& cell.getStringCellValue().equals(transaction)) {
 					int columnIndex = cell.getColumnIndex();
-					Cell dataCell = row.createCell(columnIndex + 1);
-					dataCell.setCellValue(capturedData);
-					System.out.println(capturedData);
-					break;
+                    Cell dataCell = row.createCell(columnIndex + 2 + currentColumnIndex);
+			         if (!(row.getCell(columnIndex + 1 + currentColumnIndex) ==null)) {
+	                        dataCell.setCellValue(capturedData);
+	                        System.out.println(capturedData);
+	                       
+	                    }
+	                    break;
 				}
 			}
 		}
-
 		FileOutputStream fos = new FileOutputStream(new File("premium calculations.xlsx"));
 		workbook.write(fos);
 		fos.close();

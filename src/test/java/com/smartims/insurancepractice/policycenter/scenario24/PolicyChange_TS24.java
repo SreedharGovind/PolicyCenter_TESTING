@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
+import com.smartims.insurancepractice.policycenter.scenario25.SeleniumToExcel_TS25;
 
 import PolicyCenterTransactions.ConstantsClassPC;
 
@@ -15,6 +16,8 @@ public class PolicyChange_TS24 {
 	void policychange(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		PolicyChangeVO cvo = new PolicyChangeVO();
 		PolicyChangeVO pvo = new PolicyChangeVO();
+		SeleniumToExcel_TS24 seleniumToExcel = new SeleniumToExcel_TS24();
+
 		Thread.sleep(1000);
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.changePolicy)).click();
@@ -44,6 +47,7 @@ public class PolicyChange_TS24 {
 				.sendKeys(pvo.getPolicyChangeVehicle1AIExisingPersonIntrestType());
 
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeQuote)).click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS24");
 
 		driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
 		driver.switchTo().alert().accept();
