@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
@@ -18,12 +17,9 @@ import PolicyCenterTransactions.ConstantsClass18;
 public class PolicyChange_TS22 {
 
 	void policyChange22(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
-//	public static void main(String[] args) throws IOException, InterruptedException {
-
-		AccountCreationVO pvo = new AccountCreationVO();
 
 		PolicyChangeVO pcvo = new PolicyChangeVO();
-		ExcelUtils_TS22 eu22 = new ExcelUtils_TS22();
+		SeleniumToExcel_TS22 seleniumToExcel = new SeleniumToExcel_TS22();
 
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS22.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS22.getCellValueByLabel("policyChangeDescription"));
@@ -138,8 +134,6 @@ public class PolicyChange_TS22 {
 		actions.moveToElement(pcvoPolicyChangeNext).perform();
 		pcvoPolicyChangeNext.click();
 
-//		driver.findElement(By.xpath("//*[@id=\"StartPolicyChange-StartPolicyChangeScreen-NewPolicyChange\"]/div"))
-//				.click();
 		Alert pcvoAlert = driver.switchTo().alert();
 		pcvoAlert.accept();
 
@@ -223,6 +217,7 @@ public class PolicyChange_TS22 {
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
 		driver.findElement(By.xpath(ConstantsClass18.policyPreviewTab)).sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath(ConstantsClass18.polChangeQuoteButton)).click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS22");
 		driver.findElement(By.xpath(ConstantsClass18.polChangeBindOption)).click();
 
 		Alert alert21 = driver.switchTo().alert();

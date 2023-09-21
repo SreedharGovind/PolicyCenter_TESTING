@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyRewriteFullTermVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
@@ -19,11 +18,8 @@ public class PolicyRewriteFullTerm_TS21 {
 
 	void policyRewriteFullTerm21(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 
-		AccountCreationVO pvo = new AccountCreationVO();
-
-		ExcelUtils_TS21 eu21 = new ExcelUtils_TS21();
-
 		PolicyRewriteFullTermVO prft = new PolicyRewriteFullTermVO();
+		SeleniumToExcel_TS21 seleniumToExcel = new SeleniumToExcel_TS21();
 
 		prft.setRewriteFullTermOfferingsSelection(
 				ExcelUtils_TS21.getCellValueByLabel("rewriteFullTermOfferingsSelection"));
@@ -59,6 +55,8 @@ public class PolicyRewriteFullTerm_TS21 {
 		WebElement Quote = driver.findElement(By.xpath(ConstantsClass18.rewriteFullTermQuoteButton));
 		actions.moveToElement(Quote).perform();
 		Quote.click();
+
+		seleniumToExcel.premium(driver, "PolicyRewriteFullTermTS21");
 
 		// Issue Policy
 		driver.findElement(By.xpath(

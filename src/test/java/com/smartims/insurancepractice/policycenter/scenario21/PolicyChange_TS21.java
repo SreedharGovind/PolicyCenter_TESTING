@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
@@ -18,13 +17,9 @@ import PolicyCenterTransactions.ConstantsClass18;
 public class PolicyChange_TS21 {
 
 	void policyChange21(ChromeDriver driver, Actions actions) throws IOException {
-//	public static void main(String[] args) throws IOException {
-
-		AccountCreationVO pvo = new AccountCreationVO();
 
 		PolicyChangeVO pcvo = new PolicyChangeVO();
-
-		ExcelUtils_TS21 eu21 = new ExcelUtils_TS21();
+		SeleniumToExcel_TS21 seleniumToExcel = new SeleniumToExcel_TS21();
 
 		pcvo.setPolicyChangeEffectiveDate(ExcelUtils_TS21.getCellValueByLabel("policyChangeEffectiveDate"));
 		pcvo.setPolicyChangeDescription(ExcelUtils_TS21.getCellValueByLabel("policyChangeDescription"));
@@ -85,6 +80,7 @@ public class PolicyChange_TS21 {
 		driver.findElement(By.xpath(ConstantsClass18.policyChangeWizardNext)).click();
 		driver.findElement(By.xpath(ConstantsClass18.policyPreviewTab)).sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath(ConstantsClass18.polChangeQuoteButton)).click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS21");
 		driver.findElement(By.xpath(ConstantsClass18.polChangeBindOption)).click();
 
 		Alert alert2 = driver.switchTo().alert();
