@@ -16,6 +16,7 @@ public class PolicyChange_TS14 {
 
 		// new transaction
 		PolicyChangeVO pcvo = new PolicyChangeVO();
+		SeleniumToExcel_TS14 seleniumToExcel = new SeleniumToExcel_TS14();
 
 		WebElement Trans = driver.findElement(By.xpath(Constants.newTransaction));
 		action.moveToElement(Trans).perform();
@@ -46,6 +47,7 @@ public class PolicyChange_TS14 {
 		driver.findElement(By.id(
 				"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote"))
 				.click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS14");
 
 		driver.findElement(
 				By.id("PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-JobWizardToolbarButtonSet-BindPolicyChange"))

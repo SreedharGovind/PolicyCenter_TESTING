@@ -14,6 +14,7 @@ import PolicyCenterTransactions.Constants;
 public class PolicyCancellation_TS12 {
 	void cancelpolicy(ChromeDriver driver, Actions action) throws Exception {
 		PolicyCancellationVO cvo = new PolicyCancellationVO();
+		SeleniumToExcel_TS12 seleniumToExcel = new SeleniumToExcel_TS12();
 		// new transaction
 
 		WebElement Trans = driver.findElement(By.xpath(Constants.newTransaction));
@@ -46,7 +47,7 @@ public class PolicyCancellation_TS12 {
 		action.moveToElement(cancel).perform();
 //			cancel.click();
 		driver.findElement(By.id("StartCancellation-StartCancellationScreen-NewCancellation")).click();
-
+		seleniumToExcel.premium(driver, "PolicyCancellationTS12");
 		// Bind options cancel Now
 
 		WebElement bindoption = driver.findElement(By.id(Constants.cancellationWizardBindoptions));
