@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.policycenter.scenario24;
+package com.smartims.insurancepractice.policycenter.scenario26;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,19 +15,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeleniumToExcel_TS24 {
-	 static int currentColumnIndex = 0;
+public class SeleniumToExcel_TS26 {
+	static int currentColumnIndex = 0;
+
 	WebElement premiumValue(ChromeDriver driver, String transaction) {
 
-		if (transaction == "PolicyIssuanceTS24") {
+		if (transaction == "PolicyIssuanceTS26") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"SubmissionWizard-SubmissionWizard_QuoteScreen-Quote_SummaryDV-TotalCost\"]/div/div"));
 		}
 
-		if (transaction == "PolicyChangeTS24") {
+		if (transaction == "PolicyChangeTS26") {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
 		}
+
+		if (transaction == "PolicyChange2TS26") {
+			return driver.findElement(By.xpath(
+					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
+		}
+
 		return null;
 	}
 
