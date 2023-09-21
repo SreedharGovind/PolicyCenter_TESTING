@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.policycenter.scenario01;
+ package com.smartims.insurancepractice.policycenter.scenario01;
 
 import java.io.IOException;
 
@@ -14,6 +14,7 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyChange_TS01 {
 	void policychange(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		PolicyChangeVO cvo = new PolicyChangeVO();
+		SeleniumToExcel_TS01 seleniumToExcel = new SeleniumToExcel_TS01();
 
 		driver.findElement(By.xpath(ConstantsClassPC.transactions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.changePolicy)).click();
@@ -108,7 +109,8 @@ public class PolicyChange_TS01 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangevehicle1Driver1Percentage))
 				.sendKeys(cvo.getPolicyChangeVehicle1Driver1Percentage());
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeQuote)).click();
-		driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS01");
+	driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 

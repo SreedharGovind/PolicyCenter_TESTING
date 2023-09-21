@@ -9,14 +9,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
+import com.smartims.insurancepractice.policycenter.scenario02.SeleniumToExcel_TS02;
 
 import PolicyCenterTransactions.ConstantsClassPC;
 
 public class PolicyIssuance_TS01 {
 
 	public void policyCreation(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
+		SeleniumToExcel_TS01 seleniumToExcel = new SeleniumToExcel_TS01();
+
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
-		driver.findElement(By.xpath(ConstantsClassPC.accountsTab)).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(ConstantsClassPC.newSubmission)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.defaultEffectiveDate)).clear();
@@ -125,6 +127,7 @@ public class PolicyIssuance_TS01 {
 		driver.findElement(By.xpath(ConstantsClassPC.vehicleCollison)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.toRiskAnalysIsScreen)).click();
 		driver.findElement(By.id(ConstantsClassPC.policyQuote)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS01");
 		driver.findElement(By.id(ConstantsClassPC.policyBindOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyIssue)).click();
 		driver.switchTo().alert().accept();

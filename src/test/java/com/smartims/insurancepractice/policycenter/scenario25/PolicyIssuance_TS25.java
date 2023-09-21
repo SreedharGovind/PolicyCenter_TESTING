@@ -15,6 +15,8 @@ public class PolicyIssuance_TS25 {
 
 	public void policyCreation(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
+		SeleniumToExcel_TS25 seleniumToExcel = new SeleniumToExcel_TS25();
+
 		driver.findElement(By.xpath(ConstantsClassPC.newSubmission)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.defaultEffectiveDate)).clear();
 		pvo.setDefaultEffectiveDate(ExcelUtils_TS25.getCellValueByLabel("defaultEffectiveDate"));
@@ -133,6 +135,8 @@ public class PolicyIssuance_TS25 {
 				.sendKeys(pvo.getVehicle1AIExisingPersonIntrestType());
 
 		driver.findElement(By.xpath(ConstantsClassPC.quoteAtVehicleScreen)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS25");
+
 		driver.findElement(By.id(ConstantsClassPC.policyBindOptions)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyIssue)).click();
 		driver.switchTo().alert().accept();

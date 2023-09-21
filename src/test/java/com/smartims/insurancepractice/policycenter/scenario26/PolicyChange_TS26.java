@@ -14,6 +14,7 @@ public class PolicyChange_TS26 {
 	void policychange(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 		PolicyChangeVO cvo = new PolicyChangeVO();
 		PolicyChangeVO pvo = new PolicyChangeVO();
+		SeleniumToExcel_TS26 seleniumToExcel = new SeleniumToExcel_TS26();
 
 		driver.findElement(By.id(ConstantsClassPC.transactionsID)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.changePolicy)).click();
@@ -29,6 +30,8 @@ public class PolicyChange_TS26 {
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeVehicleToPACoverages)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeUncheckMedicalPayments)).click();
 		driver.findElement(By.xpath(ConstantsClassPC.policyChangeQuote)).click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS26");
+
 		driver.findElement(By.id(ConstantsClassPC.policyChangeIssue)).click();
 		driver.switchTo().alert().accept();
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
