@@ -16,7 +16,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumToExcel_TS24 {
-	 static int currentColumnIndex = 0;
+	static int currentColumnIndex = 0;
+
 	WebElement premiumValue(ChromeDriver driver, String transaction) {
 
 		if (transaction == "PolicyIssuanceTS24") {
@@ -28,6 +29,11 @@ public class SeleniumToExcel_TS24 {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
 		}
+		if (transaction == "PolicyChange2TS24") {
+			return driver.findElement(By.xpath(
+					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
+		}
+
 		return null;
 	}
 
