@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyCancellationVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
@@ -19,10 +18,7 @@ public class PolicyCancellation_TS20 {
 
 	void policyChange20(ChromeDriver driver, Actions actions) throws IOException {
 
-		AccountCreationVO pvo = new AccountCreationVO();
 		PolicyCancellationVO pc = new PolicyCancellationVO();
-		ExcelUtils_TS20 eu = new ExcelUtils_TS20();
-
 		pc.setPolicyCancellationSource(ExcelUtils_TS20.getCellValueByLabel("policyCancellationSource"));
 		pc.setPolicyCancellationReason(ExcelUtils_TS20.getCellValueByLabel("policyCancellationReason"));
 		pc.setPolicyCancellationReasonDescription(

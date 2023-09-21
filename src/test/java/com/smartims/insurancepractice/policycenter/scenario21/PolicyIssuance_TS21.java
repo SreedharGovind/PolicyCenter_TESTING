@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.smartims.insurancepractice.policycenter.policyVO.AccountCreationVO;
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
 
 import PolicyCenterTransactions.ConstantsClass18;
@@ -19,10 +18,8 @@ public class PolicyIssuance_TS21 {
 
 	void submission21(ChromeDriver driver, Actions actions) throws IOException {
 
-		AccountCreationVO pvo = new AccountCreationVO();
 		PolicyIssuanceVO svo = new PolicyIssuanceVO();
-
-		ExcelUtils_TS21 eu21 = new ExcelUtils_TS21();
+		SeleniumToExcel_TS21 seleniumToExcel = new SeleniumToExcel_TS21();
 
 		svo.setExistingAccountNumber(ExcelUtils_TS21.getCellValueByLabel("accountNumber"));
 
@@ -236,6 +233,7 @@ public class PolicyIssuance_TS21 {
 		driver.findElement(By.xpath(ConstantsClass18.newTransactionButton)).click();
 		driver.findElement(By.xpath(ConstantsClass18.issuePolicyOption)).click();
 		driver.findElement(By.id(ConstantsClass18.quoteButtonOfferingsScreen)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS21");
 		driver.findElement(By.id(ConstantsClass18.issueButton)).click();
 
 		Alert alert2 = driver.switchTo().alert();

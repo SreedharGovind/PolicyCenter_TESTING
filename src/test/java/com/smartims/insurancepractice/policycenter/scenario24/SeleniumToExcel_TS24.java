@@ -28,14 +28,6 @@ public class SeleniumToExcel_TS24 {
 			return driver.findElement(By.xpath(
 					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
 		}
-		
-		if (transaction == "PolicyChange2TS24") {
-			return driver.findElement(By.xpath(
-					"//*[@id=\"PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-Quote_SummaryDV-TotalPremium\"]/div/div"));
-		}
-		
-		
-	
 		return null;
 	}
 
