@@ -22,6 +22,9 @@ public class AllTransactions16 {
 		PolicyChange2_TS16 change2 = new PolicyChange2_TS16();
 		change2.changePolicy(driver, action);
 
+		PolicyRewriteNewTerm rewrite= new PolicyRewriteNewTerm();
+		rewrite.rewriteNewTerm(driver,action);
+
 		PolicyManualRenewal_TS16 renew = new PolicyManualRenewal_TS16();
 		renew.policyRenew(driver, action);
 	}

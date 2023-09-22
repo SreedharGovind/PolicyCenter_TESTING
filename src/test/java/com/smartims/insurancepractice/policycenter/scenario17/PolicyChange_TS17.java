@@ -1,5 +1,6 @@
 package com.smartims.insurancepractice.policycenter.scenario17;
 
+import com.smartims.insurancepractice.policycenter.scenario14.SeleniumToExcel_TS14;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -16,6 +17,7 @@ public class PolicyChange_TS17 {
 
 		// new transaction
 		PolicyChangeVO pcvo = new PolicyChangeVO();
+		SeleniumToExcel_TS17 seleniumToExcel = new SeleniumToExcel_TS17();
 
 		WebElement Trans = driver.findElement(By.xpath(Constants.newTransaction));
 		action.moveToElement(Trans).perform();
@@ -45,6 +47,7 @@ public class PolicyChange_TS17 {
 		driver.findElement(By.id(
 				"PolicyChangeWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote"))
 				.click();
+		seleniumToExcel.premium(driver, "PolicyChangeTS17");
 
 		driver.findElement(
 				By.id("PolicyChangeWizard-PolicyChangeWizard_QuoteScreen-JobWizardToolbarButtonSet-BindPolicyChange"))

@@ -1,5 +1,6 @@
 package com.smartims.insurancepractice.policycenter.scenario17;
 
+import com.smartims.insurancepractice.policycenter.scenario12.SeleniumToExcel_TS12;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,6 +15,7 @@ import PolicyCenterTransactions.Constants;
 public class PolicyCancellation_TS17 {
 	void cancelpolicy(ChromeDriver driver, Actions action) throws Exception {
 		PolicyCancellationVO cvo = new PolicyCancellationVO();
+		SeleniumToExcel_TS17 seleniumToExcel = new SeleniumToExcel_TS17();
 		// new transaction
 
 		WebElement Trans = driver.findElement(By.xpath(Constants.newTransaction));
@@ -61,6 +63,7 @@ public class PolicyCancellation_TS17 {
 		action.moveToElement(start).perform();
 		start.click();
 		driver.findElement(By.id("StartCancellation-StartCancellationScreen-0")).click();
+		seleniumToExcel.premium(driver, "PolicyCancellationTS17");
 		// Bind options cancel Now
 
 		WebElement bindoption = driver.findElement(By.id(Constants.cancellationWizardBindoptions));

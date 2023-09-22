@@ -1,5 +1,6 @@
 package com.smartims.insurancepractice.policycenter.scenario13;
 
+import com.smartims.insurancepractice.policycenter.scenario02.SeleniumToExcel_TS02;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -17,11 +18,11 @@ public class PolicyIssuance_TS13 {
 	void newSubmission(ChromeDriver driver, Actions action) throws Exception {
 
 		PolicyIssuanceVO svo = new PolicyIssuanceVO();
+		SeleniumToExcel_TS13 seleniumToExcel = new SeleniumToExcel_TS13();
 
 		// New submission
 		driver.findElement(By.xpath(Constants.clickOnNewSubbmission)).click();
 		svo.setDefaultEffectiveDate(ExcelUtils_TS13.getCellValueByLabel("defaultEffectiveDate"));
-//		driver.findElement(By.name("NewSubmission-NewSubmissionScreen-ProductSettingsDV-DefaultPPEffDate")).clear();
 		driver.findElement(By.id("NewSubmission-NewSubmissionScreen-ProductSettingsDV-DefaultPPEffDate_dateIcon"))
 				.click();
 
@@ -311,12 +312,7 @@ public class PolicyIssuance_TS13 {
 		driver.findElement(By.name(
 				"SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel-VehiclesDetailsCV-AdditionalInterestDetailsDV-AdditionalInterestLV-0-Type"))
 				.sendKeys(svo.getVehicle1AIExisingPersonIntrestType(), Keys.ENTER);
-//		driver.findElement(By.id("SubmissionWizard-Next")).click();
 
-//		driver.findElement(By.id(Constants.submissionWizardNext)).click();
-
-		// -------------------PA Coverage Screen------------------- 
-//		driver.findElement(By.xpath("/html/body/form/div/div[2]/div[2]/div[2]/div/div[4]/table/tbody/tr[2]/td/div/div[2]/div[3]/table/tbody/tr/td/div[3]/div[2]/div[1]/div/div/div[2]")).click();
 
 		String coverage = "Collision";
 
@@ -348,6 +344,8 @@ public class PolicyIssuance_TS13 {
 
 		// -------------------Quote Screen------------------- 
 		driver.findElement(By.id(Constants.quoteScreen)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS13");
+
 		// -------------------issue Options------------------- 
 		driver.findElement(By.id(Constants.bindOptions)).click();
 		WebElement issueOptions = driver.findElement(By.xpath(Constants.issueOption));

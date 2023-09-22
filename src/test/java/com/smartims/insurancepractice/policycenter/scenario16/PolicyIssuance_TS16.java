@@ -1,5 +1,6 @@
 package com.smartims.insurancepractice.policycenter.scenario16;
 
+import com.smartims.insurancepractice.policycenter.scenario13.SeleniumToExcel_TS13;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -16,6 +17,7 @@ public class PolicyIssuance_TS16 {
 	void newSubmission(ChromeDriver driver, Actions action) throws Exception {
 
 		PolicyIssuanceVO svo = new PolicyIssuanceVO();
+		SeleniumToExcel_TS16 seleniumToExcel = new SeleniumToExcel_TS16();
 
 		// New submission
 		driver.findElement(By.xpath(Constants.clickOnNewSubbmission)).click();
@@ -218,6 +220,7 @@ public class PolicyIssuance_TS16 {
 
 		// -------------------Quote Screen------------------- 
 		driver.findElement(By.id(Constants.quoteScreen)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuanceTS16");
 		// -------------------issue Options------------------- 
 		driver.findElement(By.id(Constants.bindOptions)).click();
 		WebElement issueOptions = driver.findElement(By.xpath(Constants.issueOption));

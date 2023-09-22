@@ -1,5 +1,6 @@
 package com.smartims.insurancepractice.policycenter.scenario16;
 
+import com.smartims.insurancepractice.policycenter.scenario14.SeleniumToExcel_TS14;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -17,6 +18,7 @@ public class PolicyChange2_TS16 {
 
 		// new transaction
 		PolicyChangeVO pcvo = new PolicyChangeVO();
+		SeleniumToExcel_TS16 seleniumToExcel = new SeleniumToExcel_TS16();
 
 		WebElement Trans = driver.findElement(By.xpath(Constants.newTransaction));
 		action.moveToElement(Trans).perform();
