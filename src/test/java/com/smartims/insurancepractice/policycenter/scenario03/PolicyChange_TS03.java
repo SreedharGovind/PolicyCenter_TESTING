@@ -1,21 +1,20 @@
 package com.smartims.insurancepractice.policycenter.scenario03;
 
 import java.io.IOException;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
-
 import PolicyCenterTransactions.ConstantsClass03;
 
 public class PolicyChange_TS03 {
-	void policyChange(ChromeDriver driver, Actions action) throws IOException {
+	void policyChange(ChromeDriver driver, Actions action) throws IOException, InterruptedException {
 		PolicyChangeVO pco = new PolicyChangeVO();
+		SeleniumToExcel_TS03 seleniumToExcel = new SeleniumToExcel_TS03();
+
 		pco.setPolicyChangeEffectiveDate(ExcelUtils_TS03.getCellValueByLabel("policyChangeEffectiveDate"));
 		pco.setPolicyChangeDescription(ExcelUtils_TS03.getCellValueByLabel("policyChangeDescription"));
 		pco.setPolicyChangeExistingDriverdateOfBirth(
@@ -51,7 +50,9 @@ public class PolicyChange_TS03 {
 		driver.findElement(By.id(ConstantsClass03.policychangeremove)).click();
 		driver.findElement(By.id(ConstantsClass03.policychangenext)).click();
 		driver.findElement(By.id(ConstantsClass03.policychangequote)).click();
+		seleniumToExcel.premium(driver, "PolicyChange_TS03");
 		driver.findElement(By.id(ConstantsClass03.bindpolicychange)).click();
+		Thread.sleep(20000);
 		Alert alert1 = driver.switchTo().alert();
 		alert1.accept();
 		driver.findElement(By.id(ConstantsClass03.viewpolicy)).click();

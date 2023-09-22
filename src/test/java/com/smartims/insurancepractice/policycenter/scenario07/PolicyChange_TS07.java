@@ -19,6 +19,7 @@ public class PolicyChange_TS07 {
 	void policychange(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
 
 		PolicyChangeVO pvo = new PolicyChangeVO();
+		SeleniumToExcel_TS07 seleniumToExcel = new SeleniumToExcel_TS07();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.NewTransactionButton)).click();
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.PolicyChangeOption)).click();
@@ -116,17 +117,14 @@ public class PolicyChange_TS07 {
 				.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1NumberOfViolationsPolicyLevel));
 		Select violationpol = new Select(ViolationPolicyLevel);
 		violationpol.selectByValue("0");
-
 		WebElement ViolationAccountLevel = driver
 				.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeDriver1NumberOfViolationsAccountLevel));
 		Select violationacc = new Select(ViolationAccountLevel);
 		violationacc.selectByValue("0");
-
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.DriversNextButton)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.CreateVehicleButton)).click();
 		;
-
 		pvo.setPolicyChangeVehicle1VIN(ExcelUtils_TS07.getCellValueByLabel("policyChangeVehicle1VIN"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1VIN))
 				.sendKeys(pvo.getPolicyChangeVehicle1VIN());
@@ -155,7 +153,7 @@ public class PolicyChange_TS07 {
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.VehiclesNextButton)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeVehicle1Comprehensive)).click();
-
+		seleniumToExcel.premium(driver, "PolicyChange_TS07");
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.policyChangeQuoteButton)).click();
 		Thread.sleep(2000);
 

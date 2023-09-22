@@ -10,12 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
+import com.smartims.insurancepractice.policycenter.scenario05.SeleniumToExcel_TS05;
 
 import PolicyCenterTransactions.ConstantsClass03;
 
 public class PolicyChange_TS06 {
 	void policychange(ChromeDriver driver, Actions action) throws IOException, InterruptedException {
 		PolicyChangeVO pco = new PolicyChangeVO();
+		SeleniumToExcel_TS06 seleniumToExcel = new SeleniumToExcel_TS06();
 		pco.setPolicyChangeEffectiveDate(ExcelUtils_TS06.getCellValueByLabel("policyChangeEffectiveDate"));
 		pco.setPolicyChangeDescription(ExcelUtils_TS06.getCellValueByLabel("policyChangeDescription"));
 		pco.setPolicyChangeDescription(ExcelUtils_TS06.getCellValueByLabel("policyChangeOOSDescription"));
@@ -90,6 +92,7 @@ public class PolicyChange_TS06 {
 				.sendKeys(pco.getPolicyChangeVehicle1MedicalPaymentsLimit(), Keys.TAB);
 		driver.findElement(By.id(ConstantsClass03.validateclear)).click();
 		driver.findElement(By.id(ConstantsClass03.policychangenext)).click();
+		seleniumToExcel.premium(driver, "PolicyChange_TS06");
 		driver.findElement(By.id(ConstantsClass03.changequote1)).click();
 		driver.findElement(By.id(ConstantsClass03.bindpolicychange1)).click();
 		Alert alert2 = driver.switchTo().alert();

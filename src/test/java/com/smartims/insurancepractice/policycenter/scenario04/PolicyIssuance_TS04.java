@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
+import com.smartims.insurancepractice.policycenter.scenario03.SeleniumToExcel_TS03;
 
 import PolicyCenterTransactions.ConstantsClass03;
 import PolicyCenterTransactions.ConstantsClassPC;
@@ -17,6 +18,8 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyIssuance_TS04 {
 	void policyIssue(ChromeDriver driver, Actions action) throws IOException, InterruptedException {
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
+		SeleniumToExcel_TS04 seleniumToExcel = new SeleniumToExcel_TS04();
+
 		pvo.setOfferingsSelection(ExcelUtils_TS04.getCellValueByLabel("offeringsSelection"));
 		pvo.setIsApplicantCurrentlyInsured(ExcelUtils_TS04.getCellValueByLabel("isApplicantCurrentlyInsured"));
 		pvo.setDateQuoteNeeded(ExcelUtils_TS04.getCellValueByLabel("dateQuoteNeeded"));
@@ -164,21 +167,13 @@ public class PolicyIssuance_TS04 {
 		collision.click();
 		driver.findElement(By.id(ConstantsClass03.next)).click();
 		driver.findElement(By.id(ConstantsClass03.quote)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuance_TS04");
 		WebElement bindoptions = driver.findElement(By.id(ConstantsClass03.submissionbindoptions));
 		action.moveToElement(bindoptions).perform();
 		bindoptions.click();
 		driver.findElement(By.id(ConstantsClass03.submissionBindPolicy)).click();
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
-//			driver.findElement(By.id("UWBlockProgressIssuesPopup-IssuesScreen-DetailsButton")).click();
-//			driver.findElement(By.id("SubmissionWizard-Job_RiskAnalysisScreen-RiskAnalysisCV-RiskEvaluationPanelSet-1-UWIssueRowSet-Approve")).click();
-//			driver.findElement(By.id("RiskApprovalDetailsPopup-Update")).click();
-//			WebElement bindoptions1 = driver.findElement(By.id("SubmissionWizard-Job_RiskAnalysisScreen-JobWizardToolbarButtonSet-BindOptions"));
-//	        action.moveToElement(bindoptions1).perform();
-//	        bindoptions1.click();
-//	        driver.findElement(By.id("SubmissionWizard-Job_RiskAnalysisScreen-JobWizardToolbarButtonSet-BindOptions-BindAndIssue")).click();
-//	        Alert alert1 = driver.switchTo().alert();
-//			alert1.accept();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(ConstantsClassPC.viewPolicy)).click();
 	}
