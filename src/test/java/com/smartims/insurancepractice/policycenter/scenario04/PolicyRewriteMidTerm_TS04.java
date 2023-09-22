@@ -15,6 +15,8 @@ import PolicyCenterTransactions.ConstantsClass03;
 public class PolicyRewriteMidTerm_TS04 {
 	void policyRewrite(ChromeDriver driver, Actions action) throws IOException {
 		PolicyRewriteMidTermVO prm = new PolicyRewriteMidTermVO();
+		SeleniumToExcel_TS04 seleniumToExcel = new SeleniumToExcel_TS04();
+
 		prm.setRewriteMidTermOfferingsSelection(
 				ExcelUtils_TS04.getCellValueByLabel("rewriteMidTermOfferingsSelection"));
 		driver.findElement(By.id(ConstantsClass03.transaction)).click();
@@ -24,6 +26,7 @@ public class PolicyRewriteMidTerm_TS04 {
 		driver.findElement(By.name(ConstantsClass03.rewriteofferingselection))
 				.sendKeys(prm.getRewriteMidTermOfferingsSelection(), Keys.TAB);
 		driver.findElement(By.id(ConstantsClass03.rewritequote)).click();
+		seleniumToExcel.premium(driver, "PolicyRewriteMidTerm_TS04");
 		driver.findElement(By.id(ConstantsClass03.rewritebindoption)).click();
 		Alert alert1 = driver.switchTo().alert();
 		alert1.accept();

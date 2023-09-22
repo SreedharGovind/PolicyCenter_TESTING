@@ -9,12 +9,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyChangeVO;
+import com.smartims.insurancepractice.policycenter.scenario02.SeleniumToExcel_TS02;
 
 import PolicyCenterTransactions.ConstantsClass03;
 
 public class PolicyChange_TS04 {
 	void policyChange(ChromeDriver driver, Actions action) throws IOException {
 		PolicyChangeVO pco = new PolicyChangeVO();
+		SeleniumToExcel_TS04 seleniumToExcel = new SeleniumToExcel_TS04();
+
 		pco.setPolicyChangeEffectiveDate(ExcelUtils_TS04.getCellValueByLabel("policyChangeEffectiveDate"));
 		pco.setPolicyChangeDescription(ExcelUtils_TS04.getCellValueByLabel("policyChangeDescription"));
 		pco.setPolicyChangeDriver1LicenseNumber(
@@ -38,6 +41,7 @@ public class PolicyChange_TS04 {
 		driver.findElement(By.name(ConstantsClass03.PolicyChangeVehicle1CollisionLimit))
 				.sendKeys(pco.getPolicyChangeVehicle1CollisionLimit(), Keys.TAB);
 		driver.findElement(By.id(ConstantsClass03.policyChangeQuote)).click();
+		seleniumToExcel.premium(driver, "PolicyChange_TS04");
 		driver.findElement(By.id(ConstantsClass03.bindpolicychange)).click();
 		Alert alert1 = driver.switchTo().alert();
 		alert1.accept();
