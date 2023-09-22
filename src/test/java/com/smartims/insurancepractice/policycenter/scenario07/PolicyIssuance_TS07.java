@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
+import com.smartims.insurancepractice.policycenter.scenario06.SeleniumToExcel_TS06;
 
 import PolicyCenterTransactions.ConstantsClassPC;
 import PolicyCenterTransactions.ConstantsClassPC_TS07;
@@ -19,15 +20,14 @@ public class PolicyIssuance_TS07 {
 	public void policyCreation(ChromeDriver driver, Actions actions) throws IOException {
 
 		PolicyIssuanceVO pvo = new PolicyIssuanceVO();
+		SeleniumToExcel_TS07 seleniumToExcel = new SeleniumToExcel_TS07();
 
-//		driver.findElement(By.xpath(ConstantsClassPC1.accountsTab)).click();
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.newSubmission)).click();
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.newSubmissionScreen)).click();
 		pvo.setOfferingsSelection(ExcelUtils_TS07.getCellValueByLabel("offeringsSelection"));
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.OfferingsScreen)).sendKeys(pvo.getOfferingsSelection());
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.next)).click();
 		pvo.setIsApplicantCurrentlyInsured(ExcelUtils_TS07.getCellValueByLabel("isApplicantCurrentlyInsured"));
-//		driver.findElement(By.xpath(ConstantsClassPC1.qualificationsScreen)).sendKeys(pvo.getQualifications());
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.next1)).click();
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.secondaryaNamedInsured)).click();
 
@@ -91,45 +91,6 @@ public class PolicyIssuance_TS07 {
 				driver.findElement(By.xpath(ConstantsClassPC.existingDriverNumberOfViolationsAccountLevel1)));
 		roles4.selectByValue(pvo.getExistingDriverNumberOfViolationsAccountLevel());
 
-//		pvo.setExistingDriverYearFirstLicensed(ExcelUtils_TS07.getCellValueByLabel("existingDriverYearFirstLicensed"));
-//
-//		driver.findElement(By.xpath(ConstantsClassPC1.existingDriverYearFirstLicensed)).clear();
-//
-//		driver.findElement(By.xpath(ConstantsClassPC1.existingDriverYearFirstLicensed))
-//		.sendKeys(pvo.getExistingDriverYearFirstLicensed());
-//
-//		pvo.setExistingDriverNumberOfAccidentsPolicyLevel(
-//				ExcelUtils_TS07.getCellValueByLabel("existingDriverNumberOfAccidentsPolicyLevel"));
-//
-//		Select roles = new Select(
-//				driver.findElement(By.xpath(ConstantsClassPC1.existingDriverNumberOfAccidentsPolicyLevel)));
-//
-//		roles.selectByValue(pvo.getExistingDriverNumberOfAccidentsPolicyLevel());
-//
-//		pvo.setExistingDriverNumberOfAccidentsAccountLevel(
-//				ExcelUtils_TS07.getCellValueByLabel("existingDriverNumberOfAccidentsAccountLevel"));
-//
-//		Select roles2 = new Select(
-//				driver.findElement(By.xpath(ConstantsClassPC1.existingDriverNumberOfAccidentsAccountLevel)));
-//
-//		roles2.selectByValue(pvo.getExistingDriverNumberOfAccidentsAccountLevel());
-//
-//		pvo.setExistingDriverNumberOfViolationsPolicyLevel(
-//				ExcelUtils_TS07.getCellValueByLabel("existingDriverNumberOfViolationsPolicyLevel"));
-//
-//		Select roles3 = new Select(
-//				driver.findElement(By.xpath(ConstantsClassPC1.existingDriverNumberOfViolationsPolicyLevel)));
-//
-//		roles3.selectByValue(pvo.getExistingDriverNumberOfViolationsPolicyLevel());
-//
-//		pvo.setExistingDriverNumberOfViolationsAccountLevel(
-//				ExcelUtils_TS07.getCellValueByLabel("existingDriverNumberOfViolationsAccountLevel"));
-//
-//		Select roles4 = new Select(
-//				driver.findElement(By.xpath(ConstantsClassPC1.existingDriverNumberOfViolationsAccountLevel)));
-//
-//		roles4.selectByValue(pvo.getExistingDriverNumberOfViolationsAccountLevel());
-
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.toVehiclesScreen)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1AddOrRemove)).click();
@@ -181,6 +142,7 @@ public class PolicyIssuance_TS07 {
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.vehicle1Collison)).click();
 
 		driver.findElement(By.xpath(ConstantsClassPC_TS07.toRiskAnalysIsScreen)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuance_TS07");
 
 		driver.findElement(By.id(ConstantsClassPC_TS07.policyBindOptions)).click();
 

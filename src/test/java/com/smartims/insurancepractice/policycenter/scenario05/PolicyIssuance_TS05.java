@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
+import com.smartims.insurancepractice.policycenter.scenario04.SeleniumToExcel_TS04;
 
 import PolicyCenterTransactions.ConstantsClass03;
 import PolicyCenterTransactions.ConstantsClassPC;
@@ -17,6 +18,8 @@ import PolicyCenterTransactions.ConstantsClassPC;
 public class PolicyIssuance_TS05 {
 	void policyIssuance(ChromeDriver driver, Actions action) throws IOException {
 		PolicyIssuanceVO pio = new PolicyIssuanceVO();
+		SeleniumToExcel_TS05 seleniumToExcel = new SeleniumToExcel_TS05();
+
 		pio.setOfferingsSelection(ExcelUtils_TS05.getCellValueByLabel("offeringsSelection"));
 		pio.setIsApplicantCurrentlyInsured(ExcelUtils_TS05.getCellValueByLabel("isApplicantCurrentlyInsured"));
 		pio.setDateQuoteNeeded(ExcelUtils_TS05.getCellValueByLabel("dateQuoteNeeded"));
@@ -113,6 +116,7 @@ public class PolicyIssuance_TS05 {
 		comprehensive.click();
 		driver.findElement(By.id(ConstantsClass03.submissionnext)).click();
 		driver.findElement(By.id(ConstantsClass03.quote)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuance_TS05");
 		WebElement bindoptions = driver.findElement(By.id(ConstantsClass03.submissionbindoptions));
 		action.moveToElement(bindoptions).perform();
 		bindoptions.click();

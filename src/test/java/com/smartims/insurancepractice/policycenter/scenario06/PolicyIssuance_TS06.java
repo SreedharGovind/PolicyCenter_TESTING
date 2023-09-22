@@ -10,12 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.smartims.insurancepractice.policycenter.policyVO.PolicyIssuanceVO;
+import com.smartims.insurancepractice.policycenter.scenario05.SeleniumToExcel_TS05;
 
 import PolicyCenterTransactions.ConstantsClass03;
 
 public class PolicyIssuance_TS06 {
 	void policyIssuance(ChromeDriver driver, Actions action) throws IOException, InterruptedException {
 		PolicyIssuanceVO pio = new PolicyIssuanceVO();
+		SeleniumToExcel_TS06 seleniumToExcel = new SeleniumToExcel_TS06();
 		pio.setOfferingsSelection(ExcelUtils_TS06.getCellValueByLabel("offeringsSelection"));
 		pio.setIsApplicantCurrentlyInsured(ExcelUtils_TS06.getCellValueByLabel("isApplicantCurrentlyInsured"));
 		pio.setDateQuoteNeeded(ExcelUtils_TS06.getCellValueByLabel("dateQuoteNeeded"));
@@ -199,6 +201,7 @@ public class PolicyIssuance_TS06 {
 				Keys.TAB);
 		driver.findElement(By.id(ConstantsClass03.submissionnext)).click();
 		driver.findElement(By.id(ConstantsClass03.quote)).click();
+		seleniumToExcel.premium(driver, "PolicyIssuance_TS06");
 		Thread.sleep(2000);
 		driver.findElement(By.id("SubmissionWizard-SubmissionWizard_QuoteScreen-JobWizardToolbarButtonSet-BindOptions"))
 				.click();
